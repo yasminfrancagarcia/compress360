@@ -1,12 +1,14 @@
+
+source .venv-lalic/bin/activate
 Comando para compilar o compressor 
 
 python eval.py \
     -m LALIC \
     -p checkpoints/lalic-q1.pth checkpoints/lalic-q2.pth checkpoints/lalic-q3.pth checkpoints/lalic-q4.pth checkpoints/lalic-q5.pth checkpoints/lalic-q6.pth \
     -q 1 2 3 4 5 6 \
-    -i dataset \
-    -o recon_images \
-    --result benchmark_teste5.json \
+    -i sun360test_500 \
+    -o recon_imagesSun360_test \
+    --result benchmark_testeSun500_test.json \
     --cuda \
     --real \
     --verbose
@@ -58,7 +60,50 @@ CUDA_VISIBLE_DEVICES=0 python train360.py \
     --lr_epoch 36 \
     --batch-size 1 \
     --patch-size 256 256 \
+    --save_path checkpoints360/test10epoc/ --save
+
+ find ~/projeto/RwkvCompress360/sun360/test -maxdepth 1 -type f | head -n 500 | xargs -I {} cp "{}" ~/projeto/RwkvCompress360/sun360test_500/
+
+python eval.py \
+    -m LALIC \
+    -p checkpoints360/0.00483checkpoint_best.pth.tar \
+    -q 6 \
+    -i sun360/amostras50 \
+    -o recon_images_048-5epoc \
+    --result benchmark_amostras048_5epoc.json \
+    --cuda \
+    --real \
+    --verbose
+
+
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python train360.py \
+    -d sun360/train1000 \
+    --lambda 0.00483 \
+    --epochs 5 \
+    --lr_epoch 36 \
+    --batch-size 1 \
+    --patch-size 256 256 \
     --save_path checkpoints360/ --save
     
- find ~/projeto/RwkvCompress360/sun360/train -maxdepth 1 -type f | head -n 100 | xargs -I {} cp "{}" ~/projeto/RwkvCompress360/sun360/train1000/
 
+python eval.py \
+    -m LALIC \
+    -p checkpoints/lalic-q1.pth checkpoints/lalic-q2.pth checkpoints/lalic-q3.pth checkpoints/lalic-q4.pth checkpoints/lalic-q5.pth checkpoints/lalic-q6.pth \
+    -q 1 2 3 4 5 6 \
+    -i sun360test_500 \
+    -o recon_imagesSun360_test \
+    --result benchmark_testeSun500_test.json \
+    --cuda \
+    --real \
+    --verbose
+
+python eval.py \
+    -m LALIC \
+    -p checkpoints/lalic-q1.pth checkpoints/lalic-q2.pth checkpoints/lalic-q3.pth checkpoints/lalic-q4.pth checkpoints/lalic-q5.pth checkpoints/lalic-q6.pth \
+    -q 1 2 3 4 5 6 \
+    -i sun360test_500 \
+    -o  recon_imagesSun360_test\
+    --result benchmark_teste500Sun.json \
+    --cuda \
+    --real \
+    --verbose

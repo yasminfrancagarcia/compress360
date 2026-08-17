@@ -37,6 +37,27 @@ def compute_msssim_db(a, b):
     return -10 * math.log10(1 - ms_ssim(a, b, data_range=1.0).item())
 
 def compute_ws_psnr(a, b):
+    # a, b: (1, C, H, W)
+    H = a.size(2)
+
+    #latitude no centro de cada pixel, conforme Eq. (8) do artigo
+    j = torch.arange(H, device=a.device, dtype=a.dtype)
+
+    lat = (j + 0.5 - H / 2) * math.pi / H
+
+    #peso ERP = cos(latitude)
+    weights = torch.cos(lat).view(1, 1, H, 1)
+
+    # w-mse
+    squared_error = (a - b) ** 2
+    wmse = (squared_error * weights).sum() / (
+        weights.sum() * a.size(1) * a.size(3)
+    )
+
+    # WS-PSNR, MAX_I = 1 para imagens normalizadas [0,1]
+    return -10 * math.log10(wmse.item())
+
+def compute_ws_psnr(a, b):
     # a, b: tensores (1, C, H, W) da imagem erp original e reconstruída
     H = a.size(2)
     lat = torch.linspace(-math.pi/2, math.pi/2, H, device=a.device)
