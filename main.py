@@ -1,6 +1,8 @@
 from PIL import Image
 import matplotlib.pyplot as plt
 import json
+
+caminhoJson = "benchmark_test500_train30.json" 
 checkpoints = [
     "checkpoints/lalic-q1.pth",
     "checkpoints/lalic-q2.pth",
@@ -27,7 +29,7 @@ def comparar_todas_qualidades(nome, qualidades=range(1, len(checkpoints)+1)):
 
 
 def fazer_grafico():
-    with open("benchmark_teste5.json") as f:
+    with open(caminhoJson) as f:
         data = json.load(f)
 
     bpps = data["results"]["bpp"]
@@ -66,6 +68,6 @@ def fazer_grafico():
 
 
 
-comparar_todas_qualidades("517.jpg")
+#comparar_todas_qualidades("517.jpg")
 
 fazer_grafico()
