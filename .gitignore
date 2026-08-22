@@ -27,7 +27,13 @@ share/python-wheels/
 .installed.cfg
 *.egg
 
+# Image files
+
 dataset360_bmp/
+*.jpg
+*.png
+*.bmp
+*.pth
 MANIFEST
 
 # PyInstaller
@@ -131,3 +137,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 ./run.sh
+recon_imagesSun360_test/2/3278.jpg
