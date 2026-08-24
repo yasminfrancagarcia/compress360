@@ -134,23 +134,40 @@ python eval.py \
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python train.py \
     -d sun30 \
     --lambda 0.0067 \
-    --checkpoint checkpoints360/check_sun30/check_0067_40epoc/0.006715_checkpoint.pth.tar \
-    --epochs 20 \
-    --learning-rate 0.0001 \
-    --lr_epoch 16 \
+    --checkpoint checkpoints360/check_sun30/check_0067_20epoc/0.0067checkpoint_best.pth.tar \
+    --epochs 23 \
+    --learning-rate 0.00001 \
+    --lr_epoch 100 \
     --batch-size 4 \
     --patch-size 256 256 \
     --num-workers 12 \
     --cuda \
-    --save_path checkpoints360/check_sun30/check_0067_20epoc \
-    --save
-    2>&1 | tee checkpoints360/check_sun30/check_0067_20epoc/0.0067_20epoc_train.log
-    
+    --save_path checkpoints360/check_sun30/check_w-mse_cropRandom \
+    --save \
+    2>&1 | tee checkpoints360/check_sun30/check_w-mse_cropRandom/train360_mse.log
+
+
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train360.py \
+    -d sun30 \
+    --lambda 0.0067 \
+    --checkpoint checkpoints360/check_sun30/check_0067_20epoc/0.0067checkpoint_best.pth.tar \
+    --epochs 23 \
+    --learning-rate 0.00001 \
+    --lr_epoch 100 \
+    --batch-size 4 \
+    --patch-size 256 256 \
+    --num-workers 12 \
+    --cuda \
+    --save_path checkpoints360/check_sun30/check_w-mse_cropRandom \
+    --save \
+    2>&1 | tee checkpoints360/check_sun30/check_w-mse_cropRandom/train360_wmse.log
+
+
 //pra ver a época do latest
     python - <<'PY'
 import torch
 
-path = "0.0067checkpoint_latest.pth.tar"
+path = "0.0067checkpoint_best.pth.tar"
 
 ckpt = torch.load(path, map_location="cpu", weights_only=False)
 

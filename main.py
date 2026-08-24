@@ -2,7 +2,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import json
 
-caminhoJson = "benchmark_test500_train30.json" 
+caminhoJson = "benchmark_teste500Sun.json" 
 checkpoints = [
     "checkpoints/lalic-q1.pth",
     "checkpoints/lalic-q2.pth",
@@ -27,6 +27,51 @@ def comparar_todas_qualidades(nome, qualidades=range(1, len(checkpoints)+1)):
     plt.tight_layout()
     plt.show()
 
+
+
+def fazer_grafico2():
+    with open(caminhoJson) as f:
+        data = json.load(f)
+
+    bpps = data["results"]["bpp"]
+    psnrs = data["results"]["psnr"]
+    ms_ssim_db = data["results"]["ms-ssim-db"]
+    ws_psnr = data["results"]["ws-psnr"]
+
+    # Pegar somente o 1º, 3º e último checkpoint
+    indices = [0, 2, 5]
+
+    bpps = [bpps[i] for i in indices]
+    psnrs = [psnrs[i] for i in indices]
+    ms_ssim_db = [ms_ssim_db[i] for i in indices]
+    ws_psnr = [ws_psnr[i] for i in indices]
+
+    # gráfico bpp x PSNR
+    plt.plot(bpps, psnrs, marker="o", label="LALIC")
+    plt.xlabel("Bitrate (bpp)")
+    plt.ylabel("PSNR (dB)")
+    plt.title("Curva Rate-Distortion — bpp x PSNR")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+    # gráfico bpp x MS-SSIM
+    plt.plot(bpps, ms_ssim_db, marker="o", label="LALIC")
+    plt.xlabel("Bitrate (bpp)")
+    plt.ylabel("MS-SSIM (dB)")
+    plt.title("Curva Rate-Distortion — bpp x MS-SSIM")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+    # gráfico bpp x W-PSNR
+    plt.plot(bpps, ws_psnr, marker="o", label="LALIC")
+    plt.xlabel("Bitrate (bpp)")
+    plt.ylabel("W-PSNR (dB)")
+    plt.title("Curva Rate-Distortion — bpp x W-PSNR")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 
 def fazer_grafico():
     with open(caminhoJson) as f:
@@ -70,4 +115,6 @@ def fazer_grafico():
 
 #comparar_todas_qualidades("517.jpg")
 
-fazer_grafico()
+#fazer_grafico()
+
+fazer_grafico2()
