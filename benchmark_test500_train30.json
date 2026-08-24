@@ -1,0 +1,5026 @@
+{
+  "name": "LALIC",
+  "description": "LALIC, coding: ans, cuda: True, quality: ['1']",
+  "results": {
+    "enc_time": [
+      0.30165
+    ],
+    "dec_time": [
+      0.158152
+    ],
+    "bpp": [
+      0.145829
+    ],
+    "psnr": [
+      29.210031
+    ],
+    "ms-ssim-db": [
+      12.992635
+    ],
+    "ws-psnr": [
+      28.590065
+    ]
+  },
+  "records": [
+    {
+      "file": "sun360test_500/10018.jpg",
+      "quality": "1",
+      "enc_time": 0.484828,
+      "dec_time": 0.22062516,
+      "bpp": 0.10803223,
+      "psnr": 32.03390459,
+      "ms-ssim-db": 14.50830373,
+      "ws-psnr": 31.42131311
+    },
+    {
+      "file": "sun360test_500/10318.jpg",
+      "quality": "1",
+      "enc_time": 0.30351305,
+      "dec_time": 0.16425991,
+      "bpp": 0.08190918,
+      "psnr": 31.26310392,
+      "ms-ssim-db": 11.85055188,
+      "ws-psnr": 30.56753688
+    },
+    {
+      "file": "sun360test_500/10419.jpg",
+      "quality": "1",
+      "enc_time": 0.2999897,
+      "dec_time": 0.15847182,
+      "bpp": 0.21051025,
+      "psnr": 27.0243046,
+      "ms-ssim-db": 12.07820206,
+      "ws-psnr": 26.35871293
+    },
+    {
+      "file": "sun360test_500/10437.jpg",
+      "quality": "1",
+      "enc_time": 0.30391359,
+      "dec_time": 0.16132617,
+      "bpp": 0.1451416,
+      "psnr": 29.22812528,
+      "ms-ssim-db": 12.06592178,
+      "ws-psnr": 28.89303762
+    },
+    {
+      "file": "sun360test_500/10479.jpg",
+      "quality": "1",
+      "enc_time": 0.29888964,
+      "dec_time": 0.16150737,
+      "bpp": 0.14086914,
+      "psnr": 29.34972212,
+      "ms-ssim-db": 13.20896571,
+      "ws-psnr": 28.93200905
+    },
+    {
+      "file": "sun360test_500/10658.jpg",
+      "quality": "1",
+      "enc_time": 0.30314302,
+      "dec_time": 0.15758371,
+      "bpp": 0.20129395,
+      "psnr": 28.05673642,
+      "ms-ssim-db": 12.48606619,
+      "ws-psnr": 27.76983816
+    },
+    {
+      "file": "sun360test_500/10758.jpg",
+      "quality": "1",
+      "enc_time": 0.30873084,
+      "dec_time": 0.16131186,
+      "bpp": 0.17279053,
+      "psnr": 28.95229416,
+      "ms-ssim-db": 13.5577467,
+      "ws-psnr": 28.00981431
+    },
+    {
+      "file": "sun360test_500/1098.jpg",
+      "quality": "1",
+      "enc_time": 0.30242181,
+      "dec_time": 0.16057467,
+      "bpp": 0.10314941,
+      "psnr": 30.5628379,
+      "ms-ssim-db": 14.15593345,
+      "ws-psnr": 29.22706134
+    },
+    {
+      "file": "sun360test_500/11257.jpg",
+      "quality": "1",
+      "enc_time": 0.31134582,
+      "dec_time": 0.1626513,
+      "bpp": 0.07971191,
+      "psnr": 32.1217269,
+      "ms-ssim-db": 14.25464146,
+      "ws-psnr": 31.37121815
+    },
+    {
+      "file": "sun360test_500/11338.jpg",
+      "quality": "1",
+      "enc_time": 0.30885148,
+      "dec_time": 0.15915489,
+      "bpp": 0.09790039,
+      "psnr": 31.98351441,
+      "ms-ssim-db": 15.56892584,
+      "ws-psnr": 31.5227515
+    },
+    {
+      "file": "sun360test_500/11339.jpg",
+      "quality": "1",
+      "enc_time": 0.31816339,
+      "dec_time": 0.16013813,
+      "bpp": 0.09973145,
+      "psnr": 31.80003788,
+      "ms-ssim-db": 15.76608822,
+      "ws-psnr": 31.26973857
+    },
+    {
+      "file": "sun360test_500/1138.jpg",
+      "quality": "1",
+      "enc_time": 0.31753159,
+      "dec_time": 0.15779877,
+      "bpp": 0.10192871,
+      "psnr": 27.69546523,
+      "ms-ssim-db": 11.76471587,
+      "ws-psnr": 28.71432991
+    },
+    {
+      "file": "sun360test_500/11417.jpg",
+      "quality": "1",
+      "enc_time": 0.30227089,
+      "dec_time": 0.16255689,
+      "bpp": 0.09393311,
+      "psnr": 31.59609186,
+      "ms-ssim-db": 13.64205811,
+      "ws-psnr": 30.76645086
+    },
+    {
+      "file": "sun360test_500/11457.jpg",
+      "quality": "1",
+      "enc_time": 0.31499529,
+      "dec_time": 0.1634078,
+      "bpp": 0.09576416,
+      "psnr": 31.31977258,
+      "ms-ssim-db": 13.43428271,
+      "ws-psnr": 30.41036451
+    },
+    {
+      "file": "sun360test_500/11597.jpg",
+      "quality": "1",
+      "enc_time": 0.31413579,
+      "dec_time": 0.159302,
+      "bpp": 0.0881958,
+      "psnr": 32.40160325,
+      "ms-ssim-db": 14.06218201,
+      "ws-psnr": 31.26276886
+    },
+    {
+      "file": "sun360test_500/117.jpg",
+      "quality": "1",
+      "enc_time": 0.31190062,
+      "dec_time": 0.16231847,
+      "bpp": 0.05322266,
+      "psnr": 31.81316014,
+      "ms-ssim-db": 13.51792488,
+      "ws-psnr": 31.60185463
+    },
+    {
+      "file": "sun360test_500/11938.jpg",
+      "quality": "1",
+      "enc_time": 0.30586147,
+      "dec_time": 0.15950751,
+      "bpp": 0.152771,
+      "psnr": 28.14949749,
+      "ms-ssim-db": 12.01642012,
+      "ws-psnr": 27.47242926
+    },
+    {
+      "file": "sun360test_500/12139.jpg",
+      "quality": "1",
+      "enc_time": 0.30333304,
+      "dec_time": 0.15835333,
+      "bpp": 0.175354,
+      "psnr": 29.12842707,
+      "ms-ssim-db": 13.71203591,
+      "ws-psnr": 28.17758831
+    },
+    {
+      "file": "sun360test_500/12379.jpg",
+      "quality": "1",
+      "enc_time": 0.29325247,
+      "dec_time": 0.15085626,
+      "bpp": 0.29632568,
+      "psnr": 24.59839296,
+      "ms-ssim-db": 11.26318127,
+      "ws-psnr": 24.63176485
+    },
+    {
+      "file": "sun360test_500/12437.jpg",
+      "quality": "1",
+      "enc_time": 0.29812622,
+      "dec_time": 0.15392518,
+      "bpp": 0.16790771,
+      "psnr": 28.03625785,
+      "ms-ssim-db": 11.54956738,
+      "ws-psnr": 27.17645759
+    },
+    {
+      "file": "sun360test_500/12698.jpg",
+      "quality": "1",
+      "enc_time": 0.30092216,
+      "dec_time": 0.15835071,
+      "bpp": 0.10888672,
+      "psnr": 30.83002446,
+      "ms-ssim-db": 14.43440712,
+      "ws-psnr": 30.0244539
+    },
+    {
+      "file": "sun360test_500/1277.jpg",
+      "quality": "1",
+      "enc_time": 0.30006385,
+      "dec_time": 0.15345669,
+      "bpp": 0.15301514,
+      "psnr": 29.14408061,
+      "ms-ssim-db": 12.54342332,
+      "ws-psnr": 28.55712014
+    },
+    {
+      "file": "sun360test_500/1279.jpg",
+      "quality": "1",
+      "enc_time": 0.29922628,
+      "dec_time": 0.16196275,
+      "bpp": 0.22167969,
+      "psnr": 28.46195169,
+      "ms-ssim-db": 14.17649175,
+      "ws-psnr": 27.88020492
+    },
+    {
+      "file": "sun360test_500/12797.jpg",
+      "quality": "1",
+      "enc_time": 0.30496478,
+      "dec_time": 0.15841532,
+      "bpp": 0.309021,
+      "psnr": 25.31957636,
+      "ms-ssim-db": 14.36893295,
+      "ws-psnr": 24.74773777
+    },
+    {
+      "file": "sun360test_500/12817.jpg",
+      "quality": "1",
+      "enc_time": 0.29214215,
+      "dec_time": 0.15284848,
+      "bpp": 0.09405518,
+      "psnr": 31.48606664,
+      "ms-ssim-db": 14.44385299,
+      "ws-psnr": 30.29574392
+    },
+    {
+      "file": "sun360test_500/1297.jpg",
+      "quality": "1",
+      "enc_time": 0.29450917,
+      "dec_time": 0.15355277,
+      "bpp": 0.22009277,
+      "psnr": 26.83697575,
+      "ms-ssim-db": 12.49607147,
+      "ws-psnr": 27.49959084
+    },
+    {
+      "file": "sun360test_500/1298.jpg",
+      "quality": "1",
+      "enc_time": 0.30373001,
+      "dec_time": 0.15866637,
+      "bpp": 0.07904053,
+      "psnr": 32.29621303,
+      "ms-ssim-db": 12.827312,
+      "ws-psnr": 31.65791748
+    },
+    {
+      "file": "sun360test_500/13258.jpg",
+      "quality": "1",
+      "enc_time": 0.29997802,
+      "dec_time": 0.15703797,
+      "bpp": 0.0904541,
+      "psnr": 29.11683955,
+      "ms-ssim-db": 11.34609691,
+      "ws-psnr": 29.28575695
+    },
+    {
+      "file": "sun360test_500/13379.jpg",
+      "quality": "1",
+      "enc_time": 0.30672288,
+      "dec_time": 0.16144371,
+      "bpp": 0.39624023,
+      "psnr": 23.37827009,
+      "ms-ssim-db": 11.71976334,
+      "ws-psnr": 23.54621827
+    },
+    {
+      "file": "sun360test_500/13517.jpg",
+      "quality": "1",
+      "enc_time": 0.30215859,
+      "dec_time": 0.1577034,
+      "bpp": 0.1295166,
+      "psnr": 29.90364232,
+      "ms-ssim-db": 12.75454828,
+      "ws-psnr": 29.04139159
+    },
+    {
+      "file": "sun360test_500/13538.jpg",
+      "quality": "1",
+      "enc_time": 0.30702257,
+      "dec_time": 0.16358948,
+      "bpp": 0.16442871,
+      "psnr": 28.00483043,
+      "ms-ssim-db": 12.39856978,
+      "ws-psnr": 27.37013605
+    },
+    {
+      "file": "sun360test_500/13738.jpg",
+      "quality": "1",
+      "enc_time": 0.30900574,
+      "dec_time": 0.16395545,
+      "bpp": 0.13293457,
+      "psnr": 29.5154485,
+      "ms-ssim-db": 13.90161232,
+      "ws-psnr": 28.07522059
+    },
+    {
+      "file": "sun360test_500/13858.jpg",
+      "quality": "1",
+      "enc_time": 0.30594969,
+      "dec_time": 0.16090727,
+      "bpp": 0.15289307,
+      "psnr": 28.50635754,
+      "ms-ssim-db": 11.60995585,
+      "ws-psnr": 27.70737606
+    },
+    {
+      "file": "sun360test_500/13977.jpg",
+      "quality": "1",
+      "enc_time": 0.33662629,
+      "dec_time": 0.16498661,
+      "bpp": 0.13818359,
+      "psnr": 28.99548913,
+      "ms-ssim-db": 13.0448801,
+      "ws-psnr": 28.39611432
+    },
+    {
+      "file": "sun360test_500/1399.jpg",
+      "quality": "1",
+      "enc_time": 0.30822468,
+      "dec_time": 0.16113615,
+      "bpp": 0.17608643,
+      "psnr": 29.03888017,
+      "ms-ssim-db": 14.80739248,
+      "ws-psnr": 28.5577534
+    },
+    {
+      "file": "sun360test_500/14019.jpg",
+      "quality": "1",
+      "enc_time": 0.30440855,
+      "dec_time": 0.1569643,
+      "bpp": 0.14532471,
+      "psnr": 28.69940934,
+      "ms-ssim-db": 14.50665938,
+      "ws-psnr": 27.66128606
+    },
+    {
+      "file": "sun360test_500/14178.jpg",
+      "quality": "1",
+      "enc_time": 0.31135154,
+      "dec_time": 0.16193128,
+      "bpp": 0.07336426,
+      "psnr": 31.14705984,
+      "ms-ssim-db": 13.1526015,
+      "ws-psnr": 30.13619518
+    },
+    {
+      "file": "sun360test_500/14319.jpg",
+      "quality": "1",
+      "enc_time": 0.30495787,
+      "dec_time": 0.15555692,
+      "bpp": 0.08740234,
+      "psnr": 30.82545107,
+      "ms-ssim-db": 12.7019374,
+      "ws-psnr": 29.59494744
+    },
+    {
+      "file": "sun360test_500/14379.jpg",
+      "quality": "1",
+      "enc_time": 0.2972126,
+      "dec_time": 0.15455532,
+      "bpp": 0.14752197,
+      "psnr": 26.79579751,
+      "ms-ssim-db": 10.10411832,
+      "ws-psnr": 26.28347522
+    },
+    {
+      "file": "sun360test_500/14478.jpg",
+      "quality": "1",
+      "enc_time": 0.30701756,
+      "dec_time": 0.15655255,
+      "bpp": 0.19024658,
+      "psnr": 27.60974017,
+      "ms-ssim-db": 12.85329453,
+      "ws-psnr": 26.8374307
+    },
+    {
+      "file": "sun360test_500/14717.jpg",
+      "quality": "1",
+      "enc_time": 0.29381561,
+      "dec_time": 0.15465426,
+      "bpp": 0.09350586,
+      "psnr": 30.77100386,
+      "ms-ssim-db": 13.0231418,
+      "ws-psnr": 30.7476561
+    },
+    {
+      "file": "sun360test_500/14738.jpg",
+      "quality": "1",
+      "enc_time": 0.30370665,
+      "dec_time": 0.15629148,
+      "bpp": 0.1362915,
+      "psnr": 28.97856452,
+      "ms-ssim-db": 12.41163065,
+      "ws-psnr": 28.03749938
+    },
+    {
+      "file": "sun360test_500/1479.jpg",
+      "quality": "1",
+      "enc_time": 0.2987597,
+      "dec_time": 0.15817332,
+      "bpp": 0.13720703,
+      "psnr": 29.56810649,
+      "ms-ssim-db": 12.61671943,
+      "ws-psnr": 29.48707752
+    },
+    {
+      "file": "sun360test_500/14837.jpg",
+      "quality": "1",
+      "enc_time": 0.30141878,
+      "dec_time": 0.15135336,
+      "bpp": 0.12060547,
+      "psnr": 30.2503525,
+      "ms-ssim-db": 13.98917423,
+      "ws-psnr": 29.62429676
+    },
+    {
+      "file": "sun360test_500/14839.jpg",
+      "quality": "1",
+      "enc_time": 0.29607964,
+      "dec_time": 0.15297031,
+      "bpp": 0.09228516,
+      "psnr": 29.56954765,
+      "ms-ssim-db": 11.43096111,
+      "ws-psnr": 29.86678696
+    },
+    {
+      "file": "sun360test_500/14897.jpg",
+      "quality": "1",
+      "enc_time": 0.31010628,
+      "dec_time": 0.15102506,
+      "bpp": 0.10681152,
+      "psnr": 30.1544363,
+      "ms-ssim-db": 13.05827596,
+      "ws-psnr": 29.16680077
+    },
+    {
+      "file": "sun360test_500/15098.jpg",
+      "quality": "1",
+      "enc_time": 0.29699731,
+      "dec_time": 0.14972591,
+      "bpp": 0.15472412,
+      "psnr": 28.89626751,
+      "ms-ssim-db": 14.14569404,
+      "ws-psnr": 28.34867909
+    },
+    {
+      "file": "sun360test_500/15198.jpg",
+      "quality": "1",
+      "enc_time": 0.29276109,
+      "dec_time": 0.15160227,
+      "bpp": 0.12390137,
+      "psnr": 29.10052247,
+      "ms-ssim-db": 12.1665739,
+      "ws-psnr": 28.32651157
+    },
+    {
+      "file": "sun360test_500/15219.jpg",
+      "quality": "1",
+      "enc_time": 0.29383755,
+      "dec_time": 0.15056634,
+      "bpp": 0.2522583,
+      "psnr": 24.66436504,
+      "ms-ssim-db": 12.34020611,
+      "ws-psnr": 24.37160053
+    },
+    {
+      "file": "sun360test_500/15239.jpg",
+      "quality": "1",
+      "enc_time": 0.29033589,
+      "dec_time": 0.15010667,
+      "bpp": 0.09759521,
+      "psnr": 29.39117057,
+      "ms-ssim-db": 11.61635474,
+      "ws-psnr": 28.58329227
+    },
+    {
+      "file": "sun360test_500/15259.jpg",
+      "quality": "1",
+      "enc_time": 0.29089904,
+      "dec_time": 0.15323997,
+      "bpp": 0.06341553,
+      "psnr": 33.11277045,
+      "ms-ssim-db": 13.86137758,
+      "ws-psnr": 31.77156878
+    },
+    {
+      "file": "sun360test_500/15558.jpg",
+      "quality": "1",
+      "enc_time": 0.29014993,
+      "dec_time": 0.15122819,
+      "bpp": 0.26776123,
+      "psnr": 24.77995624,
+      "ms-ssim-db": 12.26163717,
+      "ws-psnr": 24.17867848
+    },
+    {
+      "file": "sun360test_500/15638.jpg",
+      "quality": "1",
+      "enc_time": 0.29514146,
+      "dec_time": 0.15846252,
+      "bpp": 0.06573486,
+      "psnr": 30.80259682,
+      "ms-ssim-db": 11.38172149,
+      "ws-psnr": 30.53862306
+    },
+    {
+      "file": "sun360test_500/15718.jpg",
+      "quality": "1",
+      "enc_time": 0.29127932,
+      "dec_time": 0.15628338,
+      "bpp": 0.12420654,
+      "psnr": 29.54102373,
+      "ms-ssim-db": 13.97973429,
+      "ws-psnr": 28.42240268
+    },
+    {
+      "file": "sun360test_500/15738.jpg",
+      "quality": "1",
+      "enc_time": 0.29121351,
+      "dec_time": 0.15434217,
+      "bpp": 0.15093994,
+      "psnr": 28.28800146,
+      "ms-ssim-db": 11.17395261,
+      "ws-psnr": 27.61019974
+    },
+    {
+      "file": "sun360test_500/15777.jpg",
+      "quality": "1",
+      "enc_time": 0.29919434,
+      "dec_time": 0.15945768,
+      "bpp": 0.0927124,
+      "psnr": 30.28469126,
+      "ms-ssim-db": 13.13364102,
+      "ws-psnr": 30.15561128
+    },
+    {
+      "file": "sun360test_500/1578.jpg",
+      "quality": "1",
+      "enc_time": 0.29929686,
+      "dec_time": 0.15636706,
+      "bpp": 0.1307373,
+      "psnr": 28.59494869,
+      "ms-ssim-db": 11.12586306,
+      "ws-psnr": 28.36499493
+    },
+    {
+      "file": "sun360test_500/15897.jpg",
+      "quality": "1",
+      "enc_time": 0.29405737,
+      "dec_time": 0.16088533,
+      "bpp": 0.24078369,
+      "psnr": 27.78327523,
+      "ms-ssim-db": 12.14784832,
+      "ws-psnr": 27.31285427
+    },
+    {
+      "file": "sun360test_500/15958.jpg",
+      "quality": "1",
+      "enc_time": 0.29812217,
+      "dec_time": 0.1559689,
+      "bpp": 0.1618042,
+      "psnr": 28.82522209,
+      "ms-ssim-db": 13.74985472,
+      "ws-psnr": 28.46268904
+    },
+    {
+      "file": "sun360test_500/16299.jpg",
+      "quality": "1",
+      "enc_time": 0.29909372,
+      "dec_time": 0.16061354,
+      "bpp": 0.06433105,
+      "psnr": 31.32967849,
+      "ms-ssim-db": 11.2044008,
+      "ws-psnr": 30.32705969
+    },
+    {
+      "file": "sun360test_500/16679.jpg",
+      "quality": "1",
+      "enc_time": 0.31625772,
+      "dec_time": 0.16931558,
+      "bpp": 0.11572266,
+      "psnr": 29.66276197,
+      "ms-ssim-db": 13.33298414,
+      "ws-psnr": 29.27275546
+    },
+    {
+      "file": "sun360test_500/1679.jpg",
+      "quality": "1",
+      "enc_time": 0.30352974,
+      "dec_time": 0.15473866,
+      "bpp": 0.09320068,
+      "psnr": 32.66788307,
+      "ms-ssim-db": 17.29278247,
+      "ws-psnr": 33.11163175
+    },
+    {
+      "file": "sun360test_500/16919.jpg",
+      "quality": "1",
+      "enc_time": 0.30336022,
+      "dec_time": 0.16077638,
+      "bpp": 0.12640381,
+      "psnr": 29.0154106,
+      "ms-ssim-db": 12.3368309,
+      "ws-psnr": 28.20505763
+    },
+    {
+      "file": "sun360test_500/17018.jpg",
+      "quality": "1",
+      "enc_time": 0.29619646,
+      "dec_time": 0.15801477,
+      "bpp": 0.22991943,
+      "psnr": 25.57173739,
+      "ms-ssim-db": 12.81636126,
+      "ws-psnr": 25.47951148
+    },
+    {
+      "file": "sun360test_500/17277.jpg",
+      "quality": "1",
+      "enc_time": 0.29962444,
+      "dec_time": 0.16769028,
+      "bpp": 0.2020874,
+      "psnr": 28.10359273,
+      "ms-ssim-db": 13.99794577,
+      "ws-psnr": 27.57093757
+    },
+    {
+      "file": "sun360test_500/17398.jpg",
+      "quality": "1",
+      "enc_time": 0.31176901,
+      "dec_time": 0.16316295,
+      "bpp": 0.12060547,
+      "psnr": 30.14482235,
+      "ms-ssim-db": 14.0670394,
+      "ws-psnr": 29.67045914
+    },
+    {
+      "file": "sun360test_500/17479.jpg",
+      "quality": "1",
+      "enc_time": 0.29904675,
+      "dec_time": 0.1518805,
+      "bpp": 0.07043457,
+      "psnr": 32.58672717,
+      "ms-ssim-db": 13.93260945,
+      "ws-psnr": 31.54218601
+    },
+    {
+      "file": "sun360test_500/17577.jpg",
+      "quality": "1",
+      "enc_time": 0.30053401,
+      "dec_time": 0.15752196,
+      "bpp": 0.12530518,
+      "psnr": 28.32831747,
+      "ms-ssim-db": 10.63291995,
+      "ws-psnr": 27.81729651
+    },
+    {
+      "file": "sun360test_500/17719.jpg",
+      "quality": "1",
+      "enc_time": 0.29745555,
+      "dec_time": 0.16228318,
+      "bpp": 0.25372314,
+      "psnr": 26.09565857,
+      "ms-ssim-db": 11.12373672,
+      "ws-psnr": 25.97321752
+    },
+    {
+      "file": "sun360test_500/17759.jpg",
+      "quality": "1",
+      "enc_time": 0.31430578,
+      "dec_time": 0.16322875,
+      "bpp": 0.16607666,
+      "psnr": 26.83093661,
+      "ms-ssim-db": 10.95348109,
+      "ws-psnr": 25.94755915
+    },
+    {
+      "file": "sun360test_500/17837.jpg",
+      "quality": "1",
+      "enc_time": 0.3022809,
+      "dec_time": 0.161695,
+      "bpp": 0.13726807,
+      "psnr": 28.79334409,
+      "ms-ssim-db": 11.54553054,
+      "ws-psnr": 28.33971302
+    },
+    {
+      "file": "sun360test_500/17858.jpg",
+      "quality": "1",
+      "enc_time": 0.29616022,
+      "dec_time": 0.15353036,
+      "bpp": 0.09173584,
+      "psnr": 31.88418722,
+      "ms-ssim-db": 14.82238289,
+      "ws-psnr": 31.47398451
+    },
+    {
+      "file": "sun360test_500/17958.jpg",
+      "quality": "1",
+      "enc_time": 0.3018074,
+      "dec_time": 0.1547401,
+      "bpp": 0.13665771,
+      "psnr": 29.61528047,
+      "ms-ssim-db": 13.28109914,
+      "ws-psnr": 28.8899507
+    },
+    {
+      "file": "sun360test_500/18179.jpg",
+      "quality": "1",
+      "enc_time": 0.29519367,
+      "dec_time": 0.15547919,
+      "bpp": 0.15814209,
+      "psnr": 29.1106771,
+      "ms-ssim-db": 14.42544787,
+      "ws-psnr": 28.1815091
+    },
+    {
+      "file": "sun360test_500/18198.jpg",
+      "quality": "1",
+      "enc_time": 0.29667807,
+      "dec_time": 0.15051556,
+      "bpp": 0.17938232,
+      "psnr": 27.99722743,
+      "ms-ssim-db": 13.30906554,
+      "ws-psnr": 26.89573982
+    },
+    {
+      "file": "sun360test_500/18218.jpg",
+      "quality": "1",
+      "enc_time": 0.2948761,
+      "dec_time": 0.15059781,
+      "bpp": 0.20379639,
+      "psnr": 27.43610865,
+      "ms-ssim-db": 12.55538435,
+      "ws-psnr": 26.81106984
+    },
+    {
+      "file": "sun360test_500/18298.jpg",
+      "quality": "1",
+      "enc_time": 0.29385686,
+      "dec_time": 0.15305591,
+      "bpp": 0.16662598,
+      "psnr": 27.76034737,
+      "ms-ssim-db": 12.73193447,
+      "ws-psnr": 27.71577839
+    },
+    {
+      "file": "sun360test_500/18557.jpg",
+      "quality": "1",
+      "enc_time": 0.29112601,
+      "dec_time": 0.14953995,
+      "bpp": 0.02154541,
+      "psnr": 40.39915521,
+      "ms-ssim-db": 20.95942723,
+      "ws-psnr": 38.84061259
+    },
+    {
+      "file": "sun360test_500/18818.jpg",
+      "quality": "1",
+      "enc_time": 0.28982449,
+      "dec_time": 0.14986181,
+      "bpp": 0.08197021,
+      "psnr": 29.89982108,
+      "ms-ssim-db": 11.21057771,
+      "ws-psnr": 29.70639566
+    },
+    {
+      "file": "sun360test_500/18858.jpg",
+      "quality": "1",
+      "enc_time": 0.29255867,
+      "dec_time": 0.14907432,
+      "bpp": 0.24090576,
+      "psnr": 25.90248687,
+      "ms-ssim-db": 12.87703286,
+      "ws-psnr": 26.07896859
+    },
+    {
+      "file": "sun360test_500/19018.jpg",
+      "quality": "1",
+      "enc_time": 0.29979992,
+      "dec_time": 0.15749049,
+      "bpp": 0.15533447,
+      "psnr": 27.99510857,
+      "ms-ssim-db": 14.20098031,
+      "ws-psnr": 26.6348249
+    },
+    {
+      "file": "sun360test_500/19019.jpg",
+      "quality": "1",
+      "enc_time": 0.30008245,
+      "dec_time": 0.15584564,
+      "bpp": 0.081604,
+      "psnr": 30.83338384,
+      "ms-ssim-db": 12.32382033,
+      "ws-psnr": 30.03383356
+    },
+    {
+      "file": "sun360test_500/19277.jpg",
+      "quality": "1",
+      "enc_time": 0.29981589,
+      "dec_time": 0.15604186,
+      "bpp": 0.0447998,
+      "psnr": 34.73383345,
+      "ms-ssim-db": 13.0235728,
+      "ws-psnr": 34.41589411
+    },
+    {
+      "file": "sun360test_500/19437.jpg",
+      "quality": "1",
+      "enc_time": 0.29867291,
+      "dec_time": 0.15541863,
+      "bpp": 0.12750244,
+      "psnr": 29.35471632,
+      "ms-ssim-db": 11.8378504,
+      "ws-psnr": 28.72341085
+    },
+    {
+      "file": "sun360test_500/1958.jpg",
+      "quality": "1",
+      "enc_time": 0.29230952,
+      "dec_time": 0.14953113,
+      "bpp": 0.09832764,
+      "psnr": 32.15142614,
+      "ms-ssim-db": 15.32331298,
+      "ws-psnr": 31.55481763
+    },
+    {
+      "file": "sun360test_500/19619.jpg",
+      "quality": "1",
+      "enc_time": 0.29417801,
+      "dec_time": 0.15184951,
+      "bpp": 0.13531494,
+      "psnr": 29.62910645,
+      "ms-ssim-db": 13.2421731,
+      "ws-psnr": 29.23718317
+    },
+    {
+      "file": "sun360test_500/19637.jpg",
+      "quality": "1",
+      "enc_time": 0.29739523,
+      "dec_time": 0.15281868,
+      "bpp": 0.20495605,
+      "psnr": 27.34014572,
+      "ms-ssim-db": 13.48012018,
+      "ws-psnr": 26.36565272
+    },
+    {
+      "file": "sun360test_500/19917.jpg",
+      "quality": "1",
+      "enc_time": 0.2917583,
+      "dec_time": 0.15105629,
+      "bpp": 0.07336426,
+      "psnr": 31.70133957,
+      "ms-ssim-db": 11.88240714,
+      "ws-psnr": 30.87262179
+    },
+    {
+      "file": "sun360test_500/19939.jpg",
+      "quality": "1",
+      "enc_time": 0.29336953,
+      "dec_time": 0.15307593,
+      "bpp": 0.22381592,
+      "psnr": 26.52085364,
+      "ms-ssim-db": 13.61427973,
+      "ws-psnr": 25.50158986
+    },
+    {
+      "file": "sun360test_500/20018.jpg",
+      "quality": "1",
+      "enc_time": 0.29857898,
+      "dec_time": 0.15188313,
+      "bpp": 0.14935303,
+      "psnr": 27.6366177,
+      "ms-ssim-db": 11.94761363,
+      "ws-psnr": 27.40284917
+    },
+    {
+      "file": "sun360test_500/20038.jpg",
+      "quality": "1",
+      "enc_time": 0.3001101,
+      "dec_time": 0.15639877,
+      "bpp": 0.08911133,
+      "psnr": 28.94069158,
+      "ms-ssim-db": 11.09766148,
+      "ws-psnr": 28.99759144
+    },
+    {
+      "file": "sun360test_500/20078.jpg",
+      "quality": "1",
+      "enc_time": 0.29961467,
+      "dec_time": 0.15711927,
+      "bpp": 0.11077881,
+      "psnr": 30.84832358,
+      "ms-ssim-db": 15.35871331,
+      "ws-psnr": 29.84778924
+    },
+    {
+      "file": "sun360test_500/20219.jpg",
+      "quality": "1",
+      "enc_time": 0.29919457,
+      "dec_time": 0.15623832,
+      "bpp": 0.12689209,
+      "psnr": 29.81865346,
+      "ms-ssim-db": 14.25573788,
+      "ws-psnr": 28.91167776
+    },
+    {
+      "file": "sun360test_500/20277.jpg",
+      "quality": "1",
+      "enc_time": 0.29719114,
+      "dec_time": 0.16357541,
+      "bpp": 0.14593506,
+      "psnr": 28.95491775,
+      "ms-ssim-db": 12.64457516,
+      "ws-psnr": 28.15975691
+    },
+    {
+      "file": "sun360test_500/20377.jpg",
+      "quality": "1",
+      "enc_time": 0.29835749,
+      "dec_time": 0.15659785,
+      "bpp": 0.09814453,
+      "psnr": 31.28609075,
+      "ms-ssim-db": 12.16717077,
+      "ws-psnr": 30.59609
+    },
+    {
+      "file": "sun360test_500/20418.jpg",
+      "quality": "1",
+      "enc_time": 0.29997706,
+      "dec_time": 0.15655947,
+      "bpp": 0.08270264,
+      "psnr": 31.47860446,
+      "ms-ssim-db": 12.96260031,
+      "ws-psnr": 30.66112193
+    },
+    {
+      "file": "sun360test_500/20478.jpg",
+      "quality": "1",
+      "enc_time": 0.28968883,
+      "dec_time": 0.15475631,
+      "bpp": 0.2197876,
+      "psnr": 26.38380363,
+      "ms-ssim-db": 12.16245773,
+      "ws-psnr": 26.28366085
+    },
+    {
+      "file": "sun360test_500/20537.jpg",
+      "quality": "1",
+      "enc_time": 0.30035758,
+      "dec_time": 0.15607619,
+      "bpp": 0.14855957,
+      "psnr": 28.91393162,
+      "ms-ssim-db": 12.77854167,
+      "ws-psnr": 28.28105829
+    },
+    {
+      "file": "sun360test_500/20697.jpg",
+      "quality": "1",
+      "enc_time": 0.30057406,
+      "dec_time": 0.15904331,
+      "bpp": 0.25250244,
+      "psnr": 26.87137485,
+      "ms-ssim-db": 13.50205609,
+      "ws-psnr": 26.30438731
+    },
+    {
+      "file": "sun360test_500/20718.jpg",
+      "quality": "1",
+      "enc_time": 0.29991722,
+      "dec_time": 0.1585536,
+      "bpp": 0.21405029,
+      "psnr": 26.27649252,
+      "ms-ssim-db": 11.09378364,
+      "ws-psnr": 25.83954695
+    },
+    {
+      "file": "sun360test_500/20738.jpg",
+      "quality": "1",
+      "enc_time": 0.3028264,
+      "dec_time": 0.15578628,
+      "bpp": 0.21191406,
+      "psnr": 26.52854908,
+      "ms-ssim-db": 11.9288139,
+      "ws-psnr": 25.91921587
+    },
+    {
+      "file": "sun360test_500/20758.jpg",
+      "quality": "1",
+      "enc_time": 0.3081069,
+      "dec_time": 0.15471029,
+      "bpp": 0.08422852,
+      "psnr": 31.94468579,
+      "ms-ssim-db": 12.93092206,
+      "ws-psnr": 30.95878466
+    },
+    {
+      "file": "sun360test_500/20799.jpg",
+      "quality": "1",
+      "enc_time": 0.31909037,
+      "dec_time": 0.16856408,
+      "bpp": 0.21490479,
+      "psnr": 26.37395081,
+      "ms-ssim-db": 11.33675111,
+      "ws-psnr": 25.88300882
+    },
+    {
+      "file": "sun360test_500/20879.jpg",
+      "quality": "1",
+      "enc_time": 0.31815028,
+      "dec_time": 0.17979479,
+      "bpp": 0.1272583,
+      "psnr": 29.95433709,
+      "ms-ssim-db": 14.18686521,
+      "ws-psnr": 29.12641511
+    },
+    {
+      "file": "sun360test_500/20939.jpg",
+      "quality": "1",
+      "enc_time": 0.31448317,
+      "dec_time": 0.18273759,
+      "bpp": 0.06433105,
+      "psnr": 32.12013796,
+      "ms-ssim-db": 11.56786518,
+      "ws-psnr": 31.18427316
+    },
+    {
+      "file": "sun360test_500/21018.jpg",
+      "quality": "1",
+      "enc_time": 0.32049322,
+      "dec_time": 0.1644814,
+      "bpp": 0.15045166,
+      "psnr": 29.90622383,
+      "ms-ssim-db": 15.88312246,
+      "ws-psnr": 29.16918393
+    },
+    {
+      "file": "sun360test_500/21058.jpg",
+      "quality": "1",
+      "enc_time": 0.3095727,
+      "dec_time": 0.16825938,
+      "bpp": 0.11755371,
+      "psnr": 29.43869581,
+      "ms-ssim-db": 12.40464045,
+      "ws-psnr": 28.7520986
+    },
+    {
+      "file": "sun360test_500/21199.jpg",
+      "quality": "1",
+      "enc_time": 0.31511235,
+      "dec_time": 0.18526673,
+      "bpp": 0.2276001,
+      "psnr": 25.72884868,
+      "ms-ssim-db": 12.31204309,
+      "ws-psnr": 25.76703125
+    },
+    {
+      "file": "sun360test_500/21259.jpg",
+      "quality": "1",
+      "enc_time": 0.31720018,
+      "dec_time": 0.16426635,
+      "bpp": 0.23956299,
+      "psnr": 25.98477477,
+      "ms-ssim-db": 13.21581054,
+      "ws-psnr": 25.04861277
+    },
+    {
+      "file": "sun360test_500/21319.jpg",
+      "quality": "1",
+      "enc_time": 0.30816698,
+      "dec_time": 0.16588831,
+      "bpp": 0.08374023,
+      "psnr": 31.42437657,
+      "ms-ssim-db": 14.1919729,
+      "ws-psnr": 30.26919535
+    },
+    {
+      "file": "sun360test_500/21458.jpg",
+      "quality": "1",
+      "enc_time": 0.29294491,
+      "dec_time": 0.15935397,
+      "bpp": 0.10101318,
+      "psnr": 31.16823203,
+      "ms-ssim-db": 13.76756917,
+      "ws-psnr": 30.04940903
+    },
+    {
+      "file": "sun360test_500/21539.jpg",
+      "quality": "1",
+      "enc_time": 0.2996397,
+      "dec_time": 0.15507507,
+      "bpp": 0.22790527,
+      "psnr": 26.71053198,
+      "ms-ssim-db": 14.83065721,
+      "ws-psnr": 26.61414796
+    },
+    {
+      "file": "sun360test_500/21557.jpg",
+      "quality": "1",
+      "enc_time": 0.2949338,
+      "dec_time": 0.15166163,
+      "bpp": 0.19165039,
+      "psnr": 28.07886548,
+      "ms-ssim-db": 13.12839775,
+      "ws-psnr": 27.81507163
+    },
+    {
+      "file": "sun360test_500/21577.jpg",
+      "quality": "1",
+      "enc_time": 0.29628539,
+      "dec_time": 0.15036654,
+      "bpp": 0.2255249,
+      "psnr": 26.9952289,
+      "ms-ssim-db": 11.59278744,
+      "ws-psnr": 26.83521353
+    },
+    {
+      "file": "sun360test_500/2178.jpg",
+      "quality": "1",
+      "enc_time": 0.2930398,
+      "dec_time": 0.15627837,
+      "bpp": 0.2119751,
+      "psnr": 28.1500694,
+      "ms-ssim-db": 12.69773435,
+      "ws-psnr": 27.60833961
+    },
+    {
+      "file": "sun360test_500/21798.jpg",
+      "quality": "1",
+      "enc_time": 0.30126357,
+      "dec_time": 0.15572524,
+      "bpp": 0.08825684,
+      "psnr": 29.89595533,
+      "ms-ssim-db": 12.69690579,
+      "ws-psnr": 28.52811114
+    },
+    {
+      "file": "sun360test_500/21819.jpg",
+      "quality": "1",
+      "enc_time": 0.29964423,
+      "dec_time": 0.15917778,
+      "bpp": 0.13360596,
+      "psnr": 29.4299455,
+      "ms-ssim-db": 12.1239865,
+      "ws-psnr": 28.71684932
+    },
+    {
+      "file": "sun360test_500/21997.jpg",
+      "quality": "1",
+      "enc_time": 0.30132198,
+      "dec_time": 0.15715885,
+      "bpp": 0.07598877,
+      "psnr": 32.82550515,
+      "ms-ssim-db": 15.67327452,
+      "ws-psnr": 31.83380036
+    },
+    {
+      "file": "sun360test_500/21999.jpg",
+      "quality": "1",
+      "enc_time": 0.30900741,
+      "dec_time": 0.1598959,
+      "bpp": 0.09405518,
+      "psnr": 32.34493069,
+      "ms-ssim-db": 15.65495126,
+      "ws-psnr": 30.96093923
+    },
+    {
+      "file": "sun360test_500/22339.jpg",
+      "quality": "1",
+      "enc_time": 0.3098073,
+      "dec_time": 0.15786672,
+      "bpp": 0.25366211,
+      "psnr": 25.89420875,
+      "ms-ssim-db": 11.74611707,
+      "ws-psnr": 25.46290866
+    },
+    {
+      "file": "sun360test_500/22377.jpg",
+      "quality": "1",
+      "enc_time": 0.3062942,
+      "dec_time": 0.16022849,
+      "bpp": 0.07244873,
+      "psnr": 31.96333936,
+      "ms-ssim-db": 12.74117024,
+      "ws-psnr": 31.91046691
+    },
+    {
+      "file": "sun360test_500/22537.jpg",
+      "quality": "1",
+      "enc_time": 0.30717969,
+      "dec_time": 0.15817356,
+      "bpp": 0.1282959,
+      "psnr": 29.83792423,
+      "ms-ssim-db": 14.8544826,
+      "ws-psnr": 28.8049039
+    },
+    {
+      "file": "sun360test_500/22678.jpg",
+      "quality": "1",
+      "enc_time": 0.32951856,
+      "dec_time": 0.17070508,
+      "bpp": 0.11566162,
+      "psnr": 29.82741635,
+      "ms-ssim-db": 12.48842991,
+      "ws-psnr": 28.89874486
+    },
+    {
+      "file": "sun360test_500/23057.jpg",
+      "quality": "1",
+      "enc_time": 0.30976033,
+      "dec_time": 0.16025686,
+      "bpp": 0.05578613,
+      "psnr": 33.96081804,
+      "ms-ssim-db": 14.71633457,
+      "ws-psnr": 34.2882495
+    },
+    {
+      "file": "sun360test_500/23118.jpg",
+      "quality": "1",
+      "enc_time": 0.30843401,
+      "dec_time": 0.16484427,
+      "bpp": 0.19616699,
+      "psnr": 28.30459725,
+      "ms-ssim-db": 12.87091188,
+      "ws-psnr": 27.37979017
+    },
+    {
+      "file": "sun360test_500/23137.jpg",
+      "quality": "1",
+      "enc_time": 0.32468557,
+      "dec_time": 0.17944694,
+      "bpp": 0.0970459,
+      "psnr": 31.39136264,
+      "ms-ssim-db": 15.33893217,
+      "ws-psnr": 30.54863515
+    },
+    {
+      "file": "sun360test_500/23377.jpg",
+      "quality": "1",
+      "enc_time": 0.30433655,
+      "dec_time": 0.16102195,
+      "bpp": 0.07489014,
+      "psnr": 32.51867308,
+      "ms-ssim-db": 13.99324939,
+      "ws-psnr": 31.64119355
+    },
+    {
+      "file": "sun360test_500/23658.jpg",
+      "quality": "1",
+      "enc_time": 0.31205535,
+      "dec_time": 0.16624546,
+      "bpp": 0.13763428,
+      "psnr": 29.66851143,
+      "ms-ssim-db": 15.13272901,
+      "ws-psnr": 28.5345868
+    },
+    {
+      "file": "sun360test_500/23737.jpg",
+      "quality": "1",
+      "enc_time": 0.29788995,
+      "dec_time": 0.15421319,
+      "bpp": 0.1583252,
+      "psnr": 29.18151551,
+      "ms-ssim-db": 13.7474737,
+      "ws-psnr": 28.43740201
+    },
+    {
+      "file": "sun360test_500/23919.jpg",
+      "quality": "1",
+      "enc_time": 0.31279278,
+      "dec_time": 0.16794133,
+      "bpp": 0.15338135,
+      "psnr": 28.83847539,
+      "ms-ssim-db": 14.28522439,
+      "ws-psnr": 27.53126165
+    },
+    {
+      "file": "sun360test_500/23999.jpg",
+      "quality": "1",
+      "enc_time": 0.30377412,
+      "dec_time": 0.16239214,
+      "bpp": 0.13586426,
+      "psnr": 28.751516,
+      "ms-ssim-db": 11.05013775,
+      "ws-psnr": 27.90147031
+    },
+    {
+      "file": "sun360test_500/24099.jpg",
+      "quality": "1",
+      "enc_time": 0.29853177,
+      "dec_time": 0.16155529,
+      "bpp": 0.14343262,
+      "psnr": 29.65538711,
+      "ms-ssim-db": 12.86047594,
+      "ws-psnr": 29.14086648
+    },
+    {
+      "file": "sun360test_500/24158.jpg",
+      "quality": "1",
+      "enc_time": 0.29922247,
+      "dec_time": 0.16907549,
+      "bpp": 0.10327148,
+      "psnr": 30.734059,
+      "ms-ssim-db": 13.23690632,
+      "ws-psnr": 30.00081639
+    },
+    {
+      "file": "sun360test_500/24277.jpg",
+      "quality": "1",
+      "enc_time": 0.30680037,
+      "dec_time": 0.1595962,
+      "bpp": 0.0994873,
+      "psnr": 30.06509445,
+      "ms-ssim-db": 13.63617007,
+      "ws-psnr": 31.45466839
+    },
+    {
+      "file": "sun360test_500/24398.jpg",
+      "quality": "1",
+      "enc_time": 0.303725,
+      "dec_time": 0.1619153,
+      "bpp": 0.27648926,
+      "psnr": 25.73967573,
+      "ms-ssim-db": 12.400162,
+      "ws-psnr": 25.2550923
+    },
+    {
+      "file": "sun360test_500/24399.jpg",
+      "quality": "1",
+      "enc_time": 0.30850792,
+      "dec_time": 0.16232681,
+      "bpp": 0.21765137,
+      "psnr": 26.57064272,
+      "ms-ssim-db": 14.64386392,
+      "ws-psnr": 26.81891552
+    },
+    {
+      "file": "sun360test_500/24578.jpg",
+      "quality": "1",
+      "enc_time": 0.30852485,
+      "dec_time": 0.16085792,
+      "bpp": 0.11584473,
+      "psnr": 28.62834834,
+      "ms-ssim-db": 11.12075689,
+      "ws-psnr": 28.81682182
+    },
+    {
+      "file": "sun360test_500/24979.jpg",
+      "quality": "1",
+      "enc_time": 0.29916763,
+      "dec_time": 0.15638208,
+      "bpp": 0.1607666,
+      "psnr": 26.96873687,
+      "ms-ssim-db": 11.54065953,
+      "ws-psnr": 25.8305875
+    },
+    {
+      "file": "sun360test_500/25057.jpg",
+      "quality": "1",
+      "enc_time": 0.29458809,
+      "dec_time": 0.15363121,
+      "bpp": 0.08062744,
+      "psnr": 28.62013934,
+      "ms-ssim-db": 10.50671724,
+      "ws-psnr": 28.65012816
+    },
+    {
+      "file": "sun360test_500/25097.jpg",
+      "quality": "1",
+      "enc_time": 0.30027509,
+      "dec_time": 0.1580832,
+      "bpp": 0.07788086,
+      "psnr": 32.60979554,
+      "ms-ssim-db": 14.08795647,
+      "ws-psnr": 31.57296807
+    },
+    {
+      "file": "sun360test_500/25119.jpg",
+      "quality": "1",
+      "enc_time": 0.30714655,
+      "dec_time": 0.1623168,
+      "bpp": 0.15637207,
+      "psnr": 28.09995869,
+      "ms-ssim-db": 11.37456463,
+      "ws-psnr": 27.58161715
+    },
+    {
+      "file": "sun360test_500/25179.jpg",
+      "quality": "1",
+      "enc_time": 0.32459736,
+      "dec_time": 0.15940118,
+      "bpp": 0.11096191,
+      "psnr": 29.23843457,
+      "ms-ssim-db": 12.39397629,
+      "ws-psnr": 28.15769224
+    },
+    {
+      "file": "sun360test_500/25199.jpg",
+      "quality": "1",
+      "enc_time": 0.31264806,
+      "dec_time": 0.16037989,
+      "bpp": 0.30718994,
+      "psnr": 25.35238337,
+      "ms-ssim-db": 11.84617797,
+      "ws-psnr": 25.24929443
+    },
+    {
+      "file": "sun360test_500/25399.jpg",
+      "quality": "1",
+      "enc_time": 0.30701375,
+      "dec_time": 0.16152334,
+      "bpp": 0.12768555,
+      "psnr": 29.82473022,
+      "ms-ssim-db": 12.49434256,
+      "ws-psnr": 29.18218136
+    },
+    {
+      "file": "sun360test_500/2557.jpg",
+      "quality": "1",
+      "enc_time": 0.30011797,
+      "dec_time": 0.15767503,
+      "bpp": 0.15655518,
+      "psnr": 29.20202693,
+      "ms-ssim-db": 13.07813464,
+      "ws-psnr": 28.939512
+    },
+    {
+      "file": "sun360test_500/25577.jpg",
+      "quality": "1",
+      "enc_time": 0.30964112,
+      "dec_time": 0.16166711,
+      "bpp": 0.10308838,
+      "psnr": 30.10506317,
+      "ms-ssim-db": 13.32219585,
+      "ws-psnr": 29.29114187
+    },
+    {
+      "file": "sun360test_500/25618.jpg",
+      "quality": "1",
+      "enc_time": 0.31216121,
+      "dec_time": 0.16127396,
+      "bpp": 0.13183594,
+      "psnr": 29.75906591,
+      "ms-ssim-db": 13.97010817,
+      "ws-psnr": 28.696718
+    },
+    {
+      "file": "sun360test_500/25619.jpg",
+      "quality": "1",
+      "enc_time": 0.29736495,
+      "dec_time": 0.15752697,
+      "bpp": 0.15472412,
+      "psnr": 29.56070086,
+      "ms-ssim-db": 13.71688844,
+      "ws-psnr": 29.05298133
+    },
+    {
+      "file": "sun360test_500/25638.jpg",
+      "quality": "1",
+      "enc_time": 0.31263423,
+      "dec_time": 0.15338683,
+      "bpp": 0.14453125,
+      "psnr": 28.48111577,
+      "ms-ssim-db": 12.96637586,
+      "ws-psnr": 27.65735251
+    },
+    {
+      "file": "sun360test_500/25757.jpg",
+      "quality": "1",
+      "enc_time": 0.29556584,
+      "dec_time": 0.15546799,
+      "bpp": 0.06970215,
+      "psnr": 30.99984698,
+      "ms-ssim-db": 12.12352638,
+      "ws-psnr": 30.14409059
+    },
+    {
+      "file": "sun360test_500/2578.jpg",
+      "quality": "1",
+      "enc_time": 0.29981112,
+      "dec_time": 0.15752292,
+      "bpp": 0.0581665,
+      "psnr": 33.89299418,
+      "ms-ssim-db": 14.20789821,
+      "ws-psnr": 33.53118829
+    },
+    {
+      "file": "sun360test_500/26278.jpg",
+      "quality": "1",
+      "enc_time": 0.2941649,
+      "dec_time": 0.15297294,
+      "bpp": 0.08398438,
+      "psnr": 30.88231881,
+      "ms-ssim-db": 12.38982745,
+      "ws-psnr": 29.68788909
+    },
+    {
+      "file": "sun360test_500/26438.jpg",
+      "quality": "1",
+      "enc_time": 0.29867935,
+      "dec_time": 0.15613484,
+      "bpp": 0.21008301,
+      "psnr": 27.35521399,
+      "ms-ssim-db": 12.21217574,
+      "ws-psnr": 26.78763534
+    },
+    {
+      "file": "sun360test_500/26637.jpg",
+      "quality": "1",
+      "enc_time": 0.31009531,
+      "dec_time": 0.17474699,
+      "bpp": 0.09619141,
+      "psnr": 30.3207122,
+      "ms-ssim-db": 14.84256146,
+      "ws-psnr": 28.8771123
+    },
+    {
+      "file": "sun360test_500/26639.jpg",
+      "quality": "1",
+      "enc_time": 0.31035137,
+      "dec_time": 0.1622262,
+      "bpp": 0.14642334,
+      "psnr": 29.80144764,
+      "ms-ssim-db": 13.32714388,
+      "ws-psnr": 29.5922885
+    },
+    {
+      "file": "sun360test_500/26739.jpg",
+      "quality": "1",
+      "enc_time": 0.30216098,
+      "dec_time": 0.18061185,
+      "bpp": 0.19897461,
+      "psnr": 26.95738805,
+      "ms-ssim-db": 10.28179786,
+      "ws-psnr": 26.50820475
+    },
+    {
+      "file": "sun360test_500/26857.jpg",
+      "quality": "1",
+      "enc_time": 0.31278276,
+      "dec_time": 0.16228223,
+      "bpp": 0.24005127,
+      "psnr": 26.47567027,
+      "ms-ssim-db": 12.81216971,
+      "ws-psnr": 25.84741089
+    },
+    {
+      "file": "sun360test_500/26879.jpg",
+      "quality": "1",
+      "enc_time": 0.32372522,
+      "dec_time": 0.16158628,
+      "bpp": 0.12286377,
+      "psnr": 29.10932071,
+      "ms-ssim-db": 12.94332807,
+      "ws-psnr": 28.10235012
+    },
+    {
+      "file": "sun360test_500/26937.jpg",
+      "quality": "1",
+      "enc_time": 0.30831814,
+      "dec_time": 0.15422821,
+      "bpp": 0.09814453,
+      "psnr": 31.16216875,
+      "ms-ssim-db": 12.95489035,
+      "ws-psnr": 30.9360611
+    },
+    {
+      "file": "sun360test_500/26957.jpg",
+      "quality": "1",
+      "enc_time": 0.29929328,
+      "dec_time": 0.15604305,
+      "bpp": 0.1229248,
+      "psnr": 28.10406222,
+      "ms-ssim-db": 10.91816928,
+      "ws-psnr": 27.48882214
+    },
+    {
+      "file": "sun360test_500/2737.jpg",
+      "quality": "1",
+      "enc_time": 0.30119848,
+      "dec_time": 0.15762281,
+      "bpp": 0.11682129,
+      "psnr": 28.83418249,
+      "ms-ssim-db": 12.68194184,
+      "ws-psnr": 28.45480188
+    },
+    {
+      "file": "sun360test_500/27477.jpg",
+      "quality": "1",
+      "enc_time": 0.29814625,
+      "dec_time": 0.15345263,
+      "bpp": 0.08728027,
+      "psnr": 30.89511501,
+      "ms-ssim-db": 13.24239155,
+      "ws-psnr": 30.24368581
+    },
+    {
+      "file": "sun360test_500/27559.jpg",
+      "quality": "1",
+      "enc_time": 0.29445958,
+      "dec_time": 0.15922642,
+      "bpp": 0.31488037,
+      "psnr": 24.2484147,
+      "ms-ssim-db": 12.5954031,
+      "ws-psnr": 23.51064309
+    },
+    {
+      "file": "sun360test_500/27639.jpg",
+      "quality": "1",
+      "enc_time": 0.30548215,
+      "dec_time": 0.16082048,
+      "bpp": 0.22650146,
+      "psnr": 26.33545424,
+      "ms-ssim-db": 11.05497669,
+      "ws-psnr": 25.61216924
+    },
+    {
+      "file": "sun360test_500/27698.jpg",
+      "quality": "1",
+      "enc_time": 0.29567313,
+      "dec_time": 0.15873647,
+      "bpp": 0.18481445,
+      "psnr": 27.2481689,
+      "ms-ssim-db": 12.27733474,
+      "ws-psnr": 26.35758332
+    },
+    {
+      "file": "sun360test_500/27738.jpg",
+      "quality": "1",
+      "enc_time": 0.3145411,
+      "dec_time": 0.16608143,
+      "bpp": 0.08679199,
+      "psnr": 30.81169393,
+      "ms-ssim-db": 12.86901211,
+      "ws-psnr": 29.35430497
+    },
+    {
+      "file": "sun360test_500/27839.jpg",
+      "quality": "1",
+      "enc_time": 0.32497668,
+      "dec_time": 0.17570424,
+      "bpp": 0.16320801,
+      "psnr": 27.2215084,
+      "ms-ssim-db": 12.57555373,
+      "ws-psnr": 26.35383067
+    },
+    {
+      "file": "sun360test_500/27898.jpg",
+      "quality": "1",
+      "enc_time": 0.30186176,
+      "dec_time": 0.16053271,
+      "bpp": 0.07495117,
+      "psnr": 32.63514343,
+      "ms-ssim-db": 13.96560306,
+      "ws-psnr": 31.67349214
+    },
+    {
+      "file": "sun360test_500/28078.jpg",
+      "quality": "1",
+      "enc_time": 0.31750202,
+      "dec_time": 0.16954136,
+      "bpp": 0.11022949,
+      "psnr": 28.70363964,
+      "ms-ssim-db": 10.64221352,
+      "ws-psnr": 28.65677511
+    },
+    {
+      "file": "sun360test_500/28237.jpg",
+      "quality": "1",
+      "enc_time": 0.32337022,
+      "dec_time": 0.15979958,
+      "bpp": 0.1741333,
+      "psnr": 27.2061293,
+      "ms-ssim-db": 11.19760166,
+      "ws-psnr": 26.88911701
+    },
+    {
+      "file": "sun360test_500/28337.jpg",
+      "quality": "1",
+      "enc_time": 0.31577349,
+      "dec_time": 0.16240788,
+      "bpp": 0.20526123,
+      "psnr": 26.53706443,
+      "ms-ssim-db": 12.5603339,
+      "ws-psnr": 25.57833895
+    },
+    {
+      "file": "sun360test_500/28439.jpg",
+      "quality": "1",
+      "enc_time": 0.30802202,
+      "dec_time": 0.15986967,
+      "bpp": 0.0994873,
+      "psnr": 30.90712592,
+      "ms-ssim-db": 14.13329236,
+      "ws-psnr": 30.55402721
+    },
+    {
+      "file": "sun360test_500/28579.jpg",
+      "quality": "1",
+      "enc_time": 0.30401921,
+      "dec_time": 0.15588903,
+      "bpp": 0.16644287,
+      "psnr": 28.60611892,
+      "ms-ssim-db": 14.86802443,
+      "ws-psnr": 28.06523837
+    },
+    {
+      "file": "sun360test_500/28617.jpg",
+      "quality": "1",
+      "enc_time": 0.29455614,
+      "dec_time": 0.15429306,
+      "bpp": 0.1394043,
+      "psnr": 28.84217455,
+      "ms-ssim-db": 11.86774149,
+      "ws-psnr": 28.4120751
+    },
+    {
+      "file": "sun360test_500/28778.jpg",
+      "quality": "1",
+      "enc_time": 0.29851651,
+      "dec_time": 0.15399885,
+      "bpp": 0.08209229,
+      "psnr": 31.89712133,
+      "ms-ssim-db": 13.85382027,
+      "ws-psnr": 30.97194224
+    },
+    {
+      "file": "sun360test_500/2879.jpg",
+      "quality": "1",
+      "enc_time": 0.2956965,
+      "dec_time": 0.15456915,
+      "bpp": 0.1114502,
+      "psnr": 31.49813572,
+      "ms-ssim-db": 17.00362726,
+      "ws-psnr": 30.33729294
+    },
+    {
+      "file": "sun360test_500/28899.jpg",
+      "quality": "1",
+      "enc_time": 0.29689455,
+      "dec_time": 0.15166807,
+      "bpp": 0.11114502,
+      "psnr": 29.56783141,
+      "ms-ssim-db": 12.20285018,
+      "ws-psnr": 28.87601348
+    },
+    {
+      "file": "sun360test_500/29177.jpg",
+      "quality": "1",
+      "enc_time": 0.29516196,
+      "dec_time": 0.15577102,
+      "bpp": 0.08685303,
+      "psnr": 30.90451311,
+      "ms-ssim-db": 13.2906866,
+      "ws-psnr": 29.44115075
+    },
+    {
+      "file": "sun360test_500/29239.jpg",
+      "quality": "1",
+      "enc_time": 0.2969172,
+      "dec_time": 0.15431142,
+      "bpp": 0.25592041,
+      "psnr": 25.28471828,
+      "ms-ssim-db": 12.38740464,
+      "ws-psnr": 24.93476478
+    },
+    {
+      "file": "sun360test_500/29438.jpg",
+      "quality": "1",
+      "enc_time": 0.29974079,
+      "dec_time": 0.15548396,
+      "bpp": 0.11090088,
+      "psnr": 30.51313826,
+      "ms-ssim-db": 12.83223868,
+      "ws-psnr": 29.2741365
+    },
+    {
+      "file": "sun360test_500/29457.jpg",
+      "quality": "1",
+      "enc_time": 0.29466271,
+      "dec_time": 0.15022779,
+      "bpp": 0.04168701,
+      "psnr": 34.60137868,
+      "ms-ssim-db": 14.76289197,
+      "ws-psnr": 33.44196948
+    },
+    {
+      "file": "sun360test_500/29459.jpg",
+      "quality": "1",
+      "enc_time": 0.29642153,
+      "dec_time": 0.15238976,
+      "bpp": 0.16485596,
+      "psnr": 28.30932053,
+      "ms-ssim-db": 12.13316521,
+      "ws-psnr": 27.59310117
+    },
+    {
+      "file": "sun360test_500/29479.jpg",
+      "quality": "1",
+      "enc_time": 0.29249382,
+      "dec_time": 0.15180135,
+      "bpp": 0.16094971,
+      "psnr": 28.2795332,
+      "ms-ssim-db": 14.19621575,
+      "ws-psnr": 27.64982186
+    },
+    {
+      "file": "sun360test_500/29518.jpg",
+      "quality": "1",
+      "enc_time": 0.29434872,
+      "dec_time": 0.15179873,
+      "bpp": 0.1965332,
+      "psnr": 27.64627945,
+      "ms-ssim-db": 12.18607852,
+      "ws-psnr": 26.99467006
+    },
+    {
+      "file": "sun360test_500/29598.jpg",
+      "quality": "1",
+      "enc_time": 0.29402375,
+      "dec_time": 0.15436244,
+      "bpp": 0.12866211,
+      "psnr": 28.83943123,
+      "ms-ssim-db": 11.27223113,
+      "ws-psnr": 28.15098882
+    },
+    {
+      "file": "sun360test_500/29599.jpg",
+      "quality": "1",
+      "enc_time": 0.29353428,
+      "dec_time": 0.15496564,
+      "bpp": 0.14550781,
+      "psnr": 29.87325704,
+      "ms-ssim-db": 16.7069132,
+      "ws-psnr": 29.18887065
+    },
+    {
+      "file": "sun360test_500/29619.jpg",
+      "quality": "1",
+      "enc_time": 0.2925241,
+      "dec_time": 0.15562224,
+      "bpp": 0.11724854,
+      "psnr": 28.31964875,
+      "ms-ssim-db": 10.61381976,
+      "ws-psnr": 27.70523539
+    },
+    {
+      "file": "sun360test_500/29919.jpg",
+      "quality": "1",
+      "enc_time": 0.29306746,
+      "dec_time": 0.15826607,
+      "bpp": 0.14141846,
+      "psnr": 28.57435334,
+      "ms-ssim-db": 12.6278365,
+      "ws-psnr": 27.5844714
+    },
+    {
+      "file": "sun360test_500/29939.jpg",
+      "quality": "1",
+      "enc_time": 0.29446268,
+      "dec_time": 0.15533137,
+      "bpp": 0.02008057,
+      "psnr": 37.28525103,
+      "ms-ssim-db": 15.06944576,
+      "ws-psnr": 38.02198103
+    },
+    {
+      "file": "sun360test_500/29999.jpg",
+      "quality": "1",
+      "enc_time": 0.3098197,
+      "dec_time": 0.15598774,
+      "bpp": 0.08905029,
+      "psnr": 31.11577294,
+      "ms-ssim-db": 12.64476552,
+      "ws-psnr": 31.14688569
+    },
+    {
+      "file": "sun360test_500/30018.jpg",
+      "quality": "1",
+      "enc_time": 0.29525399,
+      "dec_time": 0.15718699,
+      "bpp": 0.28314209,
+      "psnr": 24.27930442,
+      "ms-ssim-db": 13.22918416,
+      "ws-psnr": 23.96473388
+    },
+    {
+      "file": "sun360test_500/30039.jpg",
+      "quality": "1",
+      "enc_time": 0.2956965,
+      "dec_time": 0.16674376,
+      "bpp": 0.20031738,
+      "psnr": 28.27554878,
+      "ms-ssim-db": 13.20843463,
+      "ws-psnr": 27.62379523
+    },
+    {
+      "file": "sun360test_500/30119.jpg",
+      "quality": "1",
+      "enc_time": 0.29611564,
+      "dec_time": 0.15174747,
+      "bpp": 0.14819336,
+      "psnr": 28.59354264,
+      "ms-ssim-db": 11.2416292,
+      "ws-psnr": 27.94884031
+    },
+    {
+      "file": "sun360test_500/30197.jpg",
+      "quality": "1",
+      "enc_time": 0.29534292,
+      "dec_time": 0.15330005,
+      "bpp": 0.11407471,
+      "psnr": 29.8568949,
+      "ms-ssim-db": 13.73585125,
+      "ws-psnr": 29.75368072
+    },
+    {
+      "file": "sun360test_500/30337.jpg",
+      "quality": "1",
+      "enc_time": 0.2948308,
+      "dec_time": 0.15240049,
+      "bpp": 0.13208008,
+      "psnr": 29.12265671,
+      "ms-ssim-db": 14.72870577,
+      "ws-psnr": 28.53139391
+    },
+    {
+      "file": "sun360test_500/30438.jpg",
+      "quality": "1",
+      "enc_time": 0.29387546,
+      "dec_time": 0.15441298,
+      "bpp": 0.0769043,
+      "psnr": 29.83340808,
+      "ms-ssim-db": 11.05152258,
+      "ws-psnr": 29.6349133
+    },
+    {
+      "file": "sun360test_500/30717.jpg",
+      "quality": "1",
+      "enc_time": 0.29379416,
+      "dec_time": 0.15274215,
+      "bpp": 0.21142578,
+      "psnr": 25.53091418,
+      "ms-ssim-db": 11.99003693,
+      "ws-psnr": 25.85349334
+    },
+    {
+      "file": "sun360test_500/31219.jpg",
+      "quality": "1",
+      "enc_time": 0.29406714,
+      "dec_time": 0.15686274,
+      "bpp": 0.11956787,
+      "psnr": 30.13234054,
+      "ms-ssim-db": 12.82752544,
+      "ws-psnr": 29.14915211
+    },
+    {
+      "file": "sun360test_500/31359.jpg",
+      "quality": "1",
+      "enc_time": 0.29253697,
+      "dec_time": 0.15625191,
+      "bpp": 0.18322754,
+      "psnr": 27.13361268,
+      "ms-ssim-db": 12.12969344,
+      "ws-psnr": 27.26179277
+    },
+    {
+      "file": "sun360test_500/3158.jpg",
+      "quality": "1",
+      "enc_time": 0.29623652,
+      "dec_time": 0.15988851,
+      "bpp": 0.15106201,
+      "psnr": 29.22694455,
+      "ms-ssim-db": 12.5319913,
+      "ws-psnr": 28.72248886
+    },
+    {
+      "file": "sun360test_500/31719.jpg",
+      "quality": "1",
+      "enc_time": 0.303684,
+      "dec_time": 0.15433669,
+      "bpp": 0.13970947,
+      "psnr": 28.68233324,
+      "ms-ssim-db": 11.93615342,
+      "ws-psnr": 28.30295852
+    },
+    {
+      "file": "sun360test_500/31777.jpg",
+      "quality": "1",
+      "enc_time": 0.30859256,
+      "dec_time": 0.15377545,
+      "bpp": 0.13812256,
+      "psnr": 27.23944576,
+      "ms-ssim-db": 14.12461147,
+      "ws-psnr": 25.9531412
+    },
+    {
+      "file": "sun360test_500/31819.jpg",
+      "quality": "1",
+      "enc_time": 0.29819202,
+      "dec_time": 0.15268397,
+      "bpp": 0.15093994,
+      "psnr": 29.27603835,
+      "ms-ssim-db": 14.20014954,
+      "ws-psnr": 28.34251774
+    },
+    {
+      "file": "sun360test_500/31878.jpg",
+      "quality": "1",
+      "enc_time": 0.29472828,
+      "dec_time": 0.15183496,
+      "bpp": 0.05163574,
+      "psnr": 32.90732361,
+      "ms-ssim-db": 13.06377064,
+      "ws-psnr": 31.57736198
+    },
+    {
+      "file": "sun360test_500/32059.jpg",
+      "quality": "1",
+      "enc_time": 0.29805493,
+      "dec_time": 0.15054011,
+      "bpp": 0.13995361,
+      "psnr": 27.68498768,
+      "ms-ssim-db": 11.72239115,
+      "ws-psnr": 27.70710976
+    },
+    {
+      "file": "sun360test_500/32139.jpg",
+      "quality": "1",
+      "enc_time": 0.2967155,
+      "dec_time": 0.15463901,
+      "bpp": 0.21435547,
+      "psnr": 25.92973406,
+      "ms-ssim-db": 12.72343548,
+      "ws-psnr": 25.97856867
+    },
+    {
+      "file": "sun360test_500/32219.jpg",
+      "quality": "1",
+      "enc_time": 0.29458451,
+      "dec_time": 0.15278172,
+      "bpp": 0.24639893,
+      "psnr": 25.74228306,
+      "ms-ssim-db": 12.86175655,
+      "ws-psnr": 25.3338501
+    },
+    {
+      "file": "sun360test_500/32379.jpg",
+      "quality": "1",
+      "enc_time": 0.29986191,
+      "dec_time": 0.15890932,
+      "bpp": 0.04406738,
+      "psnr": 33.67181811,
+      "ms-ssim-db": 13.29757305,
+      "ws-psnr": 32.62245955
+    },
+    {
+      "file": "sun360test_500/32397.jpg",
+      "quality": "1",
+      "enc_time": 0.29145432,
+      "dec_time": 0.1572268,
+      "bpp": 0.29602051,
+      "psnr": 25.38415925,
+      "ms-ssim-db": 10.80699884,
+      "ws-psnr": 25.104316
+    },
+    {
+      "file": "sun360test_500/3278.jpg",
+      "quality": "1",
+      "enc_time": 0.30140495,
+      "dec_time": 0.16049814,
+      "bpp": 0.11968994,
+      "psnr": 30.21575254,
+      "ms-ssim-db": 11.94278054,
+      "ws-psnr": 29.76101255
+    },
+    {
+      "file": "sun360test_500/32879.jpg",
+      "quality": "1",
+      "enc_time": 0.29322505,
+      "dec_time": 0.15495539,
+      "bpp": 0.15960693,
+      "psnr": 28.84366888,
+      "ms-ssim-db": 12.69749829,
+      "ws-psnr": 28.34332968
+    },
+    {
+      "file": "sun360test_500/32937.jpg",
+      "quality": "1",
+      "enc_time": 0.2931025,
+      "dec_time": 0.15455508,
+      "bpp": 0.09033203,
+      "psnr": 30.52959429,
+      "ms-ssim-db": 12.00313049,
+      "ws-psnr": 29.36622435
+    },
+    {
+      "file": "sun360test_500/33059.jpg",
+      "quality": "1",
+      "enc_time": 0.29258704,
+      "dec_time": 0.15609097,
+      "bpp": 0.11749268,
+      "psnr": 28.55471198,
+      "ms-ssim-db": 11.21920659,
+      "ws-psnr": 28.32149784
+    },
+    {
+      "file": "sun360test_500/33258.jpg",
+      "quality": "1",
+      "enc_time": 0.2948153,
+      "dec_time": 0.15360904,
+      "bpp": 0.07202148,
+      "psnr": 32.16459649,
+      "ms-ssim-db": 13.47236823,
+      "ws-psnr": 31.63622943
+    },
+    {
+      "file": "sun360test_500/33338.jpg",
+      "quality": "1",
+      "enc_time": 0.29504943,
+      "dec_time": 0.15124822,
+      "bpp": 0.12542725,
+      "psnr": 28.63086039,
+      "ms-ssim-db": 12.57626107,
+      "ws-psnr": 28.52553395
+    },
+    {
+      "file": "sun360test_500/33419.jpg",
+      "quality": "1",
+      "enc_time": 0.29575753,
+      "dec_time": 0.15163302,
+      "bpp": 0.08569336,
+      "psnr": 31.60751122,
+      "ms-ssim-db": 13.40173742,
+      "ws-psnr": 30.47196697
+    },
+    {
+      "file": "sun360test_500/33618.jpg",
+      "quality": "1",
+      "enc_time": 0.29395604,
+      "dec_time": 0.15830731,
+      "bpp": 0.15515137,
+      "psnr": 28.3396937,
+      "ms-ssim-db": 11.88472373,
+      "ws-psnr": 27.58367252
+    },
+    {
+      "file": "sun360test_500/33639.jpg",
+      "quality": "1",
+      "enc_time": 0.29719901,
+      "dec_time": 0.15246415,
+      "bpp": 0.0881958,
+      "psnr": 30.65445365,
+      "ms-ssim-db": 13.53027312,
+      "ws-psnr": 29.42956952
+    },
+    {
+      "file": "sun360test_500/33757.jpg",
+      "quality": "1",
+      "enc_time": 0.29697275,
+      "dec_time": 0.15570903,
+      "bpp": 0.40185547,
+      "psnr": 22.76007401,
+      "ms-ssim-db": 10.39567733,
+      "ws-psnr": 22.82248984
+    },
+    {
+      "file": "sun360test_500/3377.jpg",
+      "quality": "1",
+      "enc_time": 0.3000071,
+      "dec_time": 0.15781808,
+      "bpp": 0.10675049,
+      "psnr": 30.22019041,
+      "ms-ssim-db": 12.07600959,
+      "ws-psnr": 30.08551003
+    },
+    {
+      "file": "sun360test_500/33777.jpg",
+      "quality": "1",
+      "enc_time": 0.29454136,
+      "dec_time": 0.15365434,
+      "bpp": 0.16748047,
+      "psnr": 27.86322837,
+      "ms-ssim-db": 12.04657915,
+      "ws-psnr": 27.50215215
+    },
+    {
+      "file": "sun360test_500/33797.jpg",
+      "quality": "1",
+      "enc_time": 0.2912724,
+      "dec_time": 0.15154433,
+      "bpp": 0.17321777,
+      "psnr": 26.46032928,
+      "ms-ssim-db": 11.73812192,
+      "ws-psnr": 25.92882076
+    },
+    {
+      "file": "sun360test_500/33898.jpg",
+      "quality": "1",
+      "enc_time": 0.29539227,
+      "dec_time": 0.15634942,
+      "bpp": 0.40234375,
+      "psnr": 23.9053542,
+      "ms-ssim-db": 11.77083332,
+      "ws-psnr": 23.56392093
+    },
+    {
+      "file": "sun360test_500/33919.jpg",
+      "quality": "1",
+      "enc_time": 0.2923708,
+      "dec_time": 0.15525079,
+      "bpp": 0.12316895,
+      "psnr": 29.96056475,
+      "ms-ssim-db": 13.23740271,
+      "ws-psnr": 29.07556332
+    },
+    {
+      "file": "sun360test_500/33957.jpg",
+      "quality": "1",
+      "enc_time": 0.29404116,
+      "dec_time": 0.15646696,
+      "bpp": 0.12963867,
+      "psnr": 29.09150166,
+      "ms-ssim-db": 11.51480817,
+      "ws-psnr": 28.68094786
+    },
+    {
+      "file": "sun360test_500/34019.jpg",
+      "quality": "1",
+      "enc_time": 0.29450274,
+      "dec_time": 0.15411568,
+      "bpp": 0.18945312,
+      "psnr": 27.48300582,
+      "ms-ssim-db": 12.34874232,
+      "ws-psnr": 26.57249183
+    },
+    {
+      "file": "sun360test_500/34498.jpg",
+      "quality": "1",
+      "enc_time": 0.2924304,
+      "dec_time": 0.1572969,
+      "bpp": 0.12158203,
+      "psnr": 28.96279049,
+      "ms-ssim-db": 11.72183698,
+      "ws-psnr": 28.83923192
+    },
+    {
+      "file": "sun360test_500/34537.jpg",
+      "quality": "1",
+      "enc_time": 0.29220057,
+      "dec_time": 0.15612078,
+      "bpp": 0.04669189,
+      "psnr": 35.75227782,
+      "ms-ssim-db": 17.12847225,
+      "ws-psnr": 35.09679464
+    },
+    {
+      "file": "sun360test_500/34717.jpg",
+      "quality": "1",
+      "enc_time": 0.29595971,
+      "dec_time": 0.15476966,
+      "bpp": 0.17358398,
+      "psnr": 26.31339279,
+      "ms-ssim-db": 11.16018923,
+      "ws-psnr": 25.81646467
+    },
+    {
+      "file": "sun360test_500/34817.jpg",
+      "quality": "1",
+      "enc_time": 0.29720902,
+      "dec_time": 0.1555934,
+      "bpp": 0.06304932,
+      "psnr": 31.26594915,
+      "ms-ssim-db": 12.5089911,
+      "ws-psnr": 31.32843987
+    },
+    {
+      "file": "sun360test_500/34819.jpg",
+      "quality": "1",
+      "enc_time": 0.2961154,
+      "dec_time": 0.1506722,
+      "bpp": 0.043396,
+      "psnr": 31.44319264,
+      "ms-ssim-db": 11.36033931,
+      "ws-psnr": 31.84481413
+    },
+    {
+      "file": "sun360test_500/34859.jpg",
+      "quality": "1",
+      "enc_time": 0.29665041,
+      "dec_time": 0.14923286,
+      "bpp": 0.07244873,
+      "psnr": 31.43702511,
+      "ms-ssim-db": 12.01098751,
+      "ws-psnr": 30.62026815
+    },
+    {
+      "file": "sun360test_500/34897.jpg",
+      "quality": "1",
+      "enc_time": 0.29662371,
+      "dec_time": 0.15058136,
+      "bpp": 0.175354,
+      "psnr": 29.31704283,
+      "ms-ssim-db": 15.61553453,
+      "ws-psnr": 28.41695507
+    },
+    {
+      "file": "sun360test_500/34959.jpg",
+      "quality": "1",
+      "enc_time": 0.29508591,
+      "dec_time": 0.15165734,
+      "bpp": 0.14080811,
+      "psnr": 28.74489903,
+      "ms-ssim-db": 12.97941316,
+      "ws-psnr": 28.46925688
+    },
+    {
+      "file": "sun360test_500/35218.jpg",
+      "quality": "1",
+      "enc_time": 0.2944386,
+      "dec_time": 0.15159774,
+      "bpp": 0.19165039,
+      "psnr": 27.94935485,
+      "ms-ssim-db": 13.95201281,
+      "ws-psnr": 27.51514202
+    },
+    {
+      "file": "sun360test_500/35277.jpg",
+      "quality": "1",
+      "enc_time": 0.29891729,
+      "dec_time": 0.15273857,
+      "bpp": 0.0758667,
+      "psnr": 32.28509442,
+      "ms-ssim-db": 12.85707616,
+      "ws-psnr": 31.11201683
+    },
+    {
+      "file": "sun360test_500/35279.jpg",
+      "quality": "1",
+      "enc_time": 0.28946972,
+      "dec_time": 0.15730381,
+      "bpp": 0.05627441,
+      "psnr": 32.64213676,
+      "ms-ssim-db": 14.69862633,
+      "ws-psnr": 31.24611304
+    },
+    {
+      "file": "sun360test_500/35437.jpg",
+      "quality": "1",
+      "enc_time": 0.29352999,
+      "dec_time": 0.15568662,
+      "bpp": 0.17529297,
+      "psnr": 26.75792454,
+      "ms-ssim-db": 9.74258906,
+      "ws-psnr": 26.16319736
+    },
+    {
+      "file": "sun360test_500/35578.jpg",
+      "quality": "1",
+      "enc_time": 0.29480553,
+      "dec_time": 0.1561296,
+      "bpp": 0.07617188,
+      "psnr": 32.53068758,
+      "ms-ssim-db": 14.79510775,
+      "ws-psnr": 31.82275137
+    },
+    {
+      "file": "sun360test_500/35937.jpg",
+      "quality": "1",
+      "enc_time": 0.29755831,
+      "dec_time": 0.15750718,
+      "bpp": 0.12963867,
+      "psnr": 28.2273615,
+      "ms-ssim-db": 10.06125316,
+      "ws-psnr": 28.06964308
+    },
+    {
+      "file": "sun360test_500/35957.jpg",
+      "quality": "1",
+      "enc_time": 0.2972579,
+      "dec_time": 0.15510583,
+      "bpp": 0.13543701,
+      "psnr": 29.06784997,
+      "ms-ssim-db": 11.91553174,
+      "ws-psnr": 27.8552004
+    },
+    {
+      "file": "sun360test_500/35997.jpg",
+      "quality": "1",
+      "enc_time": 0.29610848,
+      "dec_time": 0.15307951,
+      "bpp": 0.050354,
+      "psnr": 34.62023167,
+      "ms-ssim-db": 16.90179798,
+      "ws-psnr": 33.34602196
+    },
+    {
+      "file": "sun360test_500/36357.jpg",
+      "quality": "1",
+      "enc_time": 0.29579115,
+      "dec_time": 0.15237927,
+      "bpp": 0.05718994,
+      "psnr": 31.58469408,
+      "ms-ssim-db": 12.56867833,
+      "ws-psnr": 32.3832487
+    },
+    {
+      "file": "sun360test_500/36559.jpg",
+      "quality": "1",
+      "enc_time": 0.2984097,
+      "dec_time": 0.15276384,
+      "bpp": 0.19464111,
+      "psnr": 27.94035248,
+      "ms-ssim-db": 15.27907606,
+      "ws-psnr": 26.78880581
+    },
+    {
+      "file": "sun360test_500/36638.jpg",
+      "quality": "1",
+      "enc_time": 0.29876518,
+      "dec_time": 0.15594769,
+      "bpp": 0.10900879,
+      "psnr": 28.52117716,
+      "ms-ssim-db": 12.26603166,
+      "ws-psnr": 28.53956096
+    },
+    {
+      "file": "sun360test_500/36779.jpg",
+      "quality": "1",
+      "enc_time": 0.29709792,
+      "dec_time": 0.15285707,
+      "bpp": 0.12646484,
+      "psnr": 29.40574129,
+      "ms-ssim-db": 12.10464887,
+      "ws-psnr": 28.528087
+    },
+    {
+      "file": "sun360test_500/36839.jpg",
+      "quality": "1",
+      "enc_time": 0.29773021,
+      "dec_time": 0.15551472,
+      "bpp": 0.35284424,
+      "psnr": 24.19202472,
+      "ms-ssim-db": 13.58893094,
+      "ws-psnr": 23.87409984
+    },
+    {
+      "file": "sun360test_500/37038.jpg",
+      "quality": "1",
+      "enc_time": 0.29506683,
+      "dec_time": 0.15303874,
+      "bpp": 0.09759521,
+      "psnr": 30.26985166,
+      "ms-ssim-db": 11.47539196,
+      "ws-psnr": 29.636049
+    },
+    {
+      "file": "sun360test_500/37137.jpg",
+      "quality": "1",
+      "enc_time": 0.29446411,
+      "dec_time": 0.15192151,
+      "bpp": 0.14550781,
+      "psnr": 28.41156864,
+      "ms-ssim-db": 12.57141033,
+      "ws-psnr": 27.70943573
+    },
+    {
+      "file": "sun360test_500/3718.jpg",
+      "quality": "1",
+      "enc_time": 0.31247306,
+      "dec_time": 0.16607094,
+      "bpp": 0.21588135,
+      "psnr": 27.36117022,
+      "ms-ssim-db": 13.49736233,
+      "ws-psnr": 26.75457497
+    },
+    {
+      "file": "sun360test_500/37259.jpg",
+      "quality": "1",
+      "enc_time": 0.30688119,
+      "dec_time": 0.15696049,
+      "bpp": 0.12719727,
+      "psnr": 28.57209537,
+      "ms-ssim-db": 9.47444495,
+      "ws-psnr": 27.94991739
+    },
+    {
+      "file": "sun360test_500/37357.jpg",
+      "quality": "1",
+      "enc_time": 0.30703568,
+      "dec_time": 0.16025496,
+      "bpp": 0.22174072,
+      "psnr": 26.21825199,
+      "ms-ssim-db": 13.04719776,
+      "ws-psnr": 25.84158535
+    },
+    {
+      "file": "sun360test_500/37378.jpg",
+      "quality": "1",
+      "enc_time": 0.32059956,
+      "dec_time": 0.16689515,
+      "bpp": 0.13873291,
+      "psnr": 29.2539935,
+      "ms-ssim-db": 15.31982225,
+      "ws-psnr": 28.24713667
+    },
+    {
+      "file": "sun360test_500/37518.jpg",
+      "quality": "1",
+      "enc_time": 0.3114388,
+      "dec_time": 0.16321111,
+      "bpp": 0.10095215,
+      "psnr": 31.36132782,
+      "ms-ssim-db": 14.20568873,
+      "ws-psnr": 30.15301968
+    },
+    {
+      "file": "sun360test_500/37538.jpg",
+      "quality": "1",
+      "enc_time": 0.30666971,
+      "dec_time": 0.15955257,
+      "bpp": 0.15118408,
+      "psnr": 28.21505644,
+      "ms-ssim-db": 13.05127234,
+      "ws-psnr": 27.95298868
+    },
+    {
+      "file": "sun360test_500/37539.jpg",
+      "quality": "1",
+      "enc_time": 0.30208111,
+      "dec_time": 0.15788364,
+      "bpp": 0.1550293,
+      "psnr": 28.25799218,
+      "ms-ssim-db": 12.60707427,
+      "ws-psnr": 27.23482729
+    },
+    {
+      "file": "sun360test_500/37679.jpg",
+      "quality": "1",
+      "enc_time": 0.31300926,
+      "dec_time": 0.16698456,
+      "bpp": 0.13458252,
+      "psnr": 28.84011012,
+      "ms-ssim-db": 11.36829918,
+      "ws-psnr": 28.20178818
+    },
+    {
+      "file": "sun360test_500/37817.jpg",
+      "quality": "1",
+      "enc_time": 0.30557823,
+      "dec_time": 0.1576829,
+      "bpp": 0.06573486,
+      "psnr": 32.92680224,
+      "ms-ssim-db": 14.9683313,
+      "ws-psnr": 32.22387807
+    },
+    {
+      "file": "sun360test_500/37859.jpg",
+      "quality": "1",
+      "enc_time": 0.30640244,
+      "dec_time": 0.15787578,
+      "bpp": 0.13092041,
+      "psnr": 29.42843956,
+      "ms-ssim-db": 11.96339807,
+      "ws-psnr": 28.77362281
+    },
+    {
+      "file": "sun360test_500/37937.jpg",
+      "quality": "1",
+      "enc_time": 0.31079745,
+      "dec_time": 0.15904522,
+      "bpp": 0.10577393,
+      "psnr": 30.36092817,
+      "ms-ssim-db": 12.74923112,
+      "ws-psnr": 28.92766501
+    },
+    {
+      "file": "sun360test_500/38137.jpg",
+      "quality": "1",
+      "enc_time": 0.30174899,
+      "dec_time": 0.16320014,
+      "bpp": 0.20562744,
+      "psnr": 27.54137897,
+      "ms-ssim-db": 13.52392854,
+      "ws-psnr": 26.64214267
+    },
+    {
+      "file": "sun360test_500/3837.jpg",
+      "quality": "1",
+      "enc_time": 0.29917622,
+      "dec_time": 0.16378164,
+      "bpp": 0.11657715,
+      "psnr": 29.96211166,
+      "ms-ssim-db": 12.42175505,
+      "ws-psnr": 29.47810779
+    },
+    {
+      "file": "sun360test_500/38377.jpg",
+      "quality": "1",
+      "enc_time": 0.29055691,
+      "dec_time": 0.1602366,
+      "bpp": 0.24383545,
+      "psnr": 25.37939416,
+      "ms-ssim-db": 10.78611714,
+      "ws-psnr": 25.4143883
+    },
+    {
+      "file": "sun360test_500/38658.jpg",
+      "quality": "1",
+      "enc_time": 0.29299498,
+      "dec_time": 0.15613127,
+      "bpp": 0.11871338,
+      "psnr": 28.34447674,
+      "ms-ssim-db": 10.67019,
+      "ws-psnr": 27.71335674
+    },
+    {
+      "file": "sun360test_500/38697.jpg",
+      "quality": "1",
+      "enc_time": 0.29716134,
+      "dec_time": 0.15939093,
+      "bpp": 0.09857178,
+      "psnr": 30.04641701,
+      "ms-ssim-db": 13.08486572,
+      "ws-psnr": 29.09621481
+    },
+    {
+      "file": "sun360test_500/39519.jpg",
+      "quality": "1",
+      "enc_time": 0.28742933,
+      "dec_time": 0.15229106,
+      "bpp": 0.1519165,
+      "psnr": 29.34744969,
+      "ms-ssim-db": 13.40972178,
+      "ws-psnr": 29.26350965
+    },
+    {
+      "file": "sun360test_500/3957.jpg",
+      "quality": "1",
+      "enc_time": 0.30161738,
+      "dec_time": 0.15829444,
+      "bpp": 0.19042969,
+      "psnr": 28.71220734,
+      "ms-ssim-db": 14.93301981,
+      "ws-psnr": 27.59546655
+    },
+    {
+      "file": "sun360test_500/3958.jpg",
+      "quality": "1",
+      "enc_time": 0.29850817,
+      "dec_time": 0.15395188,
+      "bpp": 0.17224121,
+      "psnr": 28.9542787,
+      "ms-ssim-db": 13.13757364,
+      "ws-psnr": 28.9074794
+    },
+    {
+      "file": "sun360test_500/39898.jpg",
+      "quality": "1",
+      "enc_time": 0.30101299,
+      "dec_time": 0.16019821,
+      "bpp": 0.09216309,
+      "psnr": 29.58819025,
+      "ms-ssim-db": 10.44230444,
+      "ws-psnr": 29.31770948
+    },
+    {
+      "file": "sun360test_500/40277.jpg",
+      "quality": "1",
+      "enc_time": 0.2991457,
+      "dec_time": 0.15833044,
+      "bpp": 0.14916992,
+      "psnr": 29.35927609,
+      "ms-ssim-db": 13.65025721,
+      "ws-psnr": 28.69392803
+    },
+    {
+      "file": "sun360test_500/40318.jpg",
+      "quality": "1",
+      "enc_time": 0.29856086,
+      "dec_time": 0.15295291,
+      "bpp": 0.15856934,
+      "psnr": 28.20351821,
+      "ms-ssim-db": 12.25622428,
+      "ws-psnr": 27.8925096
+    },
+    {
+      "file": "sun360test_500/40917.jpg",
+      "quality": "1",
+      "enc_time": 0.30144811,
+      "dec_time": 0.16101432,
+      "bpp": 0.05853271,
+      "psnr": 33.64629351,
+      "ms-ssim-db": 15.45764711,
+      "ws-psnr": 32.70331185
+    },
+    {
+      "file": "sun360test_500/41038.jpg",
+      "quality": "1",
+      "enc_time": 0.29856348,
+      "dec_time": 0.15670371,
+      "bpp": 0.12060547,
+      "psnr": 29.22537074,
+      "ms-ssim-db": 11.06209812,
+      "ws-psnr": 28.45803464
+    },
+    {
+      "file": "sun360test_500/41059.jpg",
+      "quality": "1",
+      "enc_time": 0.29788327,
+      "dec_time": 0.15813684,
+      "bpp": 0.17767334,
+      "psnr": 27.10414125,
+      "ms-ssim-db": 13.14291875,
+      "ws-psnr": 27.12912387
+    },
+    {
+      "file": "sun360test_500/41079.jpg",
+      "quality": "1",
+      "enc_time": 0.30178547,
+      "dec_time": 0.15887952,
+      "bpp": 0.21191406,
+      "psnr": 27.52875982,
+      "ms-ssim-db": 14.80804248,
+      "ws-psnr": 26.24848844
+    },
+    {
+      "file": "sun360test_500/41278.jpg",
+      "quality": "1",
+      "enc_time": 0.29644418,
+      "dec_time": 0.15904093,
+      "bpp": 0.09521484,
+      "psnr": 28.57541375,
+      "ms-ssim-db": 10.34389879,
+      "ws-psnr": 27.9048249
+    },
+    {
+      "file": "sun360test_500/41338.jpg",
+      "quality": "1",
+      "enc_time": 0.31098437,
+      "dec_time": 0.17150664,
+      "bpp": 0.10894775,
+      "psnr": 29.5440511,
+      "ms-ssim-db": 12.82368514,
+      "ws-psnr": 29.06556579
+    },
+    {
+      "file": "sun360test_500/41359.jpg",
+      "quality": "1",
+      "enc_time": 0.33014512,
+      "dec_time": 0.16085505,
+      "bpp": 0.34460449,
+      "psnr": 23.93166043,
+      "ms-ssim-db": 12.52781048,
+      "ws-psnr": 23.86483882
+    },
+    {
+      "file": "sun360test_500/41597.jpg",
+      "quality": "1",
+      "enc_time": 0.31772757,
+      "dec_time": 0.17631507,
+      "bpp": 0.09521484,
+      "psnr": 30.36139024,
+      "ms-ssim-db": 11.18584097,
+      "ws-psnr": 29.52218033
+    },
+    {
+      "file": "sun360test_500/42059.jpg",
+      "quality": "1",
+      "enc_time": 0.29745317,
+      "dec_time": 0.15583444,
+      "bpp": 0.20251465,
+      "psnr": 28.17369264,
+      "ms-ssim-db": 13.20777358,
+      "ws-psnr": 27.66768728
+    },
+    {
+      "file": "sun360test_500/42077.jpg",
+      "quality": "1",
+      "enc_time": 0.30046201,
+      "dec_time": 0.16264224,
+      "bpp": 0.14672852,
+      "psnr": 29.51179032,
+      "ms-ssim-db": 14.86175569,
+      "ws-psnr": 29.51792686
+    },
+    {
+      "file": "sun360test_500/42119.jpg",
+      "quality": "1",
+      "enc_time": 0.3028903,
+      "dec_time": 0.15985346,
+      "bpp": 0.22186279,
+      "psnr": 26.32125688,
+      "ms-ssim-db": 11.05270663,
+      "ws-psnr": 25.24221864
+    },
+    {
+      "file": "sun360test_500/42178.jpg",
+      "quality": "1",
+      "enc_time": 0.30007982,
+      "dec_time": 0.15915656,
+      "bpp": 0.21343994,
+      "psnr": 26.00333446,
+      "ms-ssim-db": 10.96764196,
+      "ws-psnr": 25.91499668
+    },
+    {
+      "file": "sun360test_500/42318.jpg",
+      "quality": "1",
+      "enc_time": 0.30035686,
+      "dec_time": 0.15771317,
+      "bpp": 0.1763916,
+      "psnr": 27.47940472,
+      "ms-ssim-db": 11.84083541,
+      "ws-psnr": 26.91697549
+    },
+    {
+      "file": "sun360test_500/42697.jpg",
+      "quality": "1",
+      "enc_time": 0.31918979,
+      "dec_time": 0.16571593,
+      "bpp": 0.15362549,
+      "psnr": 27.90436054,
+      "ms-ssim-db": 11.76792325,
+      "ws-psnr": 27.3991811
+    },
+    {
+      "file": "sun360test_500/42919.jpg",
+      "quality": "1",
+      "enc_time": 0.29945493,
+      "dec_time": 0.16060162,
+      "bpp": 0.13555908,
+      "psnr": 29.63570821,
+      "ms-ssim-db": 13.05116259,
+      "ws-psnr": 28.95652058
+    },
+    {
+      "file": "sun360test_500/42959.jpg",
+      "quality": "1",
+      "enc_time": 0.31302547,
+      "dec_time": 0.15817761,
+      "bpp": 0.12261963,
+      "psnr": 28.70503077,
+      "ms-ssim-db": 10.23450621,
+      "ws-psnr": 28.37860538
+    },
+    {
+      "file": "sun360test_500/43157.jpg",
+      "quality": "1",
+      "enc_time": 0.30179381,
+      "dec_time": 0.1575942,
+      "bpp": 0.06878662,
+      "psnr": 32.99352099,
+      "ms-ssim-db": 12.87117761,
+      "ws-psnr": 31.68044611
+    },
+    {
+      "file": "sun360test_500/4317.jpg",
+      "quality": "1",
+      "enc_time": 0.29658794,
+      "dec_time": 0.15986466,
+      "bpp": 0.13787842,
+      "psnr": 28.84471073,
+      "ms-ssim-db": 10.86336032,
+      "ws-psnr": 28.14948858
+    },
+    {
+      "file": "sun360test_500/43177.jpg",
+      "quality": "1",
+      "enc_time": 0.31235909,
+      "dec_time": 0.16999364,
+      "bpp": 0.15063477,
+      "psnr": 28.59759012,
+      "ms-ssim-db": 11.16888109,
+      "ws-psnr": 28.71428516
+    },
+    {
+      "file": "sun360test_500/43178.jpg",
+      "quality": "1",
+      "enc_time": 0.2983706,
+      "dec_time": 0.15678883,
+      "bpp": 0.33062744,
+      "psnr": 24.53984208,
+      "ms-ssim-db": 11.5018796,
+      "ws-psnr": 24.44005798
+    },
+    {
+      "file": "sun360test_500/43279.jpg",
+      "quality": "1",
+      "enc_time": 0.29511762,
+      "dec_time": 0.16072512,
+      "bpp": 0.13427734,
+      "psnr": 30.29210849,
+      "ms-ssim-db": 15.40049544,
+      "ws-psnr": 29.05859303
+    },
+    {
+      "file": "sun360test_500/43579.jpg",
+      "quality": "1",
+      "enc_time": 0.29970837,
+      "dec_time": 0.15575838,
+      "bpp": 0.12072754,
+      "psnr": 29.04427974,
+      "ms-ssim-db": 13.13881598,
+      "ws-psnr": 27.6917098
+    },
+    {
+      "file": "sun360test_500/43598.jpg",
+      "quality": "1",
+      "enc_time": 0.30096507,
+      "dec_time": 0.15890169,
+      "bpp": 0.15197754,
+      "psnr": 29.16600375,
+      "ms-ssim-db": 13.50336661,
+      "ws-psnr": 27.8831925
+    },
+    {
+      "file": "sun360test_500/43617.jpg",
+      "quality": "1",
+      "enc_time": 0.29974985,
+      "dec_time": 0.15885997,
+      "bpp": 0.19329834,
+      "psnr": 27.09743725,
+      "ms-ssim-db": 11.68577252,
+      "ws-psnr": 26.26987012
+    },
+    {
+      "file": "sun360test_500/43678.jpg",
+      "quality": "1",
+      "enc_time": 0.2985518,
+      "dec_time": 0.15614176,
+      "bpp": 0.13140869,
+      "psnr": 27.76072986,
+      "ms-ssim-db": 11.65695989,
+      "ws-psnr": 28.49039139
+    },
+    {
+      "file": "sun360test_500/43777.jpg",
+      "quality": "1",
+      "enc_time": 0.30357623,
+      "dec_time": 0.15530872,
+      "bpp": 0.21459961,
+      "psnr": 26.04633477,
+      "ms-ssim-db": 12.35175309,
+      "ws-psnr": 25.77853508
+    },
+    {
+      "file": "sun360test_500/43778.jpg",
+      "quality": "1",
+      "enc_time": 0.30425501,
+      "dec_time": 0.15942502,
+      "bpp": 0.05938721,
+      "psnr": 32.06860643,
+      "ms-ssim-db": 12.80703353,
+      "ws-psnr": 31.14970221
+    },
+    {
+      "file": "sun360test_500/43799.jpg",
+      "quality": "1",
+      "enc_time": 0.30379629,
+      "dec_time": 0.16323137,
+      "bpp": 0.12493896,
+      "psnr": 29.16354101,
+      "ms-ssim-db": 13.05360388,
+      "ws-psnr": 27.9092788
+    },
+    {
+      "file": "sun360test_500/43898.jpg",
+      "quality": "1",
+      "enc_time": 0.29627442,
+      "dec_time": 0.16576076,
+      "bpp": 0.09283447,
+      "psnr": 30.42616141,
+      "ms-ssim-db": 11.71897493,
+      "ws-psnr": 29.75199139
+    },
+    {
+      "file": "sun360test_500/43918.jpg",
+      "quality": "1",
+      "enc_time": 0.30169821,
+      "dec_time": 0.15847802,
+      "bpp": 0.17388916,
+      "psnr": 27.29582792,
+      "ms-ssim-db": 12.49134618,
+      "ws-psnr": 27.04106193
+    },
+    {
+      "file": "sun360test_500/44058.jpg",
+      "quality": "1",
+      "enc_time": 0.29516196,
+      "dec_time": 0.15993953,
+      "bpp": 0.13000488,
+      "psnr": 29.59974547,
+      "ms-ssim-db": 13.65425449,
+      "ws-psnr": 28.95215037
+    },
+    {
+      "file": "sun360test_500/44078.jpg",
+      "quality": "1",
+      "enc_time": 0.30158567,
+      "dec_time": 0.15806961,
+      "bpp": 0.15264893,
+      "psnr": 29.20039946,
+      "ms-ssim-db": 14.43503956,
+      "ws-psnr": 28.77905835
+    },
+    {
+      "file": "sun360test_500/4417.jpg",
+      "quality": "1",
+      "enc_time": 0.2982645,
+      "dec_time": 0.15646029,
+      "bpp": 0.09381104,
+      "psnr": 33.3399127,
+      "ms-ssim-db": 16.42209962,
+      "ws-psnr": 32.28395953
+    },
+    {
+      "file": "sun360test_500/4418.jpg",
+      "quality": "1",
+      "enc_time": 0.29740858,
+      "dec_time": 0.15359378,
+      "bpp": 0.10333252,
+      "psnr": 31.06211977,
+      "ms-ssim-db": 15.68586223,
+      "ws-psnr": 29.52291365
+    },
+    {
+      "file": "sun360test_500/44318.jpg",
+      "quality": "1",
+      "enc_time": 0.29130864,
+      "dec_time": 0.15336156,
+      "bpp": 0.08233643,
+      "psnr": 29.79822921,
+      "ms-ssim-db": 10.83314025,
+      "ws-psnr": 30.04159364
+    },
+    {
+      "file": "sun360test_500/44398.jpg",
+      "quality": "1",
+      "enc_time": 0.29776359,
+      "dec_time": 0.1529727,
+      "bpp": 0.13037109,
+      "psnr": 30.17630727,
+      "ms-ssim-db": 13.11498571,
+      "ws-psnr": 29.42328907
+    },
+    {
+      "file": "sun360test_500/44557.jpg",
+      "quality": "1",
+      "enc_time": 0.29233003,
+      "dec_time": 0.15690947,
+      "bpp": 0.11279297,
+      "psnr": 27.93918874,
+      "ms-ssim-db": 11.3930729,
+      "ws-psnr": 28.20696696
+    },
+    {
+      "file": "sun360test_500/4459.jpg",
+      "quality": "1",
+      "enc_time": 0.29510665,
+      "dec_time": 0.15445805,
+      "bpp": 0.15435791,
+      "psnr": 27.67419382,
+      "ms-ssim-db": 12.06508045,
+      "ws-psnr": 27.87225798
+    },
+    {
+      "file": "sun360test_500/44617.jpg",
+      "quality": "1",
+      "enc_time": 0.29322886,
+      "dec_time": 0.15873075,
+      "bpp": 0.37860107,
+      "psnr": 23.53848092,
+      "ms-ssim-db": 11.04602872,
+      "ws-psnr": 23.30186463
+    },
+    {
+      "file": "sun360test_500/44859.jpg",
+      "quality": "1",
+      "enc_time": 0.3066926,
+      "dec_time": 0.16320229,
+      "bpp": 0.12390137,
+      "psnr": 29.73928118,
+      "ms-ssim-db": 13.46572237,
+      "ws-psnr": 29.92911842
+    },
+    {
+      "file": "sun360test_500/44917.jpg",
+      "quality": "1",
+      "enc_time": 0.29835105,
+      "dec_time": 0.15797782,
+      "bpp": 0.16094971,
+      "psnr": 28.24479243,
+      "ms-ssim-db": 11.69774163,
+      "ws-psnr": 27.51578286
+    },
+    {
+      "file": "sun360test_500/44959.jpg",
+      "quality": "1",
+      "enc_time": 0.30179453,
+      "dec_time": 0.15975809,
+      "bpp": 0.12768555,
+      "psnr": 28.61008233,
+      "ms-ssim-db": 13.39399393,
+      "ws-psnr": 28.03235156
+    },
+    {
+      "file": "sun360test_500/45039.jpg",
+      "quality": "1",
+      "enc_time": 0.29898381,
+      "dec_time": 0.15818167,
+      "bpp": 0.12518311,
+      "psnr": 29.80149449,
+      "ms-ssim-db": 13.43742903,
+      "ws-psnr": 29.40260433
+    },
+    {
+      "file": "sun360test_500/4519.jpg",
+      "quality": "1",
+      "enc_time": 0.31533194,
+      "dec_time": 0.16256785,
+      "bpp": 0.25634766,
+      "psnr": 26.08323243,
+      "ms-ssim-db": 12.59395405,
+      "ws-psnr": 25.52970024
+    },
+    {
+      "file": "sun360test_500/45519.jpg",
+      "quality": "1",
+      "enc_time": 0.30259633,
+      "dec_time": 0.15910792,
+      "bpp": 0.2265625,
+      "psnr": 26.15494405,
+      "ms-ssim-db": 12.42156517,
+      "ws-psnr": 25.29755812
+    },
+    {
+      "file": "sun360test_500/45677.jpg",
+      "quality": "1",
+      "enc_time": 0.31425786,
+      "dec_time": 0.1577704,
+      "bpp": 0.13909912,
+      "psnr": 28.63866877,
+      "ms-ssim-db": 11.99947803,
+      "ws-psnr": 27.68794574
+    },
+    {
+      "file": "sun360test_500/45739.jpg",
+      "quality": "1",
+      "enc_time": 0.30620313,
+      "dec_time": 0.16545653,
+      "bpp": 0.10723877,
+      "psnr": 30.66734795,
+      "ms-ssim-db": 13.6310843,
+      "ws-psnr": 29.22745574
+    },
+    {
+      "file": "sun360test_500/45878.jpg",
+      "quality": "1",
+      "enc_time": 0.30404305,
+      "dec_time": 0.15970874,
+      "bpp": 0.17907715,
+      "psnr": 27.65195599,
+      "ms-ssim-db": 13.50893784,
+      "ws-psnr": 26.61779976
+    },
+    {
+      "file": "sun360test_500/46037.jpg",
+      "quality": "1",
+      "enc_time": 0.30407,
+      "dec_time": 0.15768957,
+      "bpp": 0.14099121,
+      "psnr": 29.07722766,
+      "ms-ssim-db": 12.86483956,
+      "ws-psnr": 28.07524396
+    },
+    {
+      "file": "sun360test_500/46158.jpg",
+      "quality": "1",
+      "enc_time": 0.31767154,
+      "dec_time": 0.16645312,
+      "bpp": 0.13452148,
+      "psnr": 29.68342938,
+      "ms-ssim-db": 14.51450672,
+      "ws-psnr": 29.01125334
+    },
+    {
+      "file": "sun360test_500/46438.jpg",
+      "quality": "1",
+      "enc_time": 0.31463599,
+      "dec_time": 0.16311646,
+      "bpp": 0.12927246,
+      "psnr": 28.97540864,
+      "ms-ssim-db": 12.09066378,
+      "ws-psnr": 28.11294684
+    },
+    {
+      "file": "sun360test_500/46837.jpg",
+      "quality": "1",
+      "enc_time": 0.30967045,
+      "dec_time": 0.15503383,
+      "bpp": 0.24438477,
+      "psnr": 26.28840976,
+      "ms-ssim-db": 13.43716056,
+      "ws-psnr": 26.06057011
+    },
+    {
+      "file": "sun360test_500/47058.jpg",
+      "quality": "1",
+      "enc_time": 0.32015443,
+      "dec_time": 0.15868163,
+      "bpp": 0.18811035,
+      "psnr": 27.03543797,
+      "ms-ssim-db": 12.79792793,
+      "ws-psnr": 26.59470031
+    },
+    {
+      "file": "sun360test_500/47079.jpg",
+      "quality": "1",
+      "enc_time": 0.30199027,
+      "dec_time": 0.15061951,
+      "bpp": 0.0604248,
+      "psnr": 33.48618534,
+      "ms-ssim-db": 13.9753291,
+      "ws-psnr": 32.16270977
+    },
+    {
+      "file": "sun360test_500/47217.jpg",
+      "quality": "1",
+      "enc_time": 0.29903293,
+      "dec_time": 0.15834403,
+      "bpp": 0.17626953,
+      "psnr": 27.18592107,
+      "ms-ssim-db": 11.44519977,
+      "ws-psnr": 27.07773021
+    },
+    {
+      "file": "sun360test_500/47257.jpg",
+      "quality": "1",
+      "enc_time": 0.30510592,
+      "dec_time": 0.15986276,
+      "bpp": 0.11730957,
+      "psnr": 28.44547604,
+      "ms-ssim-db": 11.42482585,
+      "ws-psnr": 28.28696362
+    },
+    {
+      "file": "sun360test_500/47399.jpg",
+      "quality": "1",
+      "enc_time": 0.29824543,
+      "dec_time": 0.15839314,
+      "bpp": 0.16107178,
+      "psnr": 27.40393581,
+      "ms-ssim-db": 12.95126776,
+      "ws-psnr": 26.71435213
+    },
+    {
+      "file": "sun360test_500/47437.jpg",
+      "quality": "1",
+      "enc_time": 0.29250765,
+      "dec_time": 0.14834595,
+      "bpp": 0.16552734,
+      "psnr": 27.98213114,
+      "ms-ssim-db": 11.9076807,
+      "ws-psnr": 27.62580217
+    },
+    {
+      "file": "sun360test_500/47459.jpg",
+      "quality": "1",
+      "enc_time": 0.29596782,
+      "dec_time": 0.1513021,
+      "bpp": 0.08966064,
+      "psnr": 31.53614787,
+      "ms-ssim-db": 12.25370087,
+      "ws-psnr": 30.67235415
+    },
+    {
+      "file": "sun360test_500/47499.jpg",
+      "quality": "1",
+      "enc_time": 0.29244971,
+      "dec_time": 0.14986587,
+      "bpp": 0.05853271,
+      "psnr": 33.71395768,
+      "ms-ssim-db": 14.7601645,
+      "ws-psnr": 32.28544825
+    },
+    {
+      "file": "sun360test_500/47599.jpg",
+      "quality": "1",
+      "enc_time": 0.2954483,
+      "dec_time": 0.14963269,
+      "bpp": 0.13885498,
+      "psnr": 28.8144073,
+      "ms-ssim-db": 11.77376482,
+      "ws-psnr": 28.12008135
+    },
+    {
+      "file": "sun360test_500/47639.jpg",
+      "quality": "1",
+      "enc_time": 0.29252672,
+      "dec_time": 0.14870811,
+      "bpp": 0.16290283,
+      "psnr": 28.19977825,
+      "ms-ssim-db": 11.42185843,
+      "ws-psnr": 27.96432352
+    },
+    {
+      "file": "sun360test_500/4778.jpg",
+      "quality": "1",
+      "enc_time": 0.29807663,
+      "dec_time": 0.15549827,
+      "bpp": 0.10644531,
+      "psnr": 29.81379885,
+      "ms-ssim-db": 10.9646477,
+      "ws-psnr": 29.02751265
+    },
+    {
+      "file": "sun360test_500/47918.jpg",
+      "quality": "1",
+      "enc_time": 0.29125214,
+      "dec_time": 0.15725064,
+      "bpp": 0.21325684,
+      "psnr": 27.09044967,
+      "ms-ssim-db": 13.41524229,
+      "ws-psnr": 26.27428279
+    },
+    {
+      "file": "sun360test_500/48017.jpg",
+      "quality": "1",
+      "enc_time": 0.30103374,
+      "dec_time": 0.15856481,
+      "bpp": 0.12194824,
+      "psnr": 30.35982677,
+      "ms-ssim-db": 15.10468954,
+      "ws-psnr": 29.68953106
+    },
+    {
+      "file": "sun360test_500/48057.jpg",
+      "quality": "1",
+      "enc_time": 0.29592752,
+      "dec_time": 0.15680408,
+      "bpp": 0.08190918,
+      "psnr": 30.35860072,
+      "ms-ssim-db": 11.62530646,
+      "ws-psnr": 30.15716845
+    },
+    {
+      "file": "sun360test_500/48097.jpg",
+      "quality": "1",
+      "enc_time": 0.29939437,
+      "dec_time": 0.15715098,
+      "bpp": 0.06707764,
+      "psnr": 32.48592019,
+      "ms-ssim-db": 12.50558359,
+      "ws-psnr": 31.23139447
+    },
+    {
+      "file": "sun360test_500/48098.jpg",
+      "quality": "1",
+      "enc_time": 0.29386425,
+      "dec_time": 0.15032887,
+      "bpp": 0.12188721,
+      "psnr": 28.33769066,
+      "ms-ssim-db": 11.02646949,
+      "ws-psnr": 28.60550021
+    },
+    {
+      "file": "sun360test_500/48217.jpg",
+      "quality": "1",
+      "enc_time": 0.2973783,
+      "dec_time": 0.15149999,
+      "bpp": 0.11779785,
+      "psnr": 29.29477135,
+      "ms-ssim-db": 11.87828428,
+      "ws-psnr": 28.13984566
+    },
+    {
+      "file": "sun360test_500/48397.jpg",
+      "quality": "1",
+      "enc_time": 0.29521251,
+      "dec_time": 0.15318561,
+      "bpp": 0.31292725,
+      "psnr": 25.47836467,
+      "ms-ssim-db": 13.60322743,
+      "ws-psnr": 24.89590646
+    },
+    {
+      "file": "sun360test_500/48439.jpg",
+      "quality": "1",
+      "enc_time": 0.29459977,
+      "dec_time": 0.14964151,
+      "bpp": 0.10742188,
+      "psnr": 29.28738455,
+      "ms-ssim-db": 12.24818492,
+      "ws-psnr": 28.74227096
+    },
+    {
+      "file": "sun360test_500/48658.jpg",
+      "quality": "1",
+      "enc_time": 0.29468894,
+      "dec_time": 0.15018392,
+      "bpp": 0.18444824,
+      "psnr": 27.13595987,
+      "ms-ssim-db": 10.95723237,
+      "ws-psnr": 26.78152461
+    },
+    {
+      "file": "sun360test_500/48739.jpg",
+      "quality": "1",
+      "enc_time": 0.29263115,
+      "dec_time": 0.15017557,
+      "bpp": 0.25134277,
+      "psnr": 26.64116784,
+      "ms-ssim-db": 13.54403795,
+      "ws-psnr": 26.35911519
+    },
+    {
+      "file": "sun360test_500/4878.jpg",
+      "quality": "1",
+      "enc_time": 0.29974747,
+      "dec_time": 0.16498899,
+      "bpp": 0.0802002,
+      "psnr": 31.64803722,
+      "ms-ssim-db": 12.89998295,
+      "ws-psnr": 31.33477055
+    },
+    {
+      "file": "sun360test_500/48877.jpg",
+      "quality": "1",
+      "enc_time": 0.30833673,
+      "dec_time": 0.15736389,
+      "bpp": 0.25671387,
+      "psnr": 27.34389726,
+      "ms-ssim-db": 13.1747519,
+      "ws-psnr": 26.60741837
+    },
+    {
+      "file": "sun360test_500/48998.jpg",
+      "quality": "1",
+      "enc_time": 0.29776859,
+      "dec_time": 0.16059422,
+      "bpp": 0.08795166,
+      "psnr": 31.03713646,
+      "ms-ssim-db": 12.39529721,
+      "ws-psnr": 30.14332185
+    },
+    {
+      "file": "sun360test_500/49338.jpg",
+      "quality": "1",
+      "enc_time": 0.2909503,
+      "dec_time": 0.1536305,
+      "bpp": 0.09674072,
+      "psnr": 31.82058723,
+      "ms-ssim-db": 15.19477293,
+      "ws-psnr": 31.17375224
+    },
+    {
+      "file": "sun360test_500/49358.jpg",
+      "quality": "1",
+      "enc_time": 0.29274035,
+      "dec_time": 0.15261054,
+      "bpp": 0.14880371,
+      "psnr": 27.25644077,
+      "ms-ssim-db": 10.73306833,
+      "ws-psnr": 26.28644894
+    },
+    {
+      "file": "sun360test_500/49398.jpg",
+      "quality": "1",
+      "enc_time": 0.29396343,
+      "dec_time": 0.15276694,
+      "bpp": 0.21166992,
+      "psnr": 25.0016468,
+      "ms-ssim-db": 10.54434706,
+      "ws-psnr": 24.83343874
+    },
+    {
+      "file": "sun360test_500/49417.jpg",
+      "quality": "1",
+      "enc_time": 0.29604149,
+      "dec_time": 0.15438128,
+      "bpp": 0.0791626,
+      "psnr": 31.23389655,
+      "ms-ssim-db": 16.65356778,
+      "ws-psnr": 29.81593156
+    },
+    {
+      "file": "sun360test_500/49419.jpg",
+      "quality": "1",
+      "enc_time": 0.29423451,
+      "dec_time": 0.15412855,
+      "bpp": 0.12805176,
+      "psnr": 29.18067476,
+      "ms-ssim-db": 12.99741132,
+      "ws-psnr": 28.80767236
+    },
+    {
+      "file": "sun360test_500/49498.jpg",
+      "quality": "1",
+      "enc_time": 0.2992239,
+      "dec_time": 0.1574235,
+      "bpp": 0.35803223,
+      "psnr": 23.70731007,
+      "ms-ssim-db": 10.8884973,
+      "ws-psnr": 23.43406849
+    },
+    {
+      "file": "sun360test_500/49579.jpg",
+      "quality": "1",
+      "enc_time": 0.29479027,
+      "dec_time": 0.15394998,
+      "bpp": 0.15686035,
+      "psnr": 28.49802867,
+      "ms-ssim-db": 13.71680925,
+      "ws-psnr": 27.70325666
+    },
+    {
+      "file": "sun360test_500/4959.jpg",
+      "quality": "1",
+      "enc_time": 0.29294682,
+      "dec_time": 0.15327883,
+      "bpp": 0.14215088,
+      "psnr": 28.56132329,
+      "ms-ssim-db": 12.05131748,
+      "ws-psnr": 27.83659542
+    },
+    {
+      "file": "sun360test_500/49617.jpg",
+      "quality": "1",
+      "enc_time": 0.30286241,
+      "dec_time": 0.15497112,
+      "bpp": 0.29187012,
+      "psnr": 24.72563999,
+      "ms-ssim-db": 12.96196028,
+      "ws-psnr": 23.95852396
+    },
+    {
+      "file": "sun360test_500/49637.jpg",
+      "quality": "1",
+      "enc_time": 0.29797864,
+      "dec_time": 0.15653539,
+      "bpp": 0.1574707,
+      "psnr": 29.01418718,
+      "ms-ssim-db": 13.65336589,
+      "ws-psnr": 28.4337647
+    },
+    {
+      "file": "sun360test_500/49699.jpg",
+      "quality": "1",
+      "enc_time": 0.29756093,
+      "dec_time": 0.15576863,
+      "bpp": 0.24468994,
+      "psnr": 25.54344326,
+      "ms-ssim-db": 12.29731799,
+      "ws-psnr": 25.59933708
+    },
+    {
+      "file": "sun360test_500/49737.jpg",
+      "quality": "1",
+      "enc_time": 0.29476094,
+      "dec_time": 0.15295291,
+      "bpp": 0.15661621,
+      "psnr": 27.85424464,
+      "ms-ssim-db": 13.13953595,
+      "ws-psnr": 26.80019628
+    },
+    {
+      "file": "sun360test_500/49739.jpg",
+      "quality": "1",
+      "enc_time": 0.29294181,
+      "dec_time": 0.15221357,
+      "bpp": 0.17791748,
+      "psnr": 26.9909301,
+      "ms-ssim-db": 12.29093036,
+      "ws-psnr": 26.30044435
+    },
+    {
+      "file": "sun360test_500/49877.jpg",
+      "quality": "1",
+      "enc_time": 0.2957232,
+      "dec_time": 0.15282822,
+      "bpp": 0.19659424,
+      "psnr": 28.39771133,
+      "ms-ssim-db": 13.54172615,
+      "ws-psnr": 27.60448428
+    },
+    {
+      "file": "sun360test_500/49897.jpg",
+      "quality": "1",
+      "enc_time": 0.3003118,
+      "dec_time": 0.15815783,
+      "bpp": 0.10522461,
+      "psnr": 31.33336175,
+      "ms-ssim-db": 15.34857198,
+      "ws-psnr": 30.53101212
+    },
+    {
+      "file": "sun360test_500/49958.jpg",
+      "quality": "1",
+      "enc_time": 0.30892015,
+      "dec_time": 0.15730739,
+      "bpp": 0.08782959,
+      "psnr": 30.04059276,
+      "ms-ssim-db": 12.47786053,
+      "ws-psnr": 29.64349865
+    },
+    {
+      "file": "sun360test_500/49959.jpg",
+      "quality": "1",
+      "enc_time": 0.30778265,
+      "dec_time": 0.15559244,
+      "bpp": 0.14208984,
+      "psnr": 28.98831948,
+      "ms-ssim-db": 14.22525845,
+      "ws-psnr": 27.99106782
+    },
+    {
+      "file": "sun360test_500/50057.jpg",
+      "quality": "1",
+      "enc_time": 0.29845691,
+      "dec_time": 0.15763402,
+      "bpp": 0.08703613,
+      "psnr": 31.71100798,
+      "ms-ssim-db": 13.94215272,
+      "ws-psnr": 31.02149825
+    },
+    {
+      "file": "sun360test_500/50217.jpg",
+      "quality": "1",
+      "enc_time": 0.298177,
+      "dec_time": 0.15937924,
+      "bpp": 0.04669189,
+      "psnr": 33.61526323,
+      "ms-ssim-db": 13.69620094,
+      "ws-psnr": 32.75723304
+    },
+    {
+      "file": "sun360test_500/50337.jpg",
+      "quality": "1",
+      "enc_time": 0.30181766,
+      "dec_time": 0.15890527,
+      "bpp": 0.19702148,
+      "psnr": 28.00959115,
+      "ms-ssim-db": 13.32304145,
+      "ws-psnr": 28.09966165
+    },
+    {
+      "file": "sun360test_500/5038.jpg",
+      "quality": "1",
+      "enc_time": 0.29972386,
+      "dec_time": 0.15976667,
+      "bpp": 0.21643066,
+      "psnr": 27.54068957,
+      "ms-ssim-db": 13.64149529,
+      "ws-psnr": 26.92635166
+    },
+    {
+      "file": "sun360test_500/50457.jpg",
+      "quality": "1",
+      "enc_time": 0.30173564,
+      "dec_time": 0.15906596,
+      "bpp": 0.28881836,
+      "psnr": 24.40734236,
+      "ms-ssim-db": 11.70060887,
+      "ws-psnr": 23.67318039
+    },
+    {
+      "file": "sun360test_500/50477.jpg",
+      "quality": "1",
+      "enc_time": 0.29994774,
+      "dec_time": 0.15543771,
+      "bpp": 0.22174072,
+      "psnr": 25.55839447,
+      "ms-ssim-db": 12.47870788,
+      "ws-psnr": 26.05800324
+    },
+    {
+      "file": "sun360test_500/50517.jpg",
+      "quality": "1",
+      "enc_time": 0.29476786,
+      "dec_time": 0.1503222,
+      "bpp": 0.1461792,
+      "psnr": 27.92934608,
+      "ms-ssim-db": 11.06980743,
+      "ws-psnr": 28.09560695
+    },
+    {
+      "file": "sun360test_500/50558.jpg",
+      "quality": "1",
+      "enc_time": 0.30686426,
+      "dec_time": 0.15855002,
+      "bpp": 0.21588135,
+      "psnr": 27.41732318,
+      "ms-ssim-db": 14.83715714,
+      "ws-psnr": 26.15624667
+    },
+    {
+      "file": "sun360test_500/50798.jpg",
+      "quality": "1",
+      "enc_time": 0.30580735,
+      "dec_time": 0.15791821,
+      "bpp": 0.12524414,
+      "psnr": 28.30556641,
+      "ms-ssim-db": 11.38832707,
+      "ws-psnr": 27.19138859
+    },
+    {
+      "file": "sun360test_500/50818.jpg",
+      "quality": "1",
+      "enc_time": 0.30152106,
+      "dec_time": 0.1584065,
+      "bpp": 0.13110352,
+      "psnr": 29.87141651,
+      "ms-ssim-db": 12.78230295,
+      "ws-psnr": 29.325919
+    },
+    {
+      "file": "sun360test_500/50879.jpg",
+      "quality": "1",
+      "enc_time": 0.30313635,
+      "dec_time": 0.15440845,
+      "bpp": 0.0894165,
+      "psnr": 29.02420067,
+      "ms-ssim-db": 10.45140244,
+      "ws-psnr": 28.0851757
+    },
+    {
+      "file": "sun360test_500/50919.jpg",
+      "quality": "1",
+      "enc_time": 0.3013742,
+      "dec_time": 0.15801072,
+      "bpp": 0.31079102,
+      "psnr": 24.33145082,
+      "ms-ssim-db": 13.90033483,
+      "ws-psnr": 23.70432741
+    },
+    {
+      "file": "sun360test_500/51039.jpg",
+      "quality": "1",
+      "enc_time": 0.29789519,
+      "dec_time": 0.15648794,
+      "bpp": 0.14941406,
+      "psnr": 28.01292442,
+      "ms-ssim-db": 11.24947434,
+      "ws-psnr": 27.54027978
+    },
+    {
+      "file": "sun360test_500/51157.jpg",
+      "quality": "1",
+      "enc_time": 0.29823804,
+      "dec_time": 0.15586662,
+      "bpp": 0.16955566,
+      "psnr": 29.26636194,
+      "ms-ssim-db": 15.02618475,
+      "ws-psnr": 28.2123251
+    },
+    {
+      "file": "sun360test_500/51198.jpg",
+      "quality": "1",
+      "enc_time": 0.30097628,
+      "dec_time": 0.15279794,
+      "bpp": 0.14904785,
+      "psnr": 29.58305174,
+      "ms-ssim-db": 14.87247359,
+      "ws-psnr": 28.9823942
+    },
+    {
+      "file": "sun360test_500/51357.jpg",
+      "quality": "1",
+      "enc_time": 0.29496622,
+      "dec_time": 0.15792155,
+      "bpp": 0.09442139,
+      "psnr": 29.30403449,
+      "ms-ssim-db": 10.18119318,
+      "ws-psnr": 28.6451298
+    },
+    {
+      "file": "sun360test_500/51399.jpg",
+      "quality": "1",
+      "enc_time": 0.29599762,
+      "dec_time": 0.15499043,
+      "bpp": 0.05651855,
+      "psnr": 32.3882824,
+      "ms-ssim-db": 12.72444363,
+      "ws-psnr": 31.90003805
+    },
+    {
+      "file": "sun360test_500/51519.jpg",
+      "quality": "1",
+      "enc_time": 0.30213642,
+      "dec_time": 0.1600852,
+      "bpp": 0.18328857,
+      "psnr": 27.29130033,
+      "ms-ssim-db": 11.96026261,
+      "ws-psnr": 27.09849728
+    },
+    {
+      "file": "sun360test_500/51697.jpg",
+      "quality": "1",
+      "enc_time": 0.29519987,
+      "dec_time": 0.14989066,
+      "bpp": 0.27642822,
+      "psnr": 25.2459275,
+      "ms-ssim-db": 12.62459503,
+      "ws-psnr": 24.88507273
+    },
+    {
+      "file": "sun360test_500/517.jpg",
+      "quality": "1",
+      "enc_time": 0.31649494,
+      "dec_time": 0.15705204,
+      "bpp": 0.22320557,
+      "psnr": 27.89478105,
+      "ms-ssim-db": 15.20400329,
+      "ws-psnr": 26.82509617
+    },
+    {
+      "file": "sun360test_500/51718.jpg",
+      "quality": "1",
+      "enc_time": 0.29448247,
+      "dec_time": 0.15224147,
+      "bpp": 0.09539795,
+      "psnr": 30.39195282,
+      "ms-ssim-db": 11.83704421,
+      "ws-psnr": 29.26340596
+    },
+    {
+      "file": "sun360test_500/51897.jpg",
+      "quality": "1",
+      "enc_time": 0.32227492,
+      "dec_time": 0.16798687,
+      "bpp": 0.07312012,
+      "psnr": 29.49187113,
+      "ms-ssim-db": 10.28188625,
+      "ws-psnr": 29.49174115
+    },
+    {
+      "file": "sun360test_500/51957.jpg",
+      "quality": "1",
+      "enc_time": 0.31966925,
+      "dec_time": 0.17068982,
+      "bpp": 0.16943359,
+      "psnr": 28.91934155,
+      "ms-ssim-db": 13.59868988,
+      "ws-psnr": 28.16332178
+    },
+    {
+      "file": "sun360test_500/52057.jpg",
+      "quality": "1",
+      "enc_time": 0.31250381,
+      "dec_time": 0.16706705,
+      "bpp": 0.08837891,
+      "psnr": 31.52721632,
+      "ms-ssim-db": 12.44157531,
+      "ws-psnr": 30.52261467
+    },
+    {
+      "file": "sun360test_500/52157.jpg",
+      "quality": "1",
+      "enc_time": 0.30338478,
+      "dec_time": 0.16430473,
+      "bpp": 0.0559082,
+      "psnr": 32.91765205,
+      "ms-ssim-db": 13.91299284,
+      "ws-psnr": 31.59922747
+    },
+    {
+      "file": "sun360test_500/5217.jpg",
+      "quality": "1",
+      "enc_time": 0.30762196,
+      "dec_time": 0.16532898,
+      "bpp": 0.19659424,
+      "psnr": 28.53371306,
+      "ms-ssim-db": 15.22335894,
+      "ws-psnr": 27.76776205
+    },
+    {
+      "file": "sun360test_500/52279.jpg",
+      "quality": "1",
+      "enc_time": 0.30158782,
+      "dec_time": 0.15894222,
+      "bpp": 0.11462402,
+      "psnr": 30.26693239,
+      "ms-ssim-db": 13.19718881,
+      "ws-psnr": 29.30446179
+    },
+    {
+      "file": "sun360test_500/52479.jpg",
+      "quality": "1",
+      "enc_time": 0.30446959,
+      "dec_time": 0.16382098,
+      "bpp": 0.39086914,
+      "psnr": 23.11333017,
+      "ms-ssim-db": 10.8864618,
+      "ws-psnr": 22.97135262
+    },
+    {
+      "file": "sun360test_500/52537.jpg",
+      "quality": "1",
+      "enc_time": 0.30008316,
+      "dec_time": 0.1568954,
+      "bpp": 0.19836426,
+      "psnr": 26.54613559,
+      "ms-ssim-db": 13.23164591,
+      "ws-psnr": 25.32022759
+    },
+    {
+      "file": "sun360test_500/5259.jpg",
+      "quality": "1",
+      "enc_time": 0.29863501,
+      "dec_time": 0.15673208,
+      "bpp": 0.10968018,
+      "psnr": 30.99274531,
+      "ms-ssim-db": 13.12048362,
+      "ws-psnr": 30.89692587
+    },
+    {
+      "file": "sun360test_500/52617.jpg",
+      "quality": "1",
+      "enc_time": 0.29725337,
+      "dec_time": 0.15756226,
+      "bpp": 0.13305664,
+      "psnr": 28.44823816,
+      "ms-ssim-db": 10.92207582,
+      "ws-psnr": 27.95987099
+    },
+    {
+      "file": "sun360test_500/52758.jpg",
+      "quality": "1",
+      "enc_time": 0.30365968,
+      "dec_time": 0.16015506,
+      "bpp": 0.1005249,
+      "psnr": 30.86605669,
+      "ms-ssim-db": 12.83596222,
+      "ws-psnr": 29.83469814
+    },
+    {
+      "file": "sun360test_500/52939.jpg",
+      "quality": "1",
+      "enc_time": 0.29848409,
+      "dec_time": 0.16025186,
+      "bpp": 0.43450928,
+      "psnr": 22.50171649,
+      "ms-ssim-db": 11.80896842,
+      "ws-psnr": 22.23630979
+    },
+    {
+      "file": "sun360test_500/53238.jpg",
+      "quality": "1",
+      "enc_time": 0.29680085,
+      "dec_time": 0.15631914,
+      "bpp": 0.07293701,
+      "psnr": 31.2966979,
+      "ms-ssim-db": 12.51287219,
+      "ws-psnr": 30.6442427
+    },
+    {
+      "file": "sun360test_500/53257.jpg",
+      "quality": "1",
+      "enc_time": 0.29675102,
+      "dec_time": 0.15574121,
+      "bpp": 0.04559326,
+      "psnr": 34.36936231,
+      "ms-ssim-db": 15.05924348,
+      "ws-psnr": 33.24567279
+    },
+    {
+      "file": "sun360test_500/53297.jpg",
+      "quality": "1",
+      "enc_time": 0.29737926,
+      "dec_time": 0.16150784,
+      "bpp": 0.20928955,
+      "psnr": 27.806733,
+      "ms-ssim-db": 12.28542829,
+      "ws-psnr": 27.17118463
+    },
+    {
+      "file": "sun360test_500/5338.jpg",
+      "quality": "1",
+      "enc_time": 0.29818416,
+      "dec_time": 0.15670633,
+      "bpp": 0.17547607,
+      "psnr": 28.54770286,
+      "ms-ssim-db": 12.47881324,
+      "ws-psnr": 27.51979926
+    },
+    {
+      "file": "sun360test_500/53457.jpg",
+      "quality": "1",
+      "enc_time": 0.30123973,
+      "dec_time": 0.16659832,
+      "bpp": 0.11090088,
+      "psnr": 30.07744057,
+      "ms-ssim-db": 12.66802441,
+      "ws-psnr": 29.08674732
+    },
+    {
+      "file": "sun360test_500/54178.jpg",
+      "quality": "1",
+      "enc_time": 0.30317736,
+      "dec_time": 0.15902972,
+      "bpp": 0.15789795,
+      "psnr": 28.10169728,
+      "ms-ssim-db": 12.1572393,
+      "ws-psnr": 28.16996665
+    },
+    {
+      "file": "sun360test_500/54218.jpg",
+      "quality": "1",
+      "enc_time": 0.30148172,
+      "dec_time": 0.16151214,
+      "bpp": 0.07781982,
+      "psnr": 33.01992006,
+      "ms-ssim-db": 15.82768126,
+      "ws-psnr": 32.05189347
+    },
+    {
+      "file": "sun360test_500/54239.jpg",
+      "quality": "1",
+      "enc_time": 0.3039577,
+      "dec_time": 0.15934896,
+      "bpp": 0.14190674,
+      "psnr": 28.76225687,
+      "ms-ssim-db": 12.88179011,
+      "ws-psnr": 27.61580767
+    },
+    {
+      "file": "sun360test_500/54337.jpg",
+      "quality": "1",
+      "enc_time": 0.30089951,
+      "dec_time": 0.16016841,
+      "bpp": 0.17651367,
+      "psnr": 28.07417687,
+      "ms-ssim-db": 12.051496,
+      "ws-psnr": 27.76992741
+    },
+    {
+      "file": "sun360test_500/54458.jpg",
+      "quality": "1",
+      "enc_time": 0.31081748,
+      "dec_time": 0.16516972,
+      "bpp": 0.08532715,
+      "psnr": 31.08287054,
+      "ms-ssim-db": 12.55891051,
+      "ws-psnr": 30.07925932
+    },
+    {
+      "file": "sun360test_500/54479.jpg",
+      "quality": "1",
+      "enc_time": 0.30854797,
+      "dec_time": 0.1734848,
+      "bpp": 0.15557861,
+      "psnr": 29.14798351,
+      "ms-ssim-db": 14.81984555,
+      "ws-psnr": 27.88045536
+    },
+    {
+      "file": "sun360test_500/54558.jpg",
+      "quality": "1",
+      "enc_time": 0.30160594,
+      "dec_time": 0.16867685,
+      "bpp": 0.07818604,
+      "psnr": 32.0293002,
+      "ms-ssim-db": 13.8696358,
+      "ws-psnr": 31.38773253
+    },
+    {
+      "file": "sun360test_500/5459.jpg",
+      "quality": "1",
+      "enc_time": 0.32022381,
+      "dec_time": 0.16897535,
+      "bpp": 0.12426758,
+      "psnr": 30.4931891,
+      "ms-ssim-db": 13.70277817,
+      "ws-psnr": 31.03515037
+    },
+    {
+      "file": "sun360test_500/54619.jpg",
+      "quality": "1",
+      "enc_time": 0.30583715,
+      "dec_time": 0.16240764,
+      "bpp": 0.1585083,
+      "psnr": 28.93224825,
+      "ms-ssim-db": 12.80900028,
+      "ws-psnr": 28.15169669
+    },
+    {
+      "file": "sun360test_500/54657.jpg",
+      "quality": "1",
+      "enc_time": 0.30441642,
+      "dec_time": 0.15578151,
+      "bpp": 0.07073975,
+      "psnr": 33.61003077,
+      "ms-ssim-db": 15.47503619,
+      "ws-psnr": 33.62051626
+    },
+    {
+      "file": "sun360test_500/54658.jpg",
+      "quality": "1",
+      "enc_time": 0.30450082,
+      "dec_time": 0.16191554,
+      "bpp": 0.16094971,
+      "psnr": 28.04414578,
+      "ms-ssim-db": 11.45342538,
+      "ws-psnr": 27.19692663
+    },
+    {
+      "file": "sun360test_500/54779.jpg",
+      "quality": "1",
+      "enc_time": 0.3117156,
+      "dec_time": 0.15697622,
+      "bpp": 0.16308594,
+      "psnr": 26.78060134,
+      "ms-ssim-db": 11.00559461,
+      "ws-psnr": 26.22538455
+    },
+    {
+      "file": "sun360test_500/54877.jpg",
+      "quality": "1",
+      "enc_time": 0.30158973,
+      "dec_time": 0.15664601,
+      "bpp": 0.14788818,
+      "psnr": 29.30777564,
+      "ms-ssim-db": 15.09162768,
+      "ws-psnr": 29.04457552
+    },
+    {
+      "file": "sun360test_500/54997.jpg",
+      "quality": "1",
+      "enc_time": 0.29976702,
+      "dec_time": 0.1588335,
+      "bpp": 0.14971924,
+      "psnr": 29.66658989,
+      "ms-ssim-db": 13.15028572,
+      "ws-psnr": 29.00232306
+    },
+    {
+      "file": "sun360test_500/54998.jpg",
+      "quality": "1",
+      "enc_time": 0.29740286,
+      "dec_time": 0.15789461,
+      "bpp": 0.10620117,
+      "psnr": 30.94186431,
+      "ms-ssim-db": 14.27938871,
+      "ws-psnr": 29.72121314
+    },
+    {
+      "file": "sun360test_500/55058.jpg",
+      "quality": "1",
+      "enc_time": 0.29816532,
+      "dec_time": 0.16289997,
+      "bpp": 0.08056641,
+      "psnr": 31.76116556,
+      "ms-ssim-db": 13.34278197,
+      "ws-psnr": 30.53839813
+    },
+    {
+      "file": "sun360test_500/55098.jpg",
+      "quality": "1",
+      "enc_time": 0.29992723,
+      "dec_time": 0.15578675,
+      "bpp": 0.08666992,
+      "psnr": 30.23248758,
+      "ms-ssim-db": 12.04974853,
+      "ws-psnr": 29.12807672
+    },
+    {
+      "file": "sun360test_500/55138.jpg",
+      "quality": "1",
+      "enc_time": 0.29717278,
+      "dec_time": 0.16123462,
+      "bpp": 0.09399414,
+      "psnr": 31.07949183,
+      "ms-ssim-db": 12.80052688,
+      "ws-psnr": 30.42627992
+    },
+    {
+      "file": "sun360test_500/5519.jpg",
+      "quality": "1",
+      "enc_time": 0.29904103,
+      "dec_time": 0.15747118,
+      "bpp": 0.097229,
+      "psnr": 32.08631445,
+      "ms-ssim-db": 14.37632239,
+      "ws-psnr": 31.78755257
+    },
+    {
+      "file": "sun360test_500/55459.jpg",
+      "quality": "1",
+      "enc_time": 0.30346656,
+      "dec_time": 0.16287065,
+      "bpp": 0.09057617,
+      "psnr": 31.43111902,
+      "ms-ssim-db": 12.80893109,
+      "ws-psnr": 30.24734354
+    },
+    {
+      "file": "sun360test_500/55497.jpg",
+      "quality": "1",
+      "enc_time": 0.3078444,
+      "dec_time": 0.15481663,
+      "bpp": 0.09509277,
+      "psnr": 29.86223924,
+      "ms-ssim-db": 11.64655076,
+      "ws-psnr": 28.98459142
+    },
+    {
+      "file": "sun360test_500/55578.jpg",
+      "quality": "1",
+      "enc_time": 0.30143905,
+      "dec_time": 0.15552664,
+      "bpp": 0.10009766,
+      "psnr": 28.21275123,
+      "ms-ssim-db": 9.96220985,
+      "ws-psnr": 28.12928999
+    },
+    {
+      "file": "sun360test_500/55599.jpg",
+      "quality": "1",
+      "enc_time": 0.29837084,
+      "dec_time": 0.15723109,
+      "bpp": 0.26928711,
+      "psnr": 24.42262725,
+      "ms-ssim-db": 11.7434478,
+      "ws-psnr": 24.55086214
+    },
+    {
+      "file": "sun360test_500/55658.jpg",
+      "quality": "1",
+      "enc_time": 0.31753707,
+      "dec_time": 0.16083169,
+      "bpp": 0.27734375,
+      "psnr": 24.57220176,
+      "ms-ssim-db": 11.73516033,
+      "ws-psnr": 24.7218734
+    },
+    {
+      "file": "sun360test_500/55699.jpg",
+      "quality": "1",
+      "enc_time": 0.29627371,
+      "dec_time": 0.15784311,
+      "bpp": 0.11547852,
+      "psnr": 27.87223505,
+      "ms-ssim-db": 10.72776065,
+      "ws-psnr": 28.44393593
+    },
+    {
+      "file": "sun360test_500/557.jpg",
+      "quality": "1",
+      "enc_time": 0.29976845,
+      "dec_time": 0.15822721,
+      "bpp": 0.12188721,
+      "psnr": 30.32779568,
+      "ms-ssim-db": 13.79115887,
+      "ws-psnr": 29.1547647
+    },
+    {
+      "file": "sun360test_500/55759.jpg",
+      "quality": "1",
+      "enc_time": 0.29792166,
+      "dec_time": 0.15971661,
+      "bpp": 0.06652832,
+      "psnr": 30.94529565,
+      "ms-ssim-db": 10.84086171,
+      "ws-psnr": 31.32545601
+    },
+    {
+      "file": "sun360test_500/55817.jpg",
+      "quality": "1",
+      "enc_time": 0.30559874,
+      "dec_time": 0.15893102,
+      "bpp": 0.20959473,
+      "psnr": 27.24514038,
+      "ms-ssim-db": 12.99561537,
+      "ws-psnr": 26.55498375
+    },
+    {
+      "file": "sun360test_500/55898.jpg",
+      "quality": "1",
+      "enc_time": 0.29704118,
+      "dec_time": 0.15662408,
+      "bpp": 0.17102051,
+      "psnr": 28.1467655,
+      "ms-ssim-db": 13.45392302,
+      "ws-psnr": 27.39145688
+    },
+    {
+      "file": "sun360test_500/559.jpg",
+      "quality": "1",
+      "enc_time": 0.30200982,
+      "dec_time": 0.15697622,
+      "bpp": 0.33624268,
+      "psnr": 25.03893539,
+      "ms-ssim-db": 15.40305453,
+      "ws-psnr": 24.29731531
+    },
+    {
+      "file": "sun360test_500/5599.jpg",
+      "quality": "1",
+      "enc_time": 0.2969048,
+      "dec_time": 0.15915155,
+      "bpp": 0.29180908,
+      "psnr": 26.47971585,
+      "ms-ssim-db": 14.57575908,
+      "ws-psnr": 25.74304678
+    },
+    {
+      "file": "sun360test_500/55998.jpg",
+      "quality": "1",
+      "enc_time": 0.29864049,
+      "dec_time": 0.15774727,
+      "bpp": 0.1776123,
+      "psnr": 27.51929462,
+      "ms-ssim-db": 13.97099296,
+      "ws-psnr": 26.94151286
+    },
+    {
+      "file": "sun360test_500/56038.jpg",
+      "quality": "1",
+      "enc_time": 0.29645824,
+      "dec_time": 0.15666151,
+      "bpp": 0.06439209,
+      "psnr": 32.55876644,
+      "ms-ssim-db": 14.37871265,
+      "ws-psnr": 31.24110733
+    },
+    {
+      "file": "sun360test_500/5617.jpg",
+      "quality": "1",
+      "enc_time": 0.29670358,
+      "dec_time": 0.16331029,
+      "bpp": 0.09399414,
+      "psnr": 31.72871326,
+      "ms-ssim-db": 13.46339441,
+      "ws-psnr": 30.56675422
+    },
+    {
+      "file": "sun360test_500/56297.jpg",
+      "quality": "1",
+      "enc_time": 0.30385613,
+      "dec_time": 0.15804362,
+      "bpp": 0.13061523,
+      "psnr": 28.71532351,
+      "ms-ssim-db": 12.23482618,
+      "ws-psnr": 27.92871497
+    },
+    {
+      "file": "sun360test_500/56358.jpg",
+      "quality": "1",
+      "enc_time": 0.30118752,
+      "dec_time": 0.16031265,
+      "bpp": 0.06872559,
+      "psnr": 31.12906841,
+      "ms-ssim-db": 12.57067103,
+      "ws-psnr": 29.88447468
+    },
+    {
+      "file": "sun360test_500/56518.jpg",
+      "quality": "1",
+      "enc_time": 0.30107594,
+      "dec_time": 0.15766501,
+      "bpp": 0.21588135,
+      "psnr": 25.98342994,
+      "ms-ssim-db": 12.48430456,
+      "ws-psnr": 24.92130176
+    },
+    {
+      "file": "sun360test_500/5697.jpg",
+      "quality": "1",
+      "enc_time": 0.29744077,
+      "dec_time": 0.15574789,
+      "bpp": 0.15844727,
+      "psnr": 29.28697867,
+      "ms-ssim-db": 13.26589535,
+      "ws-psnr": 28.40392143
+    },
+    {
+      "file": "sun360test_500/5719.jpg",
+      "quality": "1",
+      "enc_time": 0.2993319,
+      "dec_time": 0.15794969,
+      "bpp": 0.15429688,
+      "psnr": 28.91342572,
+      "ms-ssim-db": 11.55029234,
+      "ws-psnr": 28.657962
+    },
+    {
+      "file": "sun360test_500/5737.jpg",
+      "quality": "1",
+      "enc_time": 0.29691076,
+      "dec_time": 0.15716505,
+      "bpp": 0.13006592,
+      "psnr": 29.95392536,
+      "ms-ssim-db": 12.71544165,
+      "ws-psnr": 29.03119928
+    },
+    {
+      "file": "sun360test_500/5957.jpg",
+      "quality": "1",
+      "enc_time": 0.29824495,
+      "dec_time": 0.15496135,
+      "bpp": 0.04473877,
+      "psnr": 36.30821808,
+      "ms-ssim-db": 16.99924069,
+      "ws-psnr": 36.542688
+    },
+    {
+      "file": "sun360test_500/6258.jpg",
+      "quality": "1",
+      "enc_time": 0.30381322,
+      "dec_time": 0.16044641,
+      "bpp": 0.13043213,
+      "psnr": 30.14586976,
+      "ms-ssim-db": 13.59075907,
+      "ws-psnr": 28.96274988
+    },
+    {
+      "file": "sun360test_500/6297.jpg",
+      "quality": "1",
+      "enc_time": 0.30503941,
+      "dec_time": 0.15681601,
+      "bpp": 0.12023926,
+      "psnr": 30.69114317,
+      "ms-ssim-db": 15.03991833,
+      "ws-psnr": 29.390261
+    },
+    {
+      "file": "sun360test_500/6418.jpg",
+      "quality": "1",
+      "enc_time": 0.29750013,
+      "dec_time": 0.15786266,
+      "bpp": 0.15722656,
+      "psnr": 29.15943705,
+      "ms-ssim-db": 13.62380368,
+      "ws-psnr": 28.42366401
+    },
+    {
+      "file": "sun360test_500/6459.jpg",
+      "quality": "1",
+      "enc_time": 0.30596805,
+      "dec_time": 0.15810108,
+      "bpp": 0.21704102,
+      "psnr": 27.59173239,
+      "ms-ssim-db": 12.99948688,
+      "ws-psnr": 26.98161598
+    },
+    {
+      "file": "sun360test_500/6498.jpg",
+      "quality": "1",
+      "enc_time": 0.29653811,
+      "dec_time": 0.16119933,
+      "bpp": 0.14093018,
+      "psnr": 29.9370911,
+      "ms-ssim-db": 12.57003476,
+      "ws-psnr": 29.43825999
+    },
+    {
+      "file": "sun360test_500/6578.jpg",
+      "quality": "1",
+      "enc_time": 0.31161451,
+      "dec_time": 0.15560412,
+      "bpp": 0.09393311,
+      "psnr": 32.07099635,
+      "ms-ssim-db": 14.49936596,
+      "ws-psnr": 31.63930972
+    },
+    {
+      "file": "sun360test_500/6597.jpg",
+      "quality": "1",
+      "enc_time": 0.29817772,
+      "dec_time": 0.15664053,
+      "bpp": 0.19207764,
+      "psnr": 28.67409021,
+      "ms-ssim-db": 14.53386747,
+      "ws-psnr": 27.62734159
+    },
+    {
+      "file": "sun360test_500/6677.jpg",
+      "quality": "1",
+      "enc_time": 0.29783559,
+      "dec_time": 0.15641117,
+      "bpp": 0.1293335,
+      "psnr": 29.43403019,
+      "ms-ssim-db": 12.31980418,
+      "ws-psnr": 28.89341968
+    },
+    {
+      "file": "sun360test_500/6758.jpg",
+      "quality": "1",
+      "enc_time": 0.31039071,
+      "dec_time": 0.16079998,
+      "bpp": 0.12792969,
+      "psnr": 29.96670502,
+      "ms-ssim-db": 13.32573515,
+      "ws-psnr": 28.86770692
+    },
+    {
+      "file": "sun360test_500/6858.jpg",
+      "quality": "1",
+      "enc_time": 0.29675388,
+      "dec_time": 0.15673304,
+      "bpp": 0.1663208,
+      "psnr": 26.88042816,
+      "ms-ssim-db": 9.43531938,
+      "ws-psnr": 26.67297666
+    },
+    {
+      "file": "sun360test_500/6937.jpg",
+      "quality": "1",
+      "enc_time": 0.2972641,
+      "dec_time": 0.15609932,
+      "bpp": 0.06195068,
+      "psnr": 33.08184319,
+      "ms-ssim-db": 13.48767795,
+      "ws-psnr": 32.52660096
+    },
+    {
+      "file": "sun360test_500/6938.jpg",
+      "quality": "1",
+      "enc_time": 0.30943608,
+      "dec_time": 0.16152215,
+      "bpp": 0.10736084,
+      "psnr": 30.34900202,
+      "ms-ssim-db": 13.50026491,
+      "ws-psnr": 29.09957315
+    },
+    {
+      "file": "sun360test_500/6959.jpg",
+      "quality": "1",
+      "enc_time": 0.30386567,
+      "dec_time": 0.15763998,
+      "bpp": 0.1229248,
+      "psnr": 29.30575902,
+      "ms-ssim-db": 11.54391611,
+      "ws-psnr": 28.72469223
+    },
+    {
+      "file": "sun360test_500/6998.jpg",
+      "quality": "1",
+      "enc_time": 0.3018012,
+      "dec_time": 0.15984654,
+      "bpp": 0.11334229,
+      "psnr": 31.11154269,
+      "ms-ssim-db": 13.6693886,
+      "ws-psnr": 29.98437602
+    },
+    {
+      "file": "sun360test_500/6999.jpg",
+      "quality": "1",
+      "enc_time": 0.30720353,
+      "dec_time": 0.16265535,
+      "bpp": 0.09759521,
+      "psnr": 31.13436768,
+      "ms-ssim-db": 13.46853483,
+      "ws-psnr": 30.21777395
+    },
+    {
+      "file": "sun360test_500/7037.jpg",
+      "quality": "1",
+      "enc_time": 0.29877687,
+      "dec_time": 0.15709805,
+      "bpp": 0.15429688,
+      "psnr": 27.64389624,
+      "ms-ssim-db": 10.91419596,
+      "ws-psnr": 27.14603035
+    },
+    {
+      "file": "sun360test_500/7059.jpg",
+      "quality": "1",
+      "enc_time": 0.29865694,
+      "dec_time": 0.15851784,
+      "bpp": 0.15362549,
+      "psnr": 29.70712058,
+      "ms-ssim-db": 15.09010636,
+      "ws-psnr": 29.27488687
+    },
+    {
+      "file": "sun360test_500/7097.jpg",
+      "quality": "1",
+      "enc_time": 0.29915142,
+      "dec_time": 0.15774679,
+      "bpp": 0.09820557,
+      "psnr": 30.66036608,
+      "ms-ssim-db": 12.40889363,
+      "ws-psnr": 30.1299709
+    },
+    {
+      "file": "sun360test_500/7158.jpg",
+      "quality": "1",
+      "enc_time": 0.29815841,
+      "dec_time": 0.1568923,
+      "bpp": 0.07800293,
+      "psnr": 33.01995553,
+      "ms-ssim-db": 14.60729182,
+      "ws-psnr": 32.13832043
+    },
+    {
+      "file": "sun360test_500/739.jpg",
+      "quality": "1",
+      "enc_time": 0.30103731,
+      "dec_time": 0.15716314,
+      "bpp": 0.21453857,
+      "psnr": 27.71645013,
+      "ms-ssim-db": 14.88835286,
+      "ws-psnr": 26.81354659
+    },
+    {
+      "file": "sun360test_500/7477.jpg",
+      "quality": "1",
+      "enc_time": 0.30050802,
+      "dec_time": 0.15887475,
+      "bpp": 0.12054443,
+      "psnr": 30.34804797,
+      "ms-ssim-db": 14.13294372,
+      "ws-psnr": 29.81758631
+    },
+    {
+      "file": "sun360test_500/7497.jpg",
+      "quality": "1",
+      "enc_time": 0.2974503,
+      "dec_time": 0.15727234,
+      "bpp": 0.13317871,
+      "psnr": 30.75107647,
+      "ms-ssim-db": 15.07026098,
+      "ws-psnr": 29.51090663
+    },
+    {
+      "file": "sun360test_500/7517.jpg",
+      "quality": "1",
+      "enc_time": 0.29886937,
+      "dec_time": 0.15774012,
+      "bpp": 0.15869141,
+      "psnr": 30.27520048,
+      "ms-ssim-db": 14.73628719,
+      "ws-psnr": 29.86551674
+    },
+    {
+      "file": "sun360test_500/7558.jpg",
+      "quality": "1",
+      "enc_time": 0.30870748,
+      "dec_time": 0.15693045,
+      "bpp": 0.13909912,
+      "psnr": 29.74144381,
+      "ms-ssim-db": 14.63211527,
+      "ws-psnr": 29.57065448
+    },
+    {
+      "file": "sun360test_500/7578.jpg",
+      "quality": "1",
+      "enc_time": 0.30142903,
+      "dec_time": 0.16133761,
+      "bpp": 0.11273193,
+      "psnr": 30.51144868,
+      "ms-ssim-db": 16.2929643,
+      "ws-psnr": 29.83396522
+    },
+    {
+      "file": "sun360test_500/7597.jpg",
+      "quality": "1",
+      "enc_time": 0.30388856,
+      "dec_time": 0.15646696,
+      "bpp": 0.20874023,
+      "psnr": 28.09712163,
+      "ms-ssim-db": 12.93017994,
+      "ws-psnr": 28.04044006
+    },
+    {
+      "file": "sun360test_500/7598.jpg",
+      "quality": "1",
+      "enc_time": 0.29671478,
+      "dec_time": 0.15728045,
+      "bpp": 0.06964111,
+      "psnr": 33.24379816,
+      "ms-ssim-db": 13.7576451,
+      "ws-psnr": 32.58935025
+    },
+    {
+      "file": "sun360test_500/7659.jpg",
+      "quality": "1",
+      "enc_time": 0.29733896,
+      "dec_time": 0.15761161,
+      "bpp": 0.13128662,
+      "psnr": 28.78024096,
+      "ms-ssim-db": 12.19841177,
+      "ws-psnr": 27.84958363
+    },
+    {
+      "file": "sun360test_500/7759.jpg",
+      "quality": "1",
+      "enc_time": 0.29922938,
+      "dec_time": 0.16026211,
+      "bpp": 0.14776611,
+      "psnr": 29.36035198,
+      "ms-ssim-db": 11.70891885,
+      "ws-psnr": 28.95271801
+    },
+    {
+      "file": "sun360test_500/7779.jpg",
+      "quality": "1",
+      "enc_time": 0.30497146,
+      "dec_time": 0.15872788,
+      "bpp": 0.10778809,
+      "psnr": 31.14382098,
+      "ms-ssim-db": 15.4406354,
+      "ws-psnr": 29.76591771
+    },
+    {
+      "file": "sun360test_500/7837.jpg",
+      "quality": "1",
+      "enc_time": 0.30328059,
+      "dec_time": 0.1565237,
+      "bpp": 0.07666016,
+      "psnr": 32.86986865,
+      "ms-ssim-db": 14.04159848,
+      "ws-psnr": 31.55362483
+    },
+    {
+      "file": "sun360test_500/7857.jpg",
+      "quality": "1",
+      "enc_time": 0.3008945,
+      "dec_time": 0.15724134,
+      "bpp": 0.17077637,
+      "psnr": 29.28152049,
+      "ms-ssim-db": 13.41437854,
+      "ws-psnr": 29.07042106
+    },
+    {
+      "file": "sun360test_500/8078.jpg",
+      "quality": "1",
+      "enc_time": 0.29784083,
+      "dec_time": 0.15651107,
+      "bpp": 0.14685059,
+      "psnr": 30.00243183,
+      "ms-ssim-db": 14.51926004,
+      "ws-psnr": 30.5884568
+    },
+    {
+      "file": "sun360test_500/8138.jpg",
+      "quality": "1",
+      "enc_time": 0.29627156,
+      "dec_time": 0.15836334,
+      "bpp": 0.16918945,
+      "psnr": 28.25717573,
+      "ms-ssim-db": 12.13307637,
+      "ws-psnr": 27.62050929
+    },
+    {
+      "file": "sun360test_500/8337.jpg",
+      "quality": "1",
+      "enc_time": 0.29821444,
+      "dec_time": 0.15542817,
+      "bpp": 0.13812256,
+      "psnr": 30.97590569,
+      "ms-ssim-db": 16.0818977,
+      "ws-psnr": 29.83867194
+    },
+    {
+      "file": "sun360test_500/8338.jpg",
+      "quality": "1",
+      "enc_time": 0.29743242,
+      "dec_time": 0.15842247,
+      "bpp": 0.08837891,
+      "psnr": 33.11195677,
+      "ms-ssim-db": 16.60986139,
+      "ws-psnr": 32.36203701
+    },
+    {
+      "file": "sun360test_500/8478.jpg",
+      "quality": "1",
+      "enc_time": 0.31484509,
+      "dec_time": 0.17248106,
+      "bpp": 0.21563721,
+      "psnr": 28.59199519,
+      "ms-ssim-db": 16.0659018,
+      "ws-psnr": 27.90578749
+    },
+    {
+      "file": "sun360test_500/8538.jpg",
+      "quality": "1",
+      "enc_time": 0.30191708,
+      "dec_time": 0.15681148,
+      "bpp": 0.10992432,
+      "psnr": 29.63308786,
+      "ms-ssim-db": 10.75789793,
+      "ws-psnr": 29.19695597
+    },
+    {
+      "file": "sun360test_500/8638.jpg",
+      "quality": "1",
+      "enc_time": 0.30095673,
+      "dec_time": 0.1604569,
+      "bpp": 0.16577148,
+      "psnr": 29.11215384,
+      "ms-ssim-db": 15.16440101,
+      "ws-psnr": 29.2896425
+    },
+    {
+      "file": "sun360test_500/8697.jpg",
+      "quality": "1",
+      "enc_time": 0.29886389,
+      "dec_time": 0.15701795,
+      "bpp": 0.16107178,
+      "psnr": 29.47236928,
+      "ms-ssim-db": 12.54277709,
+      "ws-psnr": 29.12992227
+    },
+    {
+      "file": "sun360test_500/8739.jpg",
+      "quality": "1",
+      "enc_time": 0.29796815,
+      "dec_time": 0.15552115,
+      "bpp": 0.05126953,
+      "psnr": 34.17184273,
+      "ms-ssim-db": 14.68375951,
+      "ws-psnr": 33.78097777
+    },
+    {
+      "file": "sun360test_500/8758.jpg",
+      "quality": "1",
+      "enc_time": 0.30149722,
+      "dec_time": 0.15562367,
+      "bpp": 0.10247803,
+      "psnr": 31.07762365,
+      "ms-ssim-db": 14.18338429,
+      "ws-psnr": 30.65483839
+    },
+    {
+      "file": "sun360test_500/898.jpg",
+      "quality": "1",
+      "enc_time": 0.29822969,
+      "dec_time": 0.15834904,
+      "bpp": 0.17034912,
+      "psnr": 28.74616593,
+      "ms-ssim-db": 12.9774602,
+      "ws-psnr": 28.21972791
+    },
+    {
+      "file": "sun360test_500/9057.jpg",
+      "quality": "1",
+      "enc_time": 0.30617499,
+      "dec_time": 0.1564343,
+      "bpp": 0.07476807,
+      "psnr": 32.91350714,
+      "ms-ssim-db": 16.24093268,
+      "ws-psnr": 31.63403545
+    },
+    {
+      "file": "sun360test_500/939.jpg",
+      "quality": "1",
+      "enc_time": 0.29779482,
+      "dec_time": 0.15719557,
+      "bpp": 0.27331543,
+      "psnr": 26.41364748,
+      "ms-ssim-db": 11.77258887,
+      "ws-psnr": 26.56411445
+    },
+    {
+      "file": "sun360test_500/9479.jpg",
+      "quality": "1",
+      "enc_time": 0.30071521,
+      "dec_time": 0.15555835,
+      "bpp": 0.10552979,
+      "psnr": 31.37812467,
+      "ms-ssim-db": 13.26338667,
+      "ws-psnr": 30.34815533
+    },
+    {
+      "file": "sun360test_500/9499.jpg",
+      "quality": "1",
+      "enc_time": 0.29823613,
+      "dec_time": 0.1565125,
+      "bpp": 0.16656494,
+      "psnr": 28.8923747,
+      "ms-ssim-db": 14.3519982,
+      "ws-psnr": 27.4781969
+    },
+    {
+      "file": "sun360test_500/959.jpg",
+      "quality": "1",
+      "enc_time": 0.29875112,
+      "dec_time": 0.16044736,
+      "bpp": 0.15570068,
+      "psnr": 29.53282771,
+      "ms-ssim-db": 15.46790991,
+      "ws-psnr": 28.69863443
+    },
+    {
+      "file": "sun360test_500/9699.jpg",
+      "quality": "1",
+      "enc_time": 0.29847646,
+      "dec_time": 0.15812469,
+      "bpp": 0.15350342,
+      "psnr": 30.16986939,
+      "ms-ssim-db": 15.92307149,
+      "ws-psnr": 29.3400636
+    },
+    {
+      "file": "sun360test_500/9718.jpg",
+      "quality": "1",
+      "enc_time": 0.29955387,
+      "dec_time": 0.16156483,
+      "bpp": 0.12530518,
+      "psnr": 29.78995463,
+      "ms-ssim-db": 14.73383814,
+      "ws-psnr": 28.25237288
+    },
+    {
+      "file": "sun360test_500/9739.jpg",
+      "quality": "1",
+      "enc_time": 0.30543828,
+      "dec_time": 0.16065431,
+      "bpp": 0.16394043,
+      "psnr": 29.31079996,
+      "ms-ssim-db": 15.07927188,
+      "ws-psnr": 27.88026885
+    },
+    {
+      "file": "sun360test_500/9779.jpg",
+      "quality": "1",
+      "enc_time": 0.30917311,
+      "dec_time": 0.15667224,
+      "bpp": 0.09606934,
+      "psnr": 31.44737246,
+      "ms-ssim-db": 13.43083638,
+      "ws-psnr": 31.11737183
+    },
+    {
+      "file": "sun360test_500/979.jpg",
+      "quality": "1",
+      "enc_time": 0.29961395,
+      "dec_time": 0.15821218,
+      "bpp": 0.12139893,
+      "psnr": 30.45202467,
+      "ms-ssim-db": 13.74398431,
+      "ws-psnr": 29.94616442
+    },
+    {
+      "file": "sun360test_500/9797.jpg",
+      "quality": "1",
+      "enc_time": 0.29915524,
+      "dec_time": 0.15785336,
+      "bpp": 0.24041748,
+      "psnr": 27.22103592,
+      "ms-ssim-db": 13.3760694,
+      "ws-psnr": 26.64911284
+    },
+    {
+      "file": "sun360test_500/9899.jpg",
+      "quality": "1",
+      "enc_time": 0.30125904,
+      "dec_time": 0.16077447,
+      "bpp": 0.222229,
+      "psnr": 27.29462182,
+      "ms-ssim-db": 12.06545112,
+      "ws-psnr": 26.85418902
+    },
+    {
+      "file": "sun360test_500/9958.jpg",
+      "quality": "1",
+      "enc_time": 0.29731917,
+      "dec_time": 0.15926075,
+      "bpp": 0.11743164,
+      "psnr": 30.5380373,
+      "ms-ssim-db": 13.27788232,
+      "ws-psnr": 29.71620805
+    },
+    {
+      "file": "sun360test_500/9998.jpg",
+      "quality": "1",
+      "enc_time": 0.29825401,
+      "dec_time": 0.15743184,
+      "bpp": 0.11419678,
+      "psnr": 29.67797326,
+      "ms-ssim-db": 13.29845813,
+      "ws-psnr": 28.71675149
+    }
+  ]
+}

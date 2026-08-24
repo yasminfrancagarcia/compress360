@@ -1,0 +1,526 @@
+{
+  "name": "LALIC",
+  "description": "LALIC, coding: ans, cuda: True, quality: ['1']",
+  "results": {
+    "enc_time": [
+      0.315268
+    ],
+    "dec_time": [
+      0.158954
+    ],
+    "bpp": [
+      0.147528
+    ],
+    "psnr": [
+      29.035691
+    ],
+    "ms-ssim-db": [
+      13.037441
+    ],
+    "ws-psnr": [
+      28.345847
+    ]
+  },
+  "records": [
+    {
+      "file": "sun360/amostras50/10674.jpg",
+      "quality": "1",
+      "enc_time": 0.92984033,
+      "dec_time": 0.21789813,
+      "bpp": 0.09735107,
+      "psnr": 31.3271721,
+      "ms-ssim-db": 12.90684265,
+      "ws-psnr": 30.40097355
+    },
+    {
+      "file": "sun360/amostras50/10914.jpg",
+      "quality": "1",
+      "enc_time": 0.3021853,
+      "dec_time": 0.15619254,
+      "bpp": 0.08221436,
+      "psnr": 33.06870512,
+      "ms-ssim-db": 17.87359422,
+      "ws-psnr": 31.58298964
+    },
+    {
+      "file": "sun360/amostras50/11314.jpg",
+      "quality": "1",
+      "enc_time": 0.30027723,
+      "dec_time": 0.15508914,
+      "bpp": 0.12921143,
+      "psnr": 30.27738772,
+      "ms-ssim-db": 14.47620186,
+      "ws-psnr": 29.73510993
+    },
+    {
+      "file": "sun360/amostras50/12375.jpg",
+      "quality": "1",
+      "enc_time": 0.29739571,
+      "dec_time": 0.15591645,
+      "bpp": 0.1048584,
+      "psnr": 30.80924753,
+      "ms-ssim-db": 13.59194274,
+      "ws-psnr": 29.71758551
+    },
+    {
+      "file": "sun360/amostras50/12694.jpg",
+      "quality": "1",
+      "enc_time": 0.30245233,
+      "dec_time": 0.15868163,
+      "bpp": 0.26654053,
+      "psnr": 26.13295999,
+      "ms-ssim-db": 13.31829816,
+      "ws-psnr": 25.1431664
+    },
+    {
+      "file": "sun360/amostras50/16574.jpg",
+      "quality": "1",
+      "enc_time": 0.30138373,
+      "dec_time": 0.15877247,
+      "bpp": 0.1673584,
+      "psnr": 28.32871797,
+      "ms-ssim-db": 12.62818259,
+      "ws-psnr": 28.29090976
+    },
+    {
+      "file": "sun360/amostras50/17014.jpg",
+      "quality": "1",
+      "enc_time": 0.30083466,
+      "dec_time": 0.15570617,
+      "bpp": 0.09118652,
+      "psnr": 31.99869434,
+      "ms-ssim-db": 14.69127805,
+      "ws-psnr": 31.68156778
+    },
+    {
+      "file": "sun360/amostras50/18936.jpg",
+      "quality": "1",
+      "enc_time": 0.2989397,
+      "dec_time": 0.15591836,
+      "bpp": 0.19671631,
+      "psnr": 25.88691267,
+      "ms-ssim-db": 10.42043946,
+      "ws-psnr": 25.86684358
+    },
+    {
+      "file": "sun360/amostras50/19415.jpg",
+      "quality": "1",
+      "enc_time": 0.31861472,
+      "dec_time": 0.15561891,
+      "bpp": 0.20947266,
+      "psnr": 26.96215763,
+      "ms-ssim-db": 13.94136359,
+      "ws-psnr": 26.44557171
+    },
+    {
+      "file": "sun360/amostras50/19476.jpg",
+      "quality": "1",
+      "enc_time": 0.3162086,
+      "dec_time": 0.15468907,
+      "bpp": 0.11743164,
+      "psnr": 30.17349544,
+      "ms-ssim-db": 14.20511609,
+      "ws-psnr": 29.01596158
+    },
+    {
+      "file": "sun360/amostras50/22195.jpg",
+      "quality": "1",
+      "enc_time": 0.29860568,
+      "dec_time": 0.15465093,
+      "bpp": 0.14825439,
+      "psnr": 28.46379139,
+      "ms-ssim-db": 12.8885154,
+      "ws-psnr": 27.09588216
+    },
+    {
+      "file": "sun360/amostras50/22356.jpg",
+      "quality": "1",
+      "enc_time": 0.29828954,
+      "dec_time": 0.15746379,
+      "bpp": 0.19464111,
+      "psnr": 26.43017292,
+      "ms-ssim-db": 11.62528388,
+      "ws-psnr": 26.53888015
+    },
+    {
+      "file": "sun360/amostras50/22616.jpg",
+      "quality": "1",
+      "enc_time": 0.29989791,
+      "dec_time": 0.15683413,
+      "bpp": 0.18066406,
+      "psnr": 26.8047313,
+      "ms-ssim-db": 10.50117632,
+      "ws-psnr": 26.39028245
+    },
+    {
+      "file": "sun360/amostras50/23096.jpg",
+      "quality": "1",
+      "enc_time": 0.2991786,
+      "dec_time": 0.15934968,
+      "bpp": 0.08703613,
+      "psnr": 31.44915823,
+      "ms-ssim-db": 12.76658225,
+      "ws-psnr": 30.50029685
+    },
+    {
+      "file": "sun360/amostras50/24595.jpg",
+      "quality": "1",
+      "enc_time": 0.29836464,
+      "dec_time": 0.15578032,
+      "bpp": 0.12774658,
+      "psnr": 30.41002917,
+      "ms-ssim-db": 12.71682535,
+      "ws-psnr": 29.70854764
+    },
+    {
+      "file": "sun360/amostras50/25596.jpg",
+      "quality": "1",
+      "enc_time": 0.29756927,
+      "dec_time": 0.15767288,
+      "bpp": 0.16650391,
+      "psnr": 27.39541289,
+      "ms-ssim-db": 12.63860188,
+      "ws-psnr": 26.04407233
+    },
+    {
+      "file": "sun360/amostras50/25614.jpg",
+      "quality": "1",
+      "enc_time": 0.2980423,
+      "dec_time": 0.15613151,
+      "bpp": 0.24511719,
+      "psnr": 26.99850848,
+      "ms-ssim-db": 13.36807353,
+      "ws-psnr": 26.62206826
+    },
+    {
+      "file": "sun360/amostras50/26476.jpg",
+      "quality": "1",
+      "enc_time": 0.29825497,
+      "dec_time": 0.15513468,
+      "bpp": 0.13482666,
+      "psnr": 28.68439308,
+      "ms-ssim-db": 12.57120912,
+      "ws-psnr": 27.46671722
+    },
+    {
+      "file": "sun360/amostras50/27054.jpg",
+      "quality": "1",
+      "enc_time": 0.29744768,
+      "dec_time": 0.15737319,
+      "bpp": 0.15039062,
+      "psnr": 29.14992567,
+      "ms-ssim-db": 13.94287139,
+      "ws-psnr": 28.13379341
+    },
+    {
+      "file": "sun360/amostras50/28676.jpg",
+      "quality": "1",
+      "enc_time": 0.30132651,
+      "dec_time": 0.1577909,
+      "bpp": 0.36639404,
+      "psnr": 24.00449416,
+      "ms-ssim-db": 11.92576783,
+      "ws-psnr": 23.4599538
+    },
+    {
+      "file": "sun360/amostras50/28954.jpg",
+      "quality": "1",
+      "enc_time": 0.30014157,
+      "dec_time": 0.15770149,
+      "bpp": 0.17193604,
+      "psnr": 27.35452465,
+      "ms-ssim-db": 12.44208856,
+      "ws-psnr": 27.12722078
+    },
+    {
+      "file": "sun360/amostras50/30934.jpg",
+      "quality": "1",
+      "enc_time": 0.30017209,
+      "dec_time": 0.15989399,
+      "bpp": 0.21270752,
+      "psnr": 27.14428225,
+      "ms-ssim-db": 12.62444344,
+      "ws-psnr": 26.64446653
+    },
+    {
+      "file": "sun360/amostras50/32014.jpg",
+      "quality": "1",
+      "enc_time": 0.29845476,
+      "dec_time": 0.15481663,
+      "bpp": 0.12347412,
+      "psnr": 28.38913618,
+      "ms-ssim-db": 12.11597311,
+      "ws-psnr": 28.61132078
+    },
+    {
+      "file": "sun360/amostras50/33054.jpg",
+      "quality": "1",
+      "enc_time": 0.30155993,
+      "dec_time": 0.15531707,
+      "bpp": 0.10839844,
+      "psnr": 28.74364953,
+      "ms-ssim-db": 11.68983114,
+      "ws-psnr": 27.86794893
+    },
+    {
+      "file": "sun360/amostras50/33394.jpg",
+      "quality": "1",
+      "enc_time": 0.29886079,
+      "dec_time": 0.15689778,
+      "bpp": 0.18341064,
+      "psnr": 28.6836735,
+      "ms-ssim-db": 15.02079393,
+      "ws-psnr": 27.49919173
+    },
+    {
+      "file": "sun360/amostras50/35535.jpg",
+      "quality": "1",
+      "enc_time": 0.29884219,
+      "dec_time": 0.1560092,
+      "bpp": 0.20056152,
+      "psnr": 27.8159549,
+      "ms-ssim-db": 12.49581393,
+      "ws-psnr": 27.32205618
+    },
+    {
+      "file": "sun360/amostras50/35756.jpg",
+      "quality": "1",
+      "enc_time": 0.2970655,
+      "dec_time": 0.15485692,
+      "bpp": 0.09454346,
+      "psnr": 30.31856942,
+      "ms-ssim-db": 12.81793104,
+      "ws-psnr": 28.94183662
+    },
+    {
+      "file": "sun360/amostras50/37736.jpg",
+      "quality": "1",
+      "enc_time": 0.30486298,
+      "dec_time": 0.15840507,
+      "bpp": 0.11242676,
+      "psnr": 30.36614977,
+      "ms-ssim-db": 15.14426478,
+      "ws-psnr": 29.54462515
+    },
+    {
+      "file": "sun360/amostras50/37835.jpg",
+      "quality": "1",
+      "enc_time": 0.29943061,
+      "dec_time": 0.15525103,
+      "bpp": 0.07476807,
+      "psnr": 31.32154194,
+      "ms-ssim-db": 11.7010148,
+      "ws-psnr": 30.44717659
+    },
+    {
+      "file": "sun360/amostras50/38136.jpg",
+      "quality": "1",
+      "enc_time": 0.29791093,
+      "dec_time": 0.15529895,
+      "bpp": 0.06359863,
+      "psnr": 31.20418608,
+      "ms-ssim-db": 12.05730796,
+      "ws-psnr": 30.1856807
+    },
+    {
+      "file": "sun360/amostras50/38534.jpg",
+      "quality": "1",
+      "enc_time": 0.29768586,
+      "dec_time": 0.15748572,
+      "bpp": 0.11877441,
+      "psnr": 30.01665686,
+      "ms-ssim-db": 12.8093018,
+      "ws-psnr": 29.13854068
+    },
+    {
+      "file": "sun360/amostras50/39996.jpg",
+      "quality": "1",
+      "enc_time": 0.30164385,
+      "dec_time": 0.15654874,
+      "bpp": 0.10894775,
+      "psnr": 30.44925064,
+      "ms-ssim-db": 13.31303266,
+      "ws-psnr": 29.0870919
+    },
+    {
+      "file": "sun360/amostras50/41976.jpg",
+      "quality": "1",
+      "enc_time": 0.30480409,
+      "dec_time": 0.15764475,
+      "bpp": 0.13562012,
+      "psnr": 28.02828437,
+      "ms-ssim-db": 12.38589331,
+      "ws-psnr": 27.25452757
+    },
+    {
+      "file": "sun360/amostras50/4476.jpg",
+      "quality": "1",
+      "enc_time": 0.30097008,
+      "dec_time": 0.15830755,
+      "bpp": 0.09332275,
+      "psnr": 32.13436972,
+      "ms-ssim-db": 14.16140976,
+      "ws-psnr": 31.46771819
+    },
+    {
+      "file": "sun360/amostras50/45414.jpg",
+      "quality": "1",
+      "enc_time": 0.30352163,
+      "dec_time": 0.15756369,
+      "bpp": 0.15673828,
+      "psnr": 28.59468091,
+      "ms-ssim-db": 14.91088553,
+      "ws-psnr": 29.16031121
+    },
+    {
+      "file": "sun360/amostras50/45776.jpg",
+      "quality": "1",
+      "enc_time": 0.30106282,
+      "dec_time": 0.15770102,
+      "bpp": 0.16217041,
+      "psnr": 26.65075344,
+      "ms-ssim-db": 11.02486646,
+      "ws-psnr": 26.61677378
+    },
+    {
+      "file": "sun360/amostras50/46155.jpg",
+      "quality": "1",
+      "enc_time": 0.29895139,
+      "dec_time": 0.15810156,
+      "bpp": 0.19055176,
+      "psnr": 27.07912966,
+      "ms-ssim-db": 12.9928197,
+      "ws-psnr": 26.9668052
+    },
+    {
+      "file": "sun360/amostras50/47514.jpg",
+      "quality": "1",
+      "enc_time": 0.31566811,
+      "dec_time": 0.16454196,
+      "bpp": 0.17559814,
+      "psnr": 28.15478318,
+      "ms-ssim-db": 13.63180109,
+      "ws-psnr": 27.07578453
+    },
+    {
+      "file": "sun360/amostras50/47956.jpg",
+      "quality": "1",
+      "enc_time": 0.31137109,
+      "dec_time": 0.1640296,
+      "bpp": 0.09643555,
+      "psnr": 30.33905631,
+      "ms-ssim-db": 13.99428826,
+      "ws-psnr": 29.78657575
+    },
+    {
+      "file": "sun360/amostras50/48454.jpg",
+      "quality": "1",
+      "enc_time": 0.31351137,
+      "dec_time": 0.16886878,
+      "bpp": 0.16497803,
+      "psnr": 27.88723074,
+      "ms-ssim-db": 12.55406045,
+      "ws-psnr": 27.11181985
+    },
+    {
+      "file": "sun360/amostras50/49474.jpg",
+      "quality": "1",
+      "enc_time": 0.30753708,
+      "dec_time": 0.16501188,
+      "bpp": 0.05114746,
+      "psnr": 32.2970624,
+      "ms-ssim-db": 10.57829975,
+      "ws-psnr": 31.87470785
+    },
+    {
+      "file": "sun360/amostras50/51335.jpg",
+      "quality": "1",
+      "enc_time": 0.30530643,
+      "dec_time": 0.16153789,
+      "bpp": 0.21673584,
+      "psnr": 26.76072462,
+      "ms-ssim-db": 12.61526798,
+      "ws-psnr": 27.17441258
+    },
+    {
+      "file": "sun360/amostras50/51535.jpg",
+      "quality": "1",
+      "enc_time": 0.29933715,
+      "dec_time": 0.15865231,
+      "bpp": 0.05761719,
+      "psnr": 32.23070339,
+      "ms-ssim-db": 12.5820225,
+      "ws-psnr": 31.00780316
+    },
+    {
+      "file": "sun360/amostras50/51875.jpg",
+      "quality": "1",
+      "enc_time": 0.3067112,
+      "dec_time": 0.15533829,
+      "bpp": 0.22564697,
+      "psnr": 26.35405734,
+      "ms-ssim-db": 13.50188795,
+      "ws-psnr": 25.72156179
+    },
+    {
+      "file": "sun360/amostras50/53196.jpg",
+      "quality": "1",
+      "enc_time": 0.29866028,
+      "dec_time": 0.15566278,
+      "bpp": 0.11346436,
+      "psnr": 30.22854336,
+      "ms-ssim-db": 12.95263674,
+      "ws-psnr": 29.35374334
+    },
+    {
+      "file": "sun360/amostras50/54316.jpg",
+      "quality": "1",
+      "enc_time": 0.29837537,
+      "dec_time": 0.15469289,
+      "bpp": 0.10870361,
+      "psnr": 30.2700526,
+      "ms-ssim-db": 12.90062906,
+      "ws-psnr": 29.00241507
+    },
+    {
+      "file": "sun360/amostras50/56976.jpg",
+      "quality": "1",
+      "enc_time": 0.3372519,
+      "dec_time": 0.16435957,
+      "bpp": 0.17114258,
+      "psnr": 28.2283156,
+      "ms-ssim-db": 14.27669903,
+      "ws-psnr": 27.77243319
+    },
+    {
+      "file": "sun360/amostras50/6336.jpg",
+      "quality": "1",
+      "enc_time": 0.31117916,
+      "dec_time": 0.1642282,
+      "bpp": 0.12304688,
+      "psnr": 31.0296929,
+      "ms-ssim-db": 14.71765372,
+      "ws-psnr": 30.34520816
+    },
+    {
+      "file": "sun360/amostras50/655.jpg",
+      "quality": "1",
+      "enc_time": 0.29880929,
+      "dec_time": 0.15575147,
+      "bpp": 0.24066162,
+      "psnr": 26.68390677,
+      "ms-ssim-db": 13.70319109,
+      "ws-psnr": 25.4699663
+    },
+    {
+      "file": "sun360/amostras50/8136.jpg",
+      "quality": "1",
+      "enc_time": 0.2986095,
+      "dec_time": 0.15455508,
+      "bpp": 0.05535889,
+      "psnr": 32.26956366,
+      "ms-ssim-db": 11.15777227,
+      "ws-psnr": 31.8714331
+    }
+  ]
+}
