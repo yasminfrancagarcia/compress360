@@ -367,19 +367,9 @@ def main(argv):
         random.seed(args.seed)
     writer = SummaryWriter(save_path + "tensorboard/")
 
-    # mantém h inteiro, recorta só w
-    class RandomCropWidthOnly:
-        def __init__(self, width):
-            self.width = width
-        def __call__(self, img):
-            w, h = img.size
-            left = random.randint(0, max(0, w - self.width))
-            return img.crop((left, 0, left + self.width, h))
-
     train_transforms = transforms.Compose(
-        [RandomCropWidthOnly(args.patch_size[1]), transforms.ToTensor()]
-    )
-
+            [transforms.RandomCrop(args.patch_size), transforms.ToTensor()]
+        )
     test_transforms = transforms.Compose(
         [transforms.Resize(args.patch_size), transforms.ToTensor()]
     )

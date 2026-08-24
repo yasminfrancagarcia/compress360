@@ -81,8 +81,9 @@ treino com o train normal
     --batch-size 4 \
     --patch-size 256 256 \
     --cuda \
-    --save_path checkpoints360/check_sun30 \
+    --save_path checkpoints360/check_sun30/check_0067_20epoc \
     --save
+    2>&1 | tee checkpoints360/check_sun30/check_0067_20epoc/0.0067_20epoc_train.log
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -100,18 +101,51 @@ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python t
     --save_path checkpoints360/check_0067_20epoc \
     --save
 
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python train.py \
+    -d sun30 \
+    --lambda 0.0067 \
+    --checkpoint checkpoints360/check_sun30/check_0067_40epoc/0.006715_checkpoint.pth.tar \
+    --epochs 20 \
+    --learning-rate 0.0001 \
+    --lr_epoch 16 \
+    --batch-size 4 \
+    --patch-size 256 256 \
+    --num-workers 12 \
+    --cuda \
+    --save_path checkpoints360/check_sun30/check_0067_20epoc \
+    --save
+    2>&1 | tee checkpoints360/check_sun30/check_0067_20epoc/0.0067_20epoc_train.log
+
 python eval.py \
     -m LALIC \
-    -p checkpoints360/check_sun30/check_0483_20epoc/0.0483checkpoint_best.pth.tar \
+    -p checkpoints360/check_sun30/check_0067_20epoc/0.0067checkpoint_best.pth.tar\
     -q 6 \
     -i sun360test_500 \
-    -o recon_test500_0483_20epoc \
-    --result benchmark_test500_0483_20epoc_train30.json \
+    -o recon_test500_0067_20epoc \
+    --result benchmark_test500_0067_20epoc_train30.json \
     --cuda \
     --real \
     --verbose
 
 
+
+////////////////// treino atual: com w-mse + crop width 
+
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python train.py \
+    -d sun30 \
+    --lambda 0.0067 \
+    --checkpoint checkpoints360/check_sun30/check_0067_40epoc/0.006715_checkpoint.pth.tar \
+    --epochs 20 \
+    --learning-rate 0.0001 \
+    --lr_epoch 16 \
+    --batch-size 4 \
+    --patch-size 256 256 \
+    --num-workers 12 \
+    --cuda \
+    --save_path checkpoints360/check_sun30/check_0067_20epoc \
+    --save
+    2>&1 | tee checkpoints360/check_sun30/check_0067_20epoc/0.0067_20epoc_train.log
+    
 //pra ver a época do latest
     python - <<'PY'
 import torch
