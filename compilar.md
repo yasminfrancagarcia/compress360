@@ -87,42 +87,15 @@ treino com o train normal
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-//fine tuning com a epoca 15
-PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python train.py \
-    -d sun30 \
-    --lambda 0.0067 \
-    --checkpoint checkpoints360/check_sun30/check_0067_40epoc/0.006715_checkpoint.pth.tar \
-    --epochs 20 \
-    --lr_epoch 16
-    --batch-size 4 \
-    --patch-size 256 256 \
-    --num-workers 12 \
-    --cuda \
-    --save_path checkpoints360/check_0067_20epoc \
-    --save
 
-PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python train.py \
-    -d sun30 \
-    --lambda 0.0067 \
-    --checkpoint checkpoints360/check_sun30/check_0067_40epoc/0.006715_checkpoint.pth.tar \
-    --epochs 20 \
-    --learning-rate 0.0001 \
-    --lr_epoch 16 \
-    --batch-size 4 \
-    --patch-size 256 256 \
-    --num-workers 12 \
-    --cuda \
-    --save_path checkpoints360/check_sun30/check_0067_20epoc \
-    --save
-    2>&1 | tee checkpoints360/check_sun30/check_0067_20epoc/0.0067_20epoc_train.log
 
-python eval.py \
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python eval.py \
     -m LALIC \
-    -p checkpoints360/check_sun30/check_0067_20epoc/0.0067checkpoint_best.pth.tar\
-    -q 6 \
+    -p checkpoints360/check_w-mse_cropRandom/0.0067checkpoint_best.pth.tar\
+    -q 3 \
     -i sun360test_500 \
-    -o recon_test500_0067_20epoc \
-    --result benchmark_test500_0067_20epoc_train30.json \
+    -o recon_test500_0067_wmse_20epoc \
+    --result benchmark_test500_0067_wmse_5epoc.json \
     --cuda \
     --real \
     --verbose
@@ -131,20 +104,20 @@ python eval.py \
 
 ////////////////// treino atual: com w-mse + crop width 
 
-PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python train.py \
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train360.py \
     -d sun30 \
     --lambda 0.0067 \
-    --checkpoint checkpoints360/check_sun30/check_0067_20epoc/0.0067checkpoint_best.pth.tar \
-    --epochs 23 \
+    --checkpoint checkpoints360/check_w-mse_cropRandom/0.0067checkpoint_best.pth.tar \
+    --epochs 35\
     --learning-rate 0.00001 \
     --lr_epoch 100 \
     --batch-size 4 \
     --patch-size 256 256 \
     --num-workers 12 \
     --cuda \
-    --save_path checkpoints360/check_sun30/check_w-mse_cropRandom \
+    --save_path checkpoints360/check_sun30/check_w-mse_cropRandom/15epocas \
     --save \
-    2>&1 | tee checkpoints360/check_sun30/check_w-mse_cropRandom/train360_mse.log
+    2>&1 | tee checkpoints360/check_sun30/check_w-mse_cropRandom/train360_mse_15epocas.log
 
 
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train360.py \
