@@ -110,11 +110,66 @@ def fazer_grafico():
     plt.grid(True)
     plt.show()
 
+caminhos = [
+    "benchmark_test500_0025_20epoctrain30.json",
+    "benchmark_test500_0067_20epoc_train30.json",
+    "benchmark_test500_0483_20epoc_train30.json"
+]
 
 
+def fazer_grafico3(caminhosJson):
+    bpps = []
+    psnrs = []
+    ms_ssim_db = []
+    ws_psnr = []
+
+    # Ler os 3 JSONs
+    for caminho in caminhosJson:
+        with open(caminho) as f:
+            data = json.load(f)
+
+        bpps.append(data["results"]["bpp"][0])
+        psnrs.append(data["results"]["psnr"][0])
+        ms_ssim_db.append(data["results"]["ms-ssim-db"][0])
+        ws_psnr.append(data["results"]["ws-psnr"][0])
+
+    #ordenar pelo bpp para a curva ficar correta
+    dados = sorted(zip(bpps, psnrs, ms_ssim_db, ws_psnr))
+
+    bpps, psnrs, ms_ssim_db, ws_psnr = zip(*dados)
+
+    #gráfico bpp x PSNR
+    plt.figure()
+    plt.plot(bpps, psnrs, marker="o", label="LALIC")
+    plt.xlabel("Bitrate (bpp)")
+    plt.ylabel("PSNR (dB)")
+    plt.title("Curva Rate-Distortion — bpp x PSNR")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+    # Gráfico bpp x MS-SSIM
+    plt.figure()
+    plt.plot(bpps, ms_ssim_db, marker="o", label="LALIC")
+    plt.xlabel("Bitrate (bpp)")
+    plt.ylabel("MS-SSIM (dB)")
+    plt.title("Curva Rate-Distortion — bpp x MS-SSIM")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+    # Gráfico bpp x W-PSNR
+    plt.figure()
+    plt.plot(bpps, ws_psnr, marker="o", label="LALIC")
+    plt.xlabel("Bitrate (bpp)")
+    plt.ylabel("W-PSNR (dB)")
+    plt.title("Curva Rate-Distortion — bpp x W-PSNR")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 
 #comparar_todas_qualidades("517.jpg")
 
 #fazer_grafico()
 
-fazer_grafico2()
+fazer_grafico3(caminhos)

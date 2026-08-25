@@ -107,17 +107,15 @@ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python e
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train360.py \
     -d sun30 \
     --lambda 0.0067 \
-    --checkpoint checkpoints360/check_w-mse_cropRandom/0.0067checkpoint_best.pth.tar \
-    --epochs 35\
-    --learning-rate 0.00001 \
-    --lr_epoch 100 \
+    --epochs 20\
+    --lr_epoch 16 \
     --batch-size 4 \
     --patch-size 256 256 \
     --num-workers 12 \
     --cuda \
-    --save_path checkpoints360/check_sun30/check_w-mse_cropRandom/15epocas \
+    --save_path checkpoints360/check_w-mse_randomCrop_doZero/ \
     --save \
-    2>&1 | tee checkpoints360/check_sun30/check_w-mse_cropRandom/train360_mse_15epocas.log
+    2>&1 | tee checkpoints360/check_w-mse_randomCrop_doZero/train360_mse_20epocas_doZero.log
 
 
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train360_wmse_crop.py \

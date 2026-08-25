@@ -3,7 +3,7 @@ import re
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
 
-log = "checkpoints360/check_sun30/check_40epoc/0.0067_train.log"
+log = "checkpoints360/check_w-mse_cropWIdthOnly/5epocas/train360_wmse_crop_5epoc.log"
 
 dados = defaultdict(lambda: {
     "loss": [],
