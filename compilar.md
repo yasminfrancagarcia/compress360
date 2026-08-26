@@ -91,11 +91,11 @@ treino com o train normal
 
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python eval.py \
     -m LALIC \
-    -p checkpoints360/check_w-mse_cropRandom/check_w-mse_cropRandom15epocas/15epocas/0.0067checkpoint_best.pth.tar\
+    -p checkpoints360/check_w-mse_randomCrop_doZero/0.0067checkpoint_best.pth.tar\
     -q 3 \
     -i sun360test_500 \
-    -o recon_test500_0067_wmse_15epoc \
-    --result benchmark_test500_0067_wmse_15epoc.json \
+    -o recon_test500_w-mse_randomCrop_20epoc \
+    --result benchmark_test500_0067_wmse_cropRand_20epoc_doZero.json \
     --cuda \
     --real \
     --verbose

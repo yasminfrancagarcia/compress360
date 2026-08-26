@@ -172,4 +172,39 @@ def fazer_grafico3(caminhosJson):
 
 #fazer_grafico()
 
-fazer_grafico3(caminhos)
+#fazer_grafico3(caminhos)
+
+import fiftyone.utils.openimages as fou
+
+# Obtém a lista completa de classes do Open Images v7
+all_classes = fou.get_classes()
+
+# Filtra por 'bed' ou 'room'
+classes_desejadas = [
+    "Tree", "Bench", "Fountain",
+    "House", "Building", "Porch",
+    "Bed", "Couch", "Window", "Kitchen appliance",
+    "Beaker", "Medical equipment", "Computer monitor",
+    "Car", "Airplane", "Bus"
+]
+keywords =  [
+    "Tree", "Bench", "Fountain",
+        "House", "Building", "Porch",
+        "Bed", "Couch", "Window", "Kitchen appliance",
+        "Beaker", "Medical equipment", "Computer monitor",
+        "Car", "Airplane", "Bus"
+]
+matching_classes = [
+    cls for cls in all_classes 
+    if any(kw in cls for kw in keywords)
+]
+
+# Exibe o resultado
+print(f"Total de classes encontradas: {len(matching_classes)}\n")
+print("Classes disponíveis:")
+for cls in sorted(matching_classes):
+    print(f"- {cls}")
+
+# print(f"Total de classes encontradas: {len(all_classes)}\n")
+# for cls in sorted(all_classes):
+#     print(f"- {cls}")
