@@ -57,20 +57,42 @@ def compute_ws_psnr(a, b):
     # WS-PSNR, MAX_I = 1 para imagens normalizadas [0,1]
     return -10 * math.log10(wmse.item())
 
-def compute_ws_psnr(a, b):
-    # a, b: tensores (1, C, H, W) da imagem erp original e reconstruída
-    H = a.size(2)
-    lat = torch.linspace(-math.pi/2, math.pi/2, H, device=a.device)
-    weights = torch.cos(lat).view(1, 1, H, 1)          # peso ~ área real na esfera
-    weights = weights / weights.mean()                   # normaliza
-    mse = (weights * (a - b) ** 2).mean().item()
-    return -10 * math.log10(mse)
+def _gaussian_kernel(win_size=11, sigma=1.5, device=None, dtype=None):
+    coords = torch.arange(win_size, dtype=dtype, device=device) - win_size // 2
+    g = torch.exp(-(coords ** 2) / (2 * sigma ** 2))
+    g = g / g.sum()
+    return torch.outer(g, g)
 
+def ssim_map(a, b, win_size=11, sigma=1.5, data_range=1.0, K=(0.01, 0.03)):
+    C = a.size(1)
+    kernel = _gaussian_kernel(win_size, sigma, a.device, a.dtype).expand(C, 1, win_size, win_size)
+    pad = win_size // 2
+
+    mu_a = F.conv2d(a, kernel, padding=pad, groups=C)
+    mu_b = F.conv2d(b, kernel, padding=pad, groups=C)
+    mu_a_sq, mu_b_sq, mu_ab = mu_a * mu_a, mu_b * mu_b, mu_a * mu_b
+
+    sigma_a_sq = F.conv2d(a * a, kernel, padding=pad, groups=C) - mu_a_sq
+    sigma_b_sq = F.conv2d(b * b, kernel, padding=pad, groups=C) - mu_b_sq
+    sigma_ab   = F.conv2d(a * b, kernel, padding=pad, groups=C) - mu_ab
+
+    C1, C2 = (K[0] * data_range) ** 2, (K[1] * data_range) ** 2
+    ssim_n = (2 * mu_ab + C1) * (2 * sigma_ab + C2)
+    ssim_d = (mu_a_sq + mu_b_sq + C1) * (sigma_a_sq + sigma_b_sq + C2)
+    return ssim_n / ssim_d  # (1, C, H, W) — mesma resolução da entrada, graças ao padding='same'
+
+
+def compute_ws_ssim(a, b):
+    smap = ssim_map(a, b)
+    weights = get_latitude_weights(smap.size(2), device=a.device, dtype=a.dtype)  # reaproveita a mesma função
+    wssim = (smap * weights).sum() / (weights.sum() * smap.size(1) * smap.size(3))
+    return wssim.item()
 
 img_metrics = {
     "psnr": compute_psnr,
     "ms-ssim-db": compute_msssim_db,
-    "ws-psnr": compute_ws_psnr
+    "ws-psnr": compute_ws_psnr,
+    "ws-ssim": compute_ws_ssim
 }
 
 
