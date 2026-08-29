@@ -145,21 +145,7 @@ if __name__ == "__main__":
     orig_dir = "sun360test_500"
 
     recon_dirs = {
-        "baseline1": "recon_teste500s_lalic_original/1",
-        "baseline 3": "recon_teste500s_lalic_original/3",
-        "baseline 6": "recon_teste500s_lalic_original/6",
-
-        "baseline treinado com 360: 1":
-            "recon_sun30_test500_3lambdas/recon_test500_0025_20epoc/1",
-
-        "baseline treinado com 360: 3":
-            "recon_sun30_test500_3lambdas/recon_test500_0067_20epoc/3",
-
-        "baseline treinado com 360: 6":
-            "recon_sun30_test500_3lambdas/recon_test500_0483_20epoc/6",
-
-        "W-MSE TREINADO DO ZERO q 3":
-            "recon_test500_w-mse_randomCrop_20epoc/3",
+        "w-mse + crop witdh 3": "recon_test500_0067_wmse_cropwidth_20epoc/3"    
     }
 
     main(

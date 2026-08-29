@@ -36,26 +36,24 @@ def compute_psnr(a, b):
 def compute_msssim_db(a, b):
     return -10 * math.log10(1 - ms_ssim(a, b, data_range=1.0).item())
 
+def get_latitude_weights(H, device=None, dtype=torch.float32):
+    """Peso cos(latitude), centrado no pixel (Eq. 8 do Sun et al. 2017)."""
+    j = torch.arange(H, device=device, dtype=dtype)
+    lat = (j + 0.5 - H / 2.0) * math.pi / H
+    return torch.cos(lat).clamp(min=0).view(1, 1, H, 1)
+
+
 def compute_ws_psnr(a, b):
-    # a, b: (1, C, H, W)
+     # a, b: (1, C, H, W)
     H = a.size(2)
-
     #latitude no centro de cada pixel, conforme Eq. (8) do artigo
-    j = torch.arange(H, device=a.device, dtype=a.dtype)
-
-    lat = (j + 0.5 - H / 2) * math.pi / H
-
-    #peso ERP = cos(latitude)
-    weights = torch.cos(lat).view(1, 1, H, 1)
-
-    # w-mse
+    weights = get_latitude_weights(H, device=a.device, dtype=a.dtype)
     squared_error = (a - b) ** 2
-    wmse = (squared_error * weights).sum() / (
-        weights.sum() * a.size(1) * a.size(3)
-    )
-
-    # WS-PSNR, MAX_I = 1 para imagens normalizadas [0,1]
+    wmse = (squared_error * weights).sum() / (weights.sum() * a.size(1) * a.size(3))
     return -10 * math.log10(wmse.item())
+
+
+
 
 def _gaussian_kernel(win_size=11, sigma=1.5, device=None, dtype=None):
     coords = torch.arange(win_size, dtype=dtype, device=device) - win_size // 2
@@ -84,7 +82,7 @@ def ssim_map(a, b, win_size=11, sigma=1.5, data_range=1.0, K=(0.01, 0.03)):
 
 def compute_ws_ssim(a, b):
     smap = ssim_map(a, b)
-    weights = get_latitude_weights(smap.size(2), device=a.device, dtype=a.dtype)  # reaproveita a mesma função
+    weights = get_latitude_weights(smap.size(2), device=a.device, dtype=a.dtype)  
     wssim = (smap * weights).sum() / (weights.sum() * smap.size(1) * smap.size(3))
     return wssim.item()
 

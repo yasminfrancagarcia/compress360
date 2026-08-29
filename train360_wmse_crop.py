@@ -181,9 +181,9 @@ def train_one_epoch(
                     f"Train epoch {epoch}: ["
                     f"{i * len(d)}/{len(train_dataloader.dataset)}"
                     f" ({100.0 * i / len(train_dataloader):.0f}%)]"
-                    f"\tLoss: {out_criterion['loss'].item():.3f} |"
-                    f"\tMSE loss: {out_criterion['mse_loss'].item():.3f} |"
-                    f"\tBpp loss: {out_criterion['bpp_loss'].item():.2f} |"
+                    f"\tLoss: {out_criterion['loss'].item():.8f} |"
+                    f"\tMSE loss: {out_criterion['mse_loss'].item():.8f} |"
+                    f"\tBpp loss: {out_criterion['bpp_loss'].item():.8f} |"
                     f"\tAux loss: {aux_loss.item():.2f}"
                 )
             else:
@@ -191,9 +191,9 @@ def train_one_epoch(
                     f"Train epoch {epoch}: ["
                     f"{i * len(d)}/{len(train_dataloader.dataset)}"
                     f" ({100.0 * i / len(train_dataloader):.0f}%)]"
-                    f"\tLoss: {out_criterion['loss'].item():.3f} |"
-                    f"\tMS_SSIM loss: {out_criterion['ms_ssim_loss'].item():.3f} |"
-                    f"\tBpp loss: {out_criterion['bpp_loss'].item():.2f} |"
+                    f"\tLoss: {out_criterion['loss'].item():.8f} |"
+                    f"\tMS_SSIM loss: {out_criterion['ms_ssim_loss'].item():.8f} |"
+                    f"\tBpp loss: {out_criterion['bpp_loss'].item():.8f} |"
                     f"\tAux loss: {aux_loss.item():.2f}"
                 )
 
@@ -220,9 +220,9 @@ def test_epoch(epoch, test_dataloader, model, criterion, type="mse"):
 
         print(
             f"Test epoch {epoch}: Average losses:"
-            f"\tLoss: {loss.avg:.3f} |"
-            f"\tMSE loss: {mse_loss.avg:.3f} |"
-            f"\tBpp loss: {bpp_loss.avg:.2f} |"
+            f"\tLoss: {loss.avg:.8f} |"
+            f"\tMSE loss: {mse_loss.avg:.8f} |"
+            f"\tBpp loss: {bpp_loss.avg:.8f} |"
             f"\tAux loss: {aux_loss.avg:.2f}\n"
         )
 

@@ -2,7 +2,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import json
 
-caminhoJson = "benchmark_teste500Sun.json" 
+
 checkpoints = [
     "checkpoints/lalic-q1.pth",
     "checkpoints/lalic-q2.pth",
@@ -29,7 +29,7 @@ def comparar_todas_qualidades(nome, qualidades=range(1, len(checkpoints)+1)):
 
 
 
-def fazer_grafico2():
+def fazer_grafico2(caminhoJson):
     with open(caminhoJson) as f:
         data = json.load(f)
 
@@ -37,41 +37,50 @@ def fazer_grafico2():
     psnrs = data["results"]["psnr"]
     ms_ssim_db = data["results"]["ms-ssim-db"]
     ws_psnr = data["results"]["ws-psnr"]
+    ws_ssim = data["results"]["ws-ssim"]
 
-    # Pegar somente o 1º, 3º e último checkpoint
-    indices = [0, 2, 5]
-
+    indices = [0, 1, 2]
     bpps = [bpps[i] for i in indices]
     psnrs = [psnrs[i] for i in indices]
     ms_ssim_db = [ms_ssim_db[i] for i in indices]
     ws_psnr = [ws_psnr[i] for i in indices]
 
-    # gráfico bpp x PSNR
     plt.plot(bpps, psnrs, marker="o", label="LALIC")
     plt.xlabel("Bitrate (bpp)")
     plt.ylabel("PSNR (dB)")
     plt.title("Curva Rate-Distortion — bpp x PSNR")
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig("output/3q_bppxpsnr.png", dpi=150, bbox_inches="tight")
+    plt.close()
 
-    # gráfico bpp x MS-SSIM
     plt.plot(bpps, ms_ssim_db, marker="o", label="LALIC")
     plt.xlabel("Bitrate (bpp)")
     plt.ylabel("MS-SSIM (dB)")
     plt.title("Curva Rate-Distortion — bpp x MS-SSIM")
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig("output/3q_bppxms_ssim_db.png", dpi=150, bbox_inches="tight")
+    plt.close()
 
-    # gráfico bpp x W-PSNR
     plt.plot(bpps, ws_psnr, marker="o", label="LALIC")
     plt.xlabel("Bitrate (bpp)")
     plt.ylabel("W-PSNR (dB)")
     plt.title("Curva Rate-Distortion — bpp x W-PSNR")
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig("output/3q_bppxws_psnr.png", dpi=150, bbox_inches="tight")
+    plt.close()
+
+    plt.plot(bpps, ws_ssim, marker="o", label="LALIC")
+    plt.xlabel("Bitrate (bpp)")
+    plt.ylabel("WS-SSIM (dB)")
+    plt.title("Curva Rate-Distortion — bpp x WS-SSIM")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig("output/3q_bppxws_ssim.png", dpi=150, bbox_inches="tight")
+    plt.close()  # em vez de plt.show()
+
 
 def fazer_grafico():
     with open(caminhoJson) as f:
@@ -89,7 +98,8 @@ def fazer_grafico():
     plt.title("Curva Rate-Distortion — bpp x psnr")
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig("output/bppxpsnr.png", dpi=150, bbox_inches="tight")
+    plt.close()  # em vez de plt.show()
 
 
     # grafico de bpp x ms-ssim-db   
@@ -99,7 +109,8 @@ def fazer_grafico():
     plt.title("Curva Rate-Distortion — bpp x ms-ssim-db")
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig("output/bppxms_ssim_db.png", dpi=150, bbox_inches="tight")
+    plt.close()  # em vez de plt.show()
 
     # grafico de bpp x ws-psnr
     plt.plot(bpps, ws_psnr, marker="o", label="LALIC")
@@ -108,7 +119,19 @@ def fazer_grafico():
     plt.title("Curva Rate-Distortion — bpp x w-psnr")
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig("output/bppxws_psnr.png", dpi=150, bbox_inches="tight")
+    plt.close()  # em vez de plt.show()
+
+    #grafico ws-ssim-db x bpp
+    plt.plot(bpps, ws_ssim_db, marker="o", label="LALIC")
+    plt.xlabel("Bitrate (bpp)")
+    plt.ylabel("WS-SSIM (dB)")
+    plt.title("Curva Rate-Distortion — bpp x WS-SSIM")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig("output/bppxws_ssim_db.png", dpi=150, bbox_inches="tight")
+    plt.close()  # em vez de plt.show()
+
 
 caminhos = [
     "benchmark_test500_0025_20epoctrain30.json",
@@ -172,39 +195,4 @@ def fazer_grafico3(caminhosJson):
 
 #fazer_grafico()
 
-#fazer_grafico3(caminhos)
-
-import fiftyone.utils.openimages as fou
-
-# Obtém a lista completa de classes do Open Images v7
-all_classes = fou.get_classes()
-
-# Filtra por 'bed' ou 'room'
-classes_desejadas = [
-    "Tree", "Bench", "Fountain",
-    "House", "Building", "Porch",
-    "Bed", "Couch", "Window", "Kitchen appliance",
-    "Beaker", "Medical equipment", "Computer monitor",
-    "Car", "Airplane", "Bus"
-]
-keywords =  [
-    "Tree", "Bench", "Fountain",
-        "House", "Building", "Porch",
-        "Bed", "Couch", "Window", "Kitchen appliance",
-        "Beaker", "Medical equipment", "Computer monitor",
-        "Car", "Airplane", "Bus"
-]
-matching_classes = [
-    cls for cls in all_classes 
-    if any(kw in cls for kw in keywords)
-]
-
-# Exibe o resultado
-print(f"Total de classes encontradas: {len(matching_classes)}\n")
-print("Classes disponíveis:")
-for cls in sorted(matching_classes):
-    print(f"- {cls}")
-
-# print(f"Total de classes encontradas: {len(all_classes)}\n")
-# for cls in sorted(all_classes):
-#     print(f"- {cls}")
+fazer_grafico2("benchmarks_50amostras/benchmark_3q_original_train360.json")
