@@ -142,21 +142,33 @@ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python e
 
 
 
-////////////////// treino atual: com w-mse + crop width 
+////////////////// treino atual deepcool: com w-mse + random crop
 
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train360.py \
     -d sun30 \
-    --lambda 0.0067 \
+    --lambda 0.0025 \
     --epochs 20\
     --lr_epoch 16 \
     --batch-size 4 \
     --patch-size 256 256 \
     --num-workers 12 \
     --cuda \
-    --save_path checkpoints360/check_w-mse_randomCrop_doZero/ \
+    --save_path checkpoints360/check_w-mse_randomCrop_doZero/check_0025 \
     --save \
-    2>&1 | tee checkpoints360/check_w-mse_randomCrop_doZero/train360_mse_20epocas_doZero.log
+    2>&1 | tee checkpoints360/check_w-mse_randomCrop_doZero/check_0025/0025_train360_mse_doZero.log
 
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train360.py \
+    -d sun30 \
+    --lambda 0.0483 \
+    --epochs 20\
+    --lr_epoch 16 \
+    --batch-size 4 \
+    --patch-size 256 256 \
+    --num-workers 12 \
+    --cuda \
+    --save_path checkpoints360/check_w-mse_randomCrop_doZero/check_0483 \
+    --save \
+    2>&1 | tee checkpoints360/check_w-mse_randomCrop_doZero/check_0483/0483_train360_mse_doZero.log
 
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train360_wmse_crop.py \
     -d sun30 \

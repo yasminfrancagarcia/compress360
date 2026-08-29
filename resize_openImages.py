@@ -2,8 +2,8 @@ import os
 from PIL import Image
 
 
-pasta_origem = "./dataset_open_images_30k"   
-pasta_destino = "./dataset_resized_1024x512"  
+pasta_origem = "./dataset_open_images_30k/test2"   
+pasta_destino = "./dataset_resized_1024x512/test"  
 
 # na biblioteca PIL, a ordem das dimensões é (largura, altura)
 TAMANHO_DESEJADO = (1024, 512)
