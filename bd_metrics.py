@@ -1,6 +1,6 @@
 import numpy as np
 import bjontegaard as bd
-
+import matplotlib.pyplot as plt
 
 # ============================================================
 # DADOS
@@ -190,6 +190,52 @@ def calcular_bd(nome_ref, ref, nome_test, test):
 #     lalic_wmse_cropwidth
 # )
 
+
+# plotar todas as rd curves juntas 
+
+def fazer_grafico():
+    plt.figure()
+    plt.plot(
+        lalic_original["bpp"],
+        lalic_original["ws_psnr"],
+        marker="o",
+        label="LALIC original"
+    )
+    plt.plot(
+        lalic_30k_planas["bpp"],
+        lalic_30k_planas["ws_psnr"],
+        marker="o",
+        label="30k planas + MSE"
+    )
+    plt.plot(
+        lalic_360_mse["bpp"],
+        lalic_360_mse["ws_psnr"],
+        marker="o",
+        label="30k 360 + MSE"
+    )
+    plt.plot(
+        lalic_360_wmse_Randomcrop["bpp"],
+        lalic_360_wmse_Randomcrop["ws_psnr"],
+        marker="o",
+        label="30k 360 + W-MSE + Random Crop"
+    )
+    plt.plot(
+        lalic_wmse_cropwidth["bpp"],
+        lalic_wmse_cropwidth["ws_psnr"],
+        marker="o",
+        label="30k 360 + W-MSE + Crop Width"
+    )
+
+    plt.xlabel("Bitrate (bpp)")
+    plt.ylabel("W-PSNR (dB)")
+    plt.title("Curva Rate-Distortion — bpp x W-PSNR")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+fazer_grafico() 
+
+# comparações entre original e metodos 
 calcular_bd(
     "LALIC original",
     lalic_original,
@@ -221,7 +267,8 @@ calcular_bd(
 # ---------------------------------------------------------
 
 # compaaração com o original treinado em 30k planas por 20 épocas 
-
+print("-" * 10 )
+print("\n\nComparações com o original treinado em 30k planas por 20 épocas\n")
 
 calcular_bd(
     "LALIC original treinado com 30k planas (1024x512), por 20 épocas",
