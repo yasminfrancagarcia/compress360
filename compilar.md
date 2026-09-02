@@ -170,20 +170,39 @@ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -
     --save \
     2>&1 | tee checkpoints360/check_w-mse_randomCrop_doZero/check_0483/0483_train360_mse_doZero.log
 
-PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train360_wmse_crop.py \
+
+//////////////////////////////// teste com convoluções adptadas 
+
+
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train_swdc.py \
     -d sun30 \
-    --lambda 0.0067 \
-    --checkpoint checkpoints360/check_sun30/check_0067_20epoc/0.0067checkpoint_best.pth.tar \
-    --epochs 24 \
-    --learning-rate 0.00001 \
-    --lr_epoch 100 \
+    --lambda 0.0025 \
+    --epochs 20 \
+    --lr_epoch 16 \
     --batch-size 2 \
     --patch-size 512 256 \
-    --num-workers 12 \
+    --num-workers 16 \
+    --swhdc_tag \
+    --swhdc_dilations 1 2 3 \
     --cuda \
-    --save_path checkpoints360/check_w-mse_cropWIdthOnly/5epocas \
+    --save_path checkpoints360/check_swhdc/check_1 \
     --save \
-    2>&1 | tee checkpoints360/check_w-mse_cropWIdthOnly/5epocas/train360_wmse_crop_5epoc.log
+    2>&1 | tee checkpoints360/check_swhdc/check_1/train_swhdc.log
+
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train_swdc.py \
+    -d sun30 \
+    --lambda 0.0067 \
+    --epochs 20 \
+    --lr_epoch 16 \
+    --batch-size 2 \
+    --patch-size 512 256 \
+    --num-workers 16 \
+    --swhdc_tag \
+    --swhdc_dilations 1 2 3 \
+    --cuda \
+    --save_path checkpoints360/check_swhdc/check_2 \
+    --save \
+    2>&1 | tee checkpoints360/check_swhdc/check_2/train_swhdc.log
 
 
 //pra ver a época do latest

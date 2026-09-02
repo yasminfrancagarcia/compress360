@@ -1,4 +1,4 @@
-# lalic adaptado com convoluções dilatadas
+lalic adaptado pra convoluçõões dilatadas 
 
 import os
 import torch
@@ -25,7 +25,7 @@ from compressai.layers import (
 
 
 def load_biwkv4():
-    # Bi-directional WKV version 4, a form of linear attention 
+    # Bi-directional WKV version 4, a form of linear attention
     # from Vision-RWKV, https://github.com/OpenGVLab/Vision-RWKV
     # commit dee3bbe: [add] update new version of cuda code, avoid hard code of T_MAX
     current_file_dir = os.path.dirname(os.path.abspath(__file__))
@@ -263,10 +263,117 @@ class RwkvBlock_BiV4(nn.Module):
         else:
             return self._forward(x)
 
+
 # =============================================================================
 # SWHDC — Spherically-Weighted Hybrid Dilated Convolution
+#
 # Substitui uma nn.Conv2d comum por uma convolução cuja dilatação horizontal
-# varia com a latitude
+# varia com a latitude, para compensar a distorção da projeção equirretangular
+
+class SWHDC(nn.Module):
+    def __init__(self, in_channels, out_channels, kernel_size, dilations, stride=1, bias=True):
+        super().__init__()
+        self.dilations = list(dilations)
+        self.in_channels = in_channels
+        self.out_channels = out_channels
+        self.kernel_size = kernel_size
+        self.stride = stride
+
+        # Um único nn.Conv2d "cru" (sem padding, dilation=1) cujo peso é
+        # reaproveitado em cada uma das N passadas com dilatação diferente.
+        self.conv = nn.Conv2d(
+            in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, bias=bias
+        )
+
+    def _row_weights(self, h_out, device):
+        """Pesos de interpolação entre dilatações inteiras, um vetor por linha
+        de SAÍDA. h_out é a altura já depois do stride."""
+        N = len(self.dilations)
+
+       
+        Rs = torch.min(
+            torch.tensor(N, device=device, dtype=torch.float32),
+            torch.abs(1.0 / torch.sin(phi - torch.finfo(torch.float32).eps)),
+        )
+
+        dilations_tensor = torch.tensor(self.dilations, device=device, dtype=torch.float32).view(N, 1)
+        Rs_expanded = Rs.unsqueeze(0)
+        cR = torch.ceil(Rs_expanded)
+        fR = torch.floor(Rs_expanded)
+
+        # cada linha recebe peso 1.0 numa dilatação exata, ou é dividida entre
+        # a dilatação inteira imediatamente abaixo e acima de Rs (interpolação
+        # linear) — isso cria uma transição suave de dilatação com a latitude,
+        # em vez de "saltos" discretos entre blocos de linhas.
+        mask_exact = dilations_tensor == Rs_expanded
+        mask_floor = (dilations_tensor == fR) & ~mask_exact
+        mask_ceil = (dilations_tensor == cR) & ~mask_exact & ~mask_floor
+
+        w = torch.zeros(N, h_out, device=device)
+        w = torch.where(mask_exact, torch.ones_like(w), w)
+        w = torch.where(mask_floor, cR - Rs_expanded, w)
+        w = torch.where(mask_ceil, Rs_expanded - fR, w)
+        return w
+
+    def forward(self, x):
+        outputs = []
+        row_weights = None
+
+        for idx, dilation_rate in enumerate(self.dilations):
+            v_pad = (self.kernel_size - 1) // 2          # padding vertical, dilatação=1
+            h_pad = dilation_rate * (self.kernel_size - 1) // 2  # padding horizontal, escala com a dilatação
+
+            # longitude "dá a volta" -> padding circular na horizontal
+            x2 = F.pad(x, (h_pad, h_pad, 0, 0), mode="circular")
+            # nos polos não há vizinho "de verdade" -> reflect como aproximação
+            x2 = F.pad(x2, (0, 0, v_pad, v_pad), mode="reflect")
+
+            out = F.conv2d(
+                x2,
+                weight=self.conv.weight,
+                bias=self.conv.bias,
+                stride=self.stride,
+                padding=0,
+                dilation=(1, dilation_rate),   # dilata só a dimensão horizontal
+                groups=self.conv.groups,
+            )
+
+            # todas as N passadas produzem a MESMA altura/largura de saída
+            # (a matemática do padding foi escolhida de propósito para isso —
+            # ver explicação no texto), então só precisamos computar os pesos
+            # de linha uma vez, a partir da primeira passada.
+            if row_weights is None:
+                row_weights = self._row_weights(out.shape[-2], x.device)
+
+            out = torch.einsum("c,abcd->abcd", row_weights[idx], out)
+            outputs.append(out)
+
+        outputs = torch.stack(outputs, dim=0)  # [N, B, C, H, W]
+        return torch.sum(outputs, dim=0)       # [B, C, H, W]
+
+
+def sw_conv(in_channels, out_channels, kernel_size=5, stride=2, dilations=(1, 2, 3, 4)):
+    """Substituto de conv de acordo com a geometria da  esfera."""
+    return SWHDC(in_channels, out_channels, kernel_size, dilations=dilations, stride=stride)
+
+
+def sw_deconv(in_channels, out_channels, kernel_size=5, stride=2, dilations=(1, 2, 3, 4)):
+    """Substituto de `deconv()` (upsampling) ciente da esfera.
+
+    SWHDC não tem uma versão "transposta" nativa: ela é definida como uma
+    convolução direta (stride>=1), não como ConvTranspose2d. A forma padrão
+    de trocar uma conv transposta por uma conv "normal" é separar o
+    upsampling espacial (nearest/bilinear) da convolução aprendida — isso
+    também evita os artefatos de "tabuleiro de xadrez" (checkerboard) comuns
+    em ConvTranspose2d, e mantém o padding circular/reflect e a dilatação
+    adaptativa por latitude intactos (eles são aplicados depois do
+    upsample, então operam sobre a grade ERP já no tamanho final).
+    """
+    return nn.Sequential(
+        nn.Upsample(scale_factor=stride, mode="nearest"),
+        SWHDC(in_channels, out_channels, kernel_size, dilations=dilations, stride=1),
+    )
+
 
 def conv(in_channels, out_channels, kernel_size=5, stride=2):
     return nn.Conv2d(
@@ -334,47 +441,76 @@ class LALIC(Elic2022Official):
         depths=[2, 4, 6, 6],
         groups=None,
         use_ckpt=False,
+        use_swhdc=True,
+        swhdc_dilations=(1, 2, 3, 4),
+        swhdc_hyperprior=False,
         **kwargs,
     ):
+        """
+        use_swhdc:
+            Se True, troca as convoluções de downsampling/upsampling de g_a/g_s
+            (o backbone principal, que opera direto sobre a imagem 360) por
+            SWHDC. É aqui que a distorção ERP é mais visível pixel-a-pixel,
+            então é o lugar de maior prioridade para adaptar.
+        swhdc_hyperprior:
+            Se True, também troca h_a/h_s (o ramo do hyperprior, que já opera
+            sobre o latente y bem reduzido). Deixei como opção separada e
+            desligada por padrão porque nessa escala o ganho tende a ser menor
+            e o custo (SWHDC roda len(dilations) convoluções completas) se
+            soma ao custo de g_a/g_s. Vale testar empiricamente com/sem.
+        swhdc_dilations:
+            Lista de dilatações candidatas, (1,2,3,4). N = len(dilations)
+            também é o teto de dilatação usado para saturar 1/sin(phi) perto
+            dos polos.
+        """
         super().__init__(N=N, M=M, groups=groups, **kwargs)
-        # self.N = N
-        # self.M = M
         N1, N2, N3, N4, N5, N6 = dims
         L1, L2, L3, L4 = depths
         M = N4
 
         load_biwkv4()
-        # flatten the list
+
+        _down = (lambda cin, cout, kernel_size=5, stride=2: sw_conv(
+            cin, cout, kernel_size=kernel_size, stride=stride, dilations=swhdc_dilations
+        )) if use_swhdc else conv
+
+        _up = (lambda cin, cout, kernel_size=5, stride=2: sw_deconv(
+            cin, cout, kernel_size=kernel_size, stride=stride, dilations=swhdc_dilations
+        )) if use_swhdc else deconv
+
+        _hyper_down = _down if swhdc_hyperprior else conv
+        _hyper_up = _up if swhdc_hyperprior else deconv
+
         self.g_a = form_modules(
-            conv(3, N1, kernel_size=5),
+            _down(3, N1, kernel_size=5),
             [RwkvBlock_BiV4(N1) for _ in range(L1)],
-            conv(N1, N2, kernel_size=3),
+            _down(N1, N2, kernel_size=3),
             [RwkvBlock_BiV4(N2) for i in range(L2)],
-            conv(N2, N3, kernel_size=3),
+            _down(N2, N3, kernel_size=3),
             [RwkvBlock_BiV4(N3) for _ in range(L3)],
-            conv(N3, N4, kernel_size=3),
+            _down(N3, N4, kernel_size=3),
         )
 
         self.g_s = form_modules(
-            deconv(N4, N3, kernel_size=3),
+            _up(N4, N3, kernel_size=3),
             [RwkvBlock_BiV4(N3) for _ in range(L3)],
-            deconv(N3, N2, kernel_size=3),
+            _up(N3, N2, kernel_size=3),
             [RwkvBlock_BiV4(N2) for _ in range(L2)],
-            deconv(N2, N1, kernel_size=3),
+            _up(N2, N1, kernel_size=3),
             [RwkvBlock_BiV4(N1) for _ in range(L1)],
-            deconv(N1, 3, kernel_size=5),
+            _up(N1, 3, kernel_size=5),
         )
 
         self.h_a = form_modules(
-            conv(N4, N5, kernel_size=5),
+            _hyper_down(N4, N5, kernel_size=5),
             [RwkvBlock_BiV4(N5) for _ in range(L4)],
-            conv(N5, N6, kernel_size=5),
+            _hyper_down(N5, N6, kernel_size=5),
         )
 
         self.h_s = form_modules(
-            deconv(N6, N5, kernel_size=5),
+            _hyper_up(N6, N5, kernel_size=5),
             [RwkvBlock_BiV4(N5) for _ in range(L4)],
-            deconv(N5, N4, kernel_size=5),
+            _hyper_up(N5, N4, kernel_size=5),
         )
 
         # In [He2022], this is labeled "g_ch^(k)".
