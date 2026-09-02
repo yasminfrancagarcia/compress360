@@ -424,7 +424,6 @@ def main(argv):
         depths=[2, 4, 6, 6],
         use_swhdc=args.swhdc_tag,
         swhdc_dilations=tuple(args.swhdc_dilations),
-        swhdc_hyperprior=args.swhdc_hyperprior,
     )
     net = net.to(device)
 
