@@ -266,91 +266,81 @@ class RwkvBlock_BiV4(nn.Module):
 
 
 # =============================================================================
-# SWHDC — Spherically-Weighted Hybrid Dilated Convolution
+# SWHDC — Spherically-Weighted Horizontally Dilated Convolution
 #
 # Substitui uma nn.Conv2d comum por uma convolução cuja dilatação horizontal
 # varia com a latitude, para compensar a distorção da projeção equirretangular
 
 class SWHDC(nn.Module):
-    def __init__(self, in_channels, out_channels, kernel_size, dilations, stride=1, bias=True):
-        super().__init__()
-        self.dilations = list(dilations)
+    def __init__(self, in_channels, out_channels, kernel_size, dilations):
+        super(SWHDC, self).__init__()
+        self.dilations = dilations
         self.in_channels = in_channels
         self.out_channels = out_channels
         self.kernel_size = kernel_size
-        self.stride = stride
 
-        # Um único nn.Conv2d "cru" (sem padding, dilation=1) cujo peso é
-        # reaproveitado em cada uma das N passadas com dilatação diferente.
         self.conv = nn.Conv2d(
-            in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, bias=bias
+            in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1
         )
 
-    def _row_weights(self, h_out, device):
-        """Pesos de interpolação entre dilatações inteiras, um vetor por linha
-        de SAÍDA. h_out é a altura já depois do stride."""
+    def forward(self, x):
+        _, _, h, w = x.shape
         N = len(self.dilations)
-        phi = torch.linspace(0, 1, h_out, device=device) * torch.pi
-       
+        phi = (torch.linspace(0, 1, h, device=x.device)) * torch.pi
         Rs = torch.min(
-            torch.tensor(N, device=device, dtype=torch.float32),
-            torch.abs(1.0 / torch.sin(phi - torch.finfo(torch.float32).eps)),
+            torch.tensor(N, device=x.device, dtype=torch.float32),
+            torch.abs(
+                torch.ones(1, device=x.device)
+                / torch.sin(phi - torch.finfo(torch.float32).eps)
+            ),
         )
 
-        dilations_tensor = torch.tensor(self.dilations, device=device, dtype=torch.float32).view(N, 1)
+        dilations_tensor = torch.tensor(
+            self.dilations, device=x.device, dtype=torch.float32
+        ).view(N, 1)
         Rs_expanded = Rs.unsqueeze(0)
+
         cR = torch.ceil(Rs_expanded)
         fR = torch.floor(Rs_expanded)
 
-        # cada linha recebe peso 1.0 numa dilatação exata, ou é dividida entre
-        # a dilatação inteira imediatamente abaixo e acima de Rs (interpolação
-        # linear) — isso cria uma transição suave de dilatação com a latitude,
-        # em vez de "saltos" discretos entre blocos de linhas.
         mask_exact = dilations_tensor == Rs_expanded
         mask_floor = (dilations_tensor == fR) & ~mask_exact
         mask_ceil = (dilations_tensor == cR) & ~mask_exact & ~mask_floor
 
-        w = torch.zeros(N, h_out, device=device)
-        w = torch.where(mask_exact, torch.ones_like(w), w)
-        w = torch.where(mask_floor, cR - Rs_expanded, w)
-        w = torch.where(mask_ceil, Rs_expanded - fR, w)
-        return w
+        row_wise_weights = torch.zeros(N, h, device=x.device)
+        row_wise_weights = torch.where(
+            mask_exact, torch.ones_like(row_wise_weights), row_wise_weights
+        )
+        row_wise_weights = torch.where(mask_floor, cR - Rs_expanded, row_wise_weights)
+        row_wise_weights = torch.where(mask_ceil, Rs_expanded - fR, row_wise_weights)
 
-    def forward(self, x):
         outputs = []
-        row_weights = None
+        for idx in range(N):
+            dilation_rate = self.dilations[idx]
+            v_padding_dilation = 1 * (self.conv.kernel_size[0] - 1) // 2
+            h_padding_dilation = dilation_rate * (self.conv.kernel_size[0] - 1) // 2
+            h_padding_tuple = (h_padding_dilation, h_padding_dilation, 0, 0)
+            v_padding_tuple = (0, 0, v_padding_dilation, v_padding_dilation)
 
-        for idx, dilation_rate in enumerate(self.dilations):
-            v_pad = (self.kernel_size - 1) // 2          # padding vertical, dilatação=1
-            h_pad = dilation_rate * (self.kernel_size - 1) // 2  # padding horizontal, escala com a dilatação
-
-            # longitude "dá a volta" -> padding circular na horizontal
-            x2 = F.pad(x, (h_pad, h_pad, 0, 0), mode="circular")
-            # nos polos não há vizinho "de verdade" -> reflect como aproximação
-            x2 = F.pad(x2, (0, 0, v_pad, v_pad), mode="reflect")
+            x2 = F.pad(x, h_padding_tuple, mode="circular")
+            x2 = F.pad(x2, v_padding_tuple, mode="reflect")
 
             out = F.conv2d(
                 x2,
                 weight=self.conv.weight,
                 bias=self.conv.bias,
-                stride=self.stride,
+                stride=self.conv.stride,
                 padding=0,
-                dilation=(1, dilation_rate),   # dilata só a dimensão horizontal
+                dilation=(1, dilation_rate),
                 groups=self.conv.groups,
             )
 
-            # todas as N passadas produzem a MESMA altura/largura de saída
-            # (a matemática do padding foi escolhida de propósito para isso —
-            # ver explicação no texto), então só precisamos computar os pesos
-            # de linha uma vez, a partir da primeira passada.
-            if row_weights is None:
-                row_weights = self._row_weights(out.shape[-2], x.device)
-
-            out = torch.einsum("c,abcd->abcd", row_weights[idx], out)
+            out = torch.einsum("c,abcd->abcd", row_wise_weights[idx], out)
             outputs.append(out)
 
         outputs = torch.stack(outputs, dim=0)  # [N, B, C, H, W]
-        return torch.sum(outputs, dim=0)       # [B, C, H, W]
+        return torch.sum(outputs, dim=0)  # [B, C, H, W]
+
 
 
 def sw_conv(in_channels, out_channels, kernel_size=5, stride=2, dilations=(1, 2, 3, 4)):
@@ -358,22 +348,6 @@ def sw_conv(in_channels, out_channels, kernel_size=5, stride=2, dilations=(1, 2,
     return SWHDC(in_channels, out_channels, kernel_size, dilations=dilations, stride=stride)
 
 
-def sw_deconv(in_channels, out_channels, kernel_size=5, stride=2, dilations=(1, 2, 3, 4)):
-    """Substituto de `deconv()` (upsampling) ciente da esfera.
-
-    SWHDC não tem uma versão "transposta" nativa: ela é definida como uma
-    convolução direta (stride>=1), não como ConvTranspose2d. A forma padrão
-    de trocar uma conv transposta por uma conv "normal" é separar o
-    upsampling espacial (nearest/bilinear) da convolução aprendida — isso
-    também evita os artefatos de "tabuleiro de xadrez" (checkerboard) comuns
-    em ConvTranspose2d, e mantém o padding circular/reflect e a dilatação
-    adaptativa por latitude intactos (eles são aplicados depois do
-    upsample, então operam sobre a grade ERP já no tamanho final).
-    """
-    return nn.Sequential(
-        nn.Upsample(scale_factor=stride, mode="nearest"),
-        SWHDC(in_channels, out_channels, kernel_size, dilations=dilations, stride=1),
-    )
 
 
 def conv(in_channels, out_channels, kernel_size=5, stride=2):
