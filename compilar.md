@@ -174,12 +174,12 @@ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -
 //////////////////////////////// teste com convoluções adptadas 
 
 
-PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train_swdc.py \
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train_swhdc.py \
     -d sun30 \
     --lambda 0.0025 \
     --epochs 20 \
     --lr_epoch 16 \
-    --batch-size 2 \
+    --batch-size 3 \
     --patch-size 512 256 \
     --num-workers 16 \
     --swhdc_tag \
@@ -187,14 +187,14 @@ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -
     --cuda \
     --save_path checkpoints360/check_swhdc/check_1 \
     --save \
-    2>&1 | tee checkpoints360/check_swhdc/check_1/train_swhdc.log
+    2>&1 |tee checkpoints360/check_swhdc/check_1/train_swhdc.log
 
-PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train_swdc.py \
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train_swhdc.py \
     -d sun30 \
     --lambda 0.0067 \
     --epochs 20 \
     --lr_epoch 16 \
-    --batch-size 2 \
+    --batch-size 3 \
     --patch-size 512 256 \
     --num-workers 16 \
     --swhdc_tag \
@@ -202,7 +202,7 @@ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -
     --cuda \
     --save_path checkpoints360/check_swhdc/check_2 \
     --save \
-    2>&1 | tee checkpoints360/check_swhdc/check_2/train_swhdc.log
+    2>&1 |tee checkpoints360/check_swhdc/check_2/train_swhdc.log
 
 
 //pra ver a época do latest

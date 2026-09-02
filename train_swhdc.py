@@ -19,7 +19,7 @@ from compressai.datasets import ImageFolder
 from compressai.zoo import models
 from pytorch_msssim import ms_ssim
 
-from models import LALIC
+from models.lalic_swhdc import LALIC
 from torch.utils.tensorboard import SummaryWriter
 import os
 

@@ -1,6 +1,7 @@
-lalic adaptado pra convoluçõões dilatadas 
+#lalic adaptado pra convoluçõões dilatadas 
 
 import os
+import math
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
@@ -289,7 +290,7 @@ class SWHDC(nn.Module):
         """Pesos de interpolação entre dilatações inteiras, um vetor por linha
         de SAÍDA. h_out é a altura já depois do stride."""
         N = len(self.dilations)
-
+        phi = torch.linspace(0, 1, h_out, device=device) * torch.pi
        
         Rs = torch.min(
             torch.tensor(N, device=device, dtype=torch.float32),
