@@ -353,20 +353,14 @@ def parse_args(argv):
         "--swhdc_tag",
         action="store_true",
         default=False,
-        help="Troca as convs de g_a/g_s  por SWHDC",
-    )
-    parser.add_argument(
-        "--swhdc_hyperprior",
-        action="store_true",
-        default=False,
-        help="Se --swhdc_tag, também troca h_a/h_s por SWHDC ",
+        help="Troca as 2 primeiras convs do g_a por SWHDC",
     )
     parser.add_argument(
         "--swhdc_dilations",
         nargs="+",
         type=int,
         default=[1, 2, 3, 4],
-        help="Dilatações candidatas do SWHDC (N=len(...)); o artigo usa N=4 (default: %(default)s)",
+        help="Dilatações candidatas do SWHDC ",
     )
     args = parser.parse_args(argv)
     return args

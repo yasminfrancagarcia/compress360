@@ -1,4 +1,4 @@
-#lalic adaptado pra convoluçõões dilatadas 
+#lalic adaptado pra convoluções dilatadas 
 
 import os
 import math
@@ -343,11 +343,16 @@ class SWHDC(nn.Module):
 
 
 
-def sw_conv(in_channels, out_channels, kernel_size=5, stride=2, dilations=(1, 2, 3, 4)):
-    """Substituto de conv de acordo com a geometria da  esfera."""
-    return SWHDC(in_channels, out_channels, kernel_size, dilations=dilations, stride=stride)
-
-
+def sw_conv(in_channels, out_channels, kernel_size=5, dilations=(1, 2, 3, 4)):
+    return nn.Sequential(
+        SWHDC(
+            in_channels,
+            out_channels,
+            kernel_size,
+            dilations=dilations,
+        ),
+        nn.AvgPool2d(kernel_size=2, stride=2),
+    )
 
 
 def conv(in_channels, out_channels, kernel_size=5, stride=2):
@@ -418,21 +423,14 @@ class LALIC(Elic2022Official):
         use_ckpt=False,
         use_swhdc=True,
         swhdc_dilations=(1, 2, 3, 4),
-        swhdc_hyperprior=False,
         **kwargs,
     ):
         """
         use_swhdc:
             Se True, troca as convoluções de downsampling/upsampling de g_a/g_s
             (o backbone principal, que opera direto sobre a imagem 360) por
-            SWHDC. É aqui que a distorção ERP é mais visível pixel-a-pixel,
-            então é o lugar de maior prioridade para adaptar.
-        swhdc_hyperprior:
-            Se True, também troca h_a/h_s (o ramo do hyperprior, que já opera
-            sobre o latente y bem reduzido). Deixei como opção separada e
-            desligada por padrão porque nessa escala o ganho tende a ser menor
-            e o custo (SWHDC roda len(dilations) convoluções completas) se
-            soma ao custo de g_a/g_s. Vale testar empiricamente com/sem.
+            SWHDC. 
+
         swhdc_dilations:
             Lista de dilatações candidatas, (1,2,3,4). N = len(dilations)
             também é o teto de dilatação usado para saturar 1/sin(phi) perto
@@ -445,47 +443,46 @@ class LALIC(Elic2022Official):
 
         load_biwkv4()
 
-        _down = (lambda cin, cout, kernel_size=5, stride=2: sw_conv(
-            cin, cout, kernel_size=kernel_size, stride=stride, dilations=swhdc_dilations
-        )) if use_swhdc else conv
+        _down = (
+            lambda cin, cout, kernel_size=5: sw_conv(
+            cin,
+            cout,
+            kernel_size=kernel_size,
+            dilations=swhdc_dilations,
+            )
+        ) if use_swhdc else conv
 
-        _up = (lambda cin, cout, kernel_size=5, stride=2: sw_deconv(
-            cin, cout, kernel_size=kernel_size, stride=stride, dilations=swhdc_dilations
-        )) if use_swhdc else deconv
-
-        _hyper_down = _down if swhdc_hyperprior else conv
-        _hyper_up = _up if swhdc_hyperprior else deconv
 
         self.g_a = form_modules(
             _down(3, N1, kernel_size=5),
             [RwkvBlock_BiV4(N1) for _ in range(L1)],
             _down(N1, N2, kernel_size=3),
             [RwkvBlock_BiV4(N2) for i in range(L2)],
-            _down(N2, N3, kernel_size=3),
+            conv(N2, N3, kernel_size=3),
             [RwkvBlock_BiV4(N3) for _ in range(L3)],
-            _down(N3, N4, kernel_size=3),
+            conv(N3, N4, kernel_size=3),
         )
 
         self.g_s = form_modules(
-            _up(N4, N3, kernel_size=3),
+            deconv(N4, N3, kernel_size=3),
             [RwkvBlock_BiV4(N3) for _ in range(L3)],
-            _up(N3, N2, kernel_size=3),
+            deconv(N3, N2, kernel_size=3),
             [RwkvBlock_BiV4(N2) for _ in range(L2)],
-            _up(N2, N1, kernel_size=3),
+            deconv(N2, N1, kernel_size=3),
             [RwkvBlock_BiV4(N1) for _ in range(L1)],
-            _up(N1, 3, kernel_size=5),
+            deconv(N1, 3, kernel_size=5),
         )
 
         self.h_a = form_modules(
-            _hyper_down(N4, N5, kernel_size=5),
+            conv(N4, N5, kernel_size=5),
             [RwkvBlock_BiV4(N5) for _ in range(L4)],
-            _hyper_down(N5, N6, kernel_size=5),
+            conv(N5, N6, kernel_size=5),
         )
 
         self.h_s = form_modules(
-            _hyper_up(N6, N5, kernel_size=5),
+            deconv(N6, N5, kernel_size=5),
             [RwkvBlock_BiV4(N5) for _ in range(L4)],
-            _hyper_up(N5, N4, kernel_size=5),
+            deconv(N5, N4, kernel_size=5),
         )
 
         # In [He2022], this is labeled "g_ch^(k)".

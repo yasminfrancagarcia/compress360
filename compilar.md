@@ -185,9 +185,9 @@ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -
     --swhdc_tag \
     --swhdc_dilations 1 2 3 \
     --cuda \
-    --save_path checkpoints360/check_swhdc/check_1 \
+    --save_path checkpoints360/check_swhdc_certo/check_1 \
     --save \
-    2>&1 |tee checkpoints360/check_swhdc/check_1/train_swhdc.log
+    2>&1 |tee checkpoints360/check_swhdc_certo/check_1/train_swhdc_certo.log
 
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -u train_swhdc.py \
     -d sun30 \
@@ -200,9 +200,9 @@ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=0 python -
     --swhdc_tag \
     --swhdc_dilations 1 2 3 \
     --cuda \
-    --save_path checkpoints360/check_swhdc/check_2 \
+    --save_path checkpoints360/check_swhdc_certo/check_2 \
     --save \
-    2>&1 |tee checkpoints360/check_swhdc/check_2/train_swhdc.log
+    2>&1 |tee checkpoints360/check_swhdc_certo/check_2/train_swhdc_certo.log
 
 
 //pra ver a época do latest
