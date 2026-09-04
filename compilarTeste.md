@@ -58,11 +58,24 @@ teste com as 50 imagens e  o dataset treinado com 20 epocas em 30k imagens plana
 teste com as 3 qualidades treinado com 30k imagens planas
 python eval.py \
     -m LALIC \
-    -p checkpoints_30k_openImg/check_0025/0.0025checkpoint_best.pth.tar checkpoints_30k_openImg/check_0067/0.0067checkpoint_best.pth.tar checkpoints_30k_openImg/check_0483/0.0483checkpoint_best.pth.tar\
-    -q 1 3 6 \
+    -p checkpoints_openimages30k/check_0025/0.0025checkpoint_best.pth.tar\
+    -q 1 \
     -i amostras_50_sun360 \
-    -o recon_images_50amostras/train_on_30kOpenI \
-    --result benchmarks_50amostras/benchmark_train_on_30kOpenI_3q.json \
+    -o teste_modelo \
+    --result teste_modelo/benchmark_train_on_30kOpenI_3q.json \
+    --cuda \
+    --real \
+    --verbose
+
+
+teste só com 2 qualidades treinado com WS-MSE + crop 512 x 256 + conv SWHDC
+python eval_swhdc.py \
+    -m LALIC \
+    -p checkpoints_swhdc/0.0025checkpoint_best.pth.tar checkpoints_swhdc/0.0067checkpoint_best.pth.tar\
+    -q 1 3 \
+    -i amostras_50_sun360 \
+    -o RwkvCompress360/recon_images_50amostras/recon_swhdc \
+    --result benchmarks_50amostras/benchmark_swhdc_2q.json \
     --cuda \
     --real \
     --verbose
