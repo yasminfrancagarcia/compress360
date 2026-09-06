@@ -2,12 +2,19 @@ import numpy as np
 import bjontegaard as bd
 import matplotlib.pyplot as plt
 
-# ============================================================
-# DADOS
-# ============================================================
+plt.rcParams["font.family"] = "Times New Roman"
+
+
+plt.rcParams["font.size"] = 14
+plt.rcParams["axes.labelsize"] = 16
+plt.rcParams["axes.titlesize"] = 16
+plt.rcParams["xtick.labelsize"] = 14
+plt.rcParams["ytick.labelsize"] = 14
+plt.rcParams["legend.fontsize"] = 12
+
 
 # ------------------------------------------------------------
-# 1. LALIC original
+# lalic original
 # ------------------------------------------------------------
 lalic_original = {
     "bpp": np.array([
@@ -22,28 +29,10 @@ lalic_original = {
     ])
 }
 
-
 # ------------------------------------------------------------
-# 2. LALIC 30k 360 + MSE
+# lalic 30k planas + mse
 # ------------------------------------------------------------
-lalic_360_mse = {
-    "bpp": np.array([
-        0.157097,
-        0.326110,
-        1.038092
-    ]),
-    "ws_psnr": np.array([
-        28.269910,
-        30.664554,
-        36.281543
-    ])
-}
-
-
-# ------------------------------------------------------------
-# 3. LALIC 30k planas + MSE
-# ------------------------------------------------------------
-lalic_30k_planas = {
+lalic_baseline = {
     "bpp": np.array([
         0.158131,
         0.326836,
@@ -56,27 +45,42 @@ lalic_30k_planas = {
     ])
 }
 
-# 4. LALIC 30k 360 + W-MSE + random crop 256 256 
-
-lalic_360_wmse_Randomcrop = {
-    "bpp": [
-      0.166709,
-      0.338719,
-      1.06543
-    ],
-    "ws_psnr": [
-      28.581836,
-      30.90475,
-      36.497981
-
-    ]
+# ------------------------------------------------------------
+# estratégia I
+# ------------------------------------------------------------
+estrategia_1 = {
+    "bpp": np.array([
+        0.157097,
+        0.326110,
+        1.038092
+    ]),
+    "ws_psnr": np.array([
+        28.269910,
+        30.664554,
+        36.281543
+    ])
 }
 
+# ------------------------------------------------------------
+# estratégia II
+# ------------------------------------------------------------
+estrategia_2 = {
+    "bpp": np.array([
+        0.166709,
+        0.338719,
+        1.065430
+    ]),
+    "ws_psnr": np.array([
+        28.581836,
+        30.904750,
+        36.497981
+    ])
+}
 
 # ------------------------------------------------------------
-# 4. LALIC 30k 360 + W-MSE + CropWidth
+# estratégia III
 # ------------------------------------------------------------
-lalic_wmse_cropwidth = {
+estrategia_3 = {
     "bpp": np.array([
         0.168745,
         0.335549,
@@ -85,18 +89,32 @@ lalic_wmse_cropwidth = {
     "ws_psnr": np.array([
         28.778219,
         31.197338,
-        36.995555
+        37.000000
     ])
 }
 
+# ------------------------------------------------------------
+# estratégia IV
+# ------------------------------------------------------------
+estrategia_4 = {
+    "bpp": np.array([
+        0.160812,
+        0.323918,
+        1.021573
+    ]),
+    "ws_psnr": np.array([
+        28.577817,
+        30.876526,
+        35.403960
+    ])
+}
 
 # ============================================================
-# FUNÇÃO PARA CALCULAR BD-RATE E BD-WS-PSNR
+# função para calcular bd-rate e bd-ws-psnr
 # ============================================================
 
 def calcular_bd(nome_ref, ref, nome_test, test):
 
-    #BD-Rate
     bd_rate = bd.bd_rate(
         ref["bpp"],
         ref["ws_psnr"],
@@ -105,7 +123,6 @@ def calcular_bd(nome_ref, ref, nome_test, test):
         method="pchip"
     )
 
-    #BD-WS-PSNR
     bd_wspsnr = bd.bd_psnr(
         ref["bpp"],
         ref["ws_psnr"],
@@ -114,192 +131,112 @@ def calcular_bd(nome_ref, ref, nome_test, test):
         method="pchip"
     )
 
-    print("=" * 5)
-    print(f"Referência: {nome_ref}")
-    print(f"Comparado:  {nome_test}")
-    print("=" * 5)
-    print(f"BD-Rate:    {bd_rate:.2f}%")
-    print(f"BD-WS-PSNR: {bd_wspsnr:.4f} dB")
-    print("=" * 5)
+    print("=" * 60)
+    print(f"referência: {nome_ref}")
+    print(f"comparado:  {nome_test}")
+    print("=" * 60)
+    print(f"bd-rate:    {bd_rate:.2f}%")
+    print(f"bd-ws-psnr: {bd_wspsnr:.4f} db")
+    print("=" * 60)
 
     return bd_rate, bd_wspsnr
 
-# w-mse + 360 + random crop 256 256 vs lalic original 
 
-# calcular_bd(
-#     "LALIC original",
-#     lalic_original,
-#     "LALIC 30k 360 + W-MSE + RandomCrop",
-#     lalic_360_wmse_Randomcrop
-# )
+# ============================================================
+# comparações com o lalic original
+# ============================================================
 
-# # w-mse + 360 + random crop 256 256 vs lalic 360 + mse
+print("\n")
+print("#" * 60)
+print("comparações com o lalic original")
+print("#" * 60)
 
-# calcular_bd(
-#     "LALIC 30k 360 + MSE",
-#     lalic_360_mse,
-#     "LALIC 30k 360 + W-MSE + RandomCrop",
-#     lalic_360_wmse_Randomcrop
-# )
-
-
-# # 360 + MSE vs W-MSE + CropWidth
-
-# calcular_bd(
-#     "LALIC 30k 360 + MSE",
-#     lalic_360_mse,
-#     "LALIC 30k 360 + W-MSE + CropWidth",
-#     lalic_wmse_cropwidth
-# )
-
-# # wmse + 360 + random crop 256 256 vs lalic 360 + wmse + cropwidth
-
-# calcular_bd(
-#     "LALIC 30k 360 + W-MSE + RandomCrop",
-#     lalic_360_wmse_Randomcrop,
-#     "LALIC 30k 360 + W-MSE + CropWidth",
-#     lalic_wmse_cropwidth
-# )
-
-# # W-MSE + CropWidth vs LALIC original
-
-# calcular_bd(
-#     "LALIC original",
-#     lalic_original,
-#     "LALIC 30k 360 + W-MSE + CropWidth",
-#     lalic_wmse_cropwidth
-# )
-
-
-# # Treino com imagens 360 + MSE vs treino com imagens planas
-
-# calcular_bd(
-#     "LALIC 30k planas + MSE",
-#     lalic_30k_planas,
-#     "LALIC 30k 360 + MSE",
-#     lalic_360_mse
-# )
-
-
-# # Método proposto vs treino com 30k imagens planas
-
-# calcular_bd(
-#     "LALIC 30k planas + MSE",
-#     lalic_30k_planas,
-#     "LALIC 30k 360 + W-MSE + CropWidth",
-#     lalic_wmse_cropwidth
-# )
-
-
-# plotar todas as rd curves juntas 
-
-def fazer_grafico():
-    plt.figure()
-    plt.plot(
-        lalic_original["bpp"],
-        lalic_original["ws_psnr"],
-        marker="o",
-        label="LALIC original"
-    )
-    plt.plot(
-        lalic_30k_planas["bpp"],
-        lalic_30k_planas["ws_psnr"],
-        marker="o",
-        label="30k planas + MSE"
-    )
-    plt.plot(
-        lalic_360_mse["bpp"],
-        lalic_360_mse["ws_psnr"],
-        marker="o",
-        label="30k 360 + MSE"
-    )
-    plt.plot(
-        lalic_360_wmse_Randomcrop["bpp"],
-        lalic_360_wmse_Randomcrop["ws_psnr"],
-        marker="o",
-        label="30k 360 + W-MSE + Random Crop"
-    )
-    plt.plot(
-        lalic_wmse_cropwidth["bpp"],
-        lalic_wmse_cropwidth["ws_psnr"],
-        marker="o",
-        label="30k 360 + W-MSE + Crop Width"
-    )
-
-    plt.xlabel("Bitrate (bpp)")
-    plt.ylabel("W-PSNR (dB)")
-    plt.title("Curva Rate-Distortion — bpp x W-PSNR")
-    plt.legend()
-    plt.grid(True)
-    plt.show()
-
-fazer_grafico() 
-
-# comparações entre original e metodos 
 calcular_bd(
-    "LALIC original",
+    "lalic",
     lalic_original,
-    "30k planas + MSE",
-    lalic_30k_planas
+    "30k planas + mse",
+    lalic_baseline
 )
 
 calcular_bd(
-    "LALIC original",
+    "lalic",
     lalic_original,
-    "30k 360 + MSE",
-    lalic_360_mse
+    "estratégia I",
+    estrategia_1
 )
 
 calcular_bd(
-    "LALIC original",
+    "lalic",
     lalic_original,
-    "360 + W-MSE + Random Crop",
-    lalic_360_wmse_Randomcrop
+    "estratégia II",
+    estrategia_2
 )
 
 calcular_bd(
-    "LALIC original",
+    "lalic",
     lalic_original,
-    "360 + W-MSE + Crop Width",
-    lalic_wmse_cropwidth
-)
-
-# ---------------------------------------------------------
-
-# compaaração com o original treinado em 30k planas por 20 épocas 
-print("-" * 10 )
-print("\n\nComparações com o original treinado em 30k planas por 20 épocas\n")
-
-calcular_bd(
-    "LALIC original treinado com 30k planas (1024x512), por 20 épocas",
-    lalic_30k_planas,
-    "30k 360 + MSE",
-    lalic_360_mse
+    "estratégia III",
+    estrategia_3
 )
 
 calcular_bd(
-    "LALIC original treinado com 30k planas (1024x512), por 20 épocas",
-    lalic_30k_planas,
-    "360 + W-MSE + Random Crop",
-    lalic_360_wmse_Randomcrop
+    "lalic",
+    lalic_original,
+    "estratégia IV",
+    estrategia_4
+)
+
+# ============================================================
+# comparações com o baseline
+# ============================================================
+
+print("\n")
+print("#" * 60)
+print("comparações com o baseline")
+print("#" * 60)
+
+calcular_bd(
+    "30k planas + mse",
+    lalic_baseline,
+    "estratégia I",
+    estrategia_1
 )
 
 calcular_bd(
-    "LALIC original treinado com 30k planas (1024x512), por 20 épocas   ",
-    lalic_30k_planas,
-    "360 + W-MSE + Crop Width",
-    lalic_wmse_cropwidth
+    "30k planas + mse",
+    lalic_baseline,
+    "estratégia II",
+    estrategia_2
 )
 
-def plot_rcd_vs_anchor(nome_anchor, anchor, nome_testes):
+calcular_bd(
+    "30k planas + mse",
+    lalic_baseline,
+    "estratégia III",
+    estrategia_3
+)
+
+calcular_bd(
+    "30k planas + mse",
+    lalic_baseline,
+    "estratégia IV",
+    estrategia_4
+)
+
+# ============================================================
+# função para gerar rcd
+# ============================================================
+
+def plot_rcd_vs_anchor(nome_anchor, anchor, nome_testes, nome_arquivo):
 
     for nome_test, test in nome_testes.items():
 
-        print("=" * 10)
-        print(f"Anchor: {nome_anchor}")
-        print(f"Test:   {nome_test}")
-        print("=" * 10)
+        print("\n" + "=" * 60)
+        print(f"anchor: {nome_anchor}")
+        print(f"test:   {nome_test}")
+        print("=" * 60)
 
+        # gerar o rcd
         bd.plot_rcd(
             anchor["bpp"],
             anchor["ws_psnr"],
@@ -310,38 +247,123 @@ def plot_rcd_vs_anchor(nome_anchor, anchor, nome_testes):
             samples=1000
         )
 
+        # ajustar layout
+        plt.tight_layout()
+
+        # salvar a figura
+        plt.savefig(
+            nome_arquivo(nome_test),
+            dpi=300,
+            bbox_inches="tight"
+        )
+
+        # fechar a figura para evitar sobreposição
+        plt.close()
+
+
+# ============================================================
+# testes contra o lalic original
+# ============================================================
+
 testes_vs_original = {
-    "30k planas + MSE": lalic_30k_planas,
-
-    "30k 360 + MSE": lalic_360_mse,
-
-    "30k 360 + W-MSE + Random Crop":
-        lalic_360_wmse_Randomcrop,
-
-    "30k 360 + W-MSE + Crop Width":
-        lalic_wmse_cropwidth
+    "30k planas + MSE": lalic_baseline,
+    "Estratégia I": estrategia_1,
+    "Estratégia II": estrategia_2,
+    "Estratégia III": estrategia_3,
+    "Estratégia IV": estrategia_4
 }
+
+# ============================================================
+# testes contra o baseline
+# ============================================================
 
 testes_vs_30k_planas = {
-    "30k 360 + MSE": lalic_360_mse,
-
-    "30k 360 + W-MSE + Random Crop":
-        lalic_360_wmse_Randomcrop,
-
-    "30k 360 + W-MSE + Crop Width":
-        lalic_wmse_cropwidth
+    "Estratégia I": estrategia_1,
+    "Estratégia II": estrategia_2,
+    "Estratégia III": estrategia_3,
+    "Estratégia IV": estrategia_4
 }
 
+# ============================================================
+# nomes dos arquivos rcd
+# ============================================================
 
+def nome_rcd_original(nome):
+    nome = nome.lower()
+    nome = nome.replace(" ", "_")
+    nome = nome.replace("+", "")
+    return f"rcd_vs_lalic_original_{nome}.pdf"
+
+
+def nome_rcd_baseline(nome):
+    nome = nome.lower()
+    nome = nome.replace(" ", "_")
+    return f"rcd_vs_baseline_{nome}.pdf"
+
+
+# ============================================================
+# gerar rcd contra lalic original
+# ============================================================
 
 plot_rcd_vs_anchor(
-    "LALIC original",
+    "lalic original",
     lalic_original,
-    testes_vs_original
+    testes_vs_original,
+    nome_rcd_original
 )
 
+# ============================================================
+# gerar rcd contra baseline
+# ============================================================
+
 plot_rcd_vs_anchor(
-    "30k planas + MSE",
-    lalic_30k_planas,
-    testes_vs_30k_planas
+    "30k planas + mse",
+    lalic_baseline,
+    testes_vs_30k_planas,
+    nome_rcd_baseline
 )
+
+# ============================================================
+# compare methods
+# ============================================================
+
+# ------------------------------------------------------------
+# compare methods: lalic original x estratégia III
+# ------------------------------------------------------------
+
+bd.compare_methods(
+    lalic_original["bpp"],
+    lalic_original["ws_psnr"],
+    estrategia_3["bpp"],
+    estrategia_3["ws_psnr"],
+    rate_label="bpp",
+    distortion_label="ws-psnr (db)",
+    figure_label="lalic vs estratégia iii",
+    filepath="compare_methods_lalic_vs_estrategia_iii.pdf"
+)
+
+# ------------------------------------------------------------
+# compare methods: baseline x estratégia III
+# ------------------------------------------------------------
+
+bd.compare_methods(
+    lalic_baseline["bpp"],
+    lalic_baseline["ws_psnr"],
+    estrategia_3["bpp"],
+    estrategia_3["ws_psnr"],
+    rate_label="bpp",
+    distortion_label="ws-psnr (db)",
+    figure_label="baseline vs estratégia iii",
+    filepath="compare_methods_baseline_vs_estrategia_iii.pdf"
+)
+
+print("\n")
+print("=" * 60)
+print("arquivos gerados com sucesso")
+print("=" * 60)
+print("rcd_vs_lalic_original_*.pdf")
+print("rcd_vs_baseline_*.pdf")
+print("compare_methods_lalic_vs_estrategia_iii.pdf")
+print("compare_methods_baseline_vs_estrategia_iii.pdf")
+print("=" * 60)
+

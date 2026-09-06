@@ -38,17 +38,14 @@ python eval.py \
     --verbose
 
 
-teste com lambda 0,0067 (qualidade 3), lalic original, treinado por 40 epocas em 30k de imagens 360 ((MSE normal e random crop fixo de 256x256)
-)
-
-agora é o random crop + wmse
+teste com o original treinado em imagens 360 (random crop + wmse)
 python eval.py \
     -m LALIC \
-    -p randomCrop_wmse/0.0067checkpoint_best.pth.tar  \
-    -q 3 \
+    -p checkpoints_original_train_on_360/0.0025checkpoint_best.pth.tar checkpoints_original_train_on_360/0.0067checkpoint_best.pth.tar checkpoints_original_train_on_360/0.0483checkpoint_best.pth.tar   \
+    -q 1 3 6 \
     -i amostras_50_sun360 \
-    -o recon_images_50amostras/wmse_randomCrop_1q \
-    --result benchmarks_50amostras/benchmark_wmse_randomCrop.json \
+    -o recon_images_50amostras/lalic_original_train_on360 \
+    --result benchmarks_50amostras/benchmark_train_on_360.json \
     --cuda \
     --real \
     --verbose
@@ -58,8 +55,8 @@ teste com as 50 imagens e  o dataset treinado com 20 epocas em 30k imagens plana
 teste com as 3 qualidades treinado com 30k imagens planas
 python eval.py \
     -m LALIC \
-    -p checkpoints_openimages30k/check_0025/0.0025checkpoint_best.pth.tar\
-    -q 1 \
+    -p checkpoints_30k_openImg/check_0025/0.0025checkpoint_best.pth.tar checkpoints_30k_openImg/check_0067/0.0067checkpoint_best.pth.tar checkpoints_30k_openImg/check_0483/0.0483checkpoint_best.pth.tar \
+    -q 1 3 6  \
     -i amostras_50_sun360 \
     -o teste_modelo \
     --result teste_modelo/benchmark_train_on_30kOpenI_3q.json \
@@ -71,11 +68,11 @@ python eval.py \
 teste só com 2 qualidades treinado com WS-MSE + crop 512 x 256 + conv SWHDC
 python eval_swhdc.py \
     -m LALIC \
-    -p checkpoints_swhdc/0.0025checkpoint_best.pth.tar checkpoints_swhdc/0.0067checkpoint_best.pth.tar\
-    -q 1 3 \
+    -p checkpoints360/check_swhdc_certo/check_1/0.0025checkpoint_best.pth.tar checkpoints360/check_swhdc_certo/check_2/0.0067checkpoint_best.pth.tar checkpoints360/check_swhdc_certo/check_3/0.0483checkpoint_best.pth.tar\
+    -q 1 3 6 \
     -i amostras_50_sun360 \
-    -o RwkvCompress360/recon_images_50amostras/recon_swhdc \
-    --result benchmarks_50amostras/benchmark_swhdc_2q.json \
+    -o recon_images_50amostras/recon_swhdc_TESTE2 \
+    --result benchmarks_50amostras/benchmark_TESTE2_swhdc_3q.json \
     --cuda \
     --real \
     --verbose
