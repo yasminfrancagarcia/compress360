@@ -339,7 +339,7 @@ bd.compare_methods(
     rate_label="bpp",
     distortion_label="ws-psnr (db)",
     figure_label="lalic vs estratégia iii",
-    filepath="compare_methods_lalic_vs_estrategia_iii.pdf"
+    filepath="compare_methods_lalic_vs_estrategia_iii.png"
 )
 
 # ------------------------------------------------------------

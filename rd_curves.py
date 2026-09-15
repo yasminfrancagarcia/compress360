@@ -60,7 +60,7 @@ estrategia_4 = {
 
 # marker diferente por método, todas com linha solida (sem pontilhado/tracejado)
 metodos = [
-    ("LALIC Baseline",  lalic_baseline_30k,        "s"),
+    ("LALIC",  lalic_baseline_30k,        "s"),
     ("Estratégia I",    estrategia_1,              "^"),
     ("Estratégia II",   estrategia_2,              "v"),
     ("Estratégia III",  estrategia_3,              "D"),
@@ -97,12 +97,12 @@ def plot_metric(ax, chave_y, ylabel, titulo):
     ax.legend(loc="lower right", frameon=True, ncol=1, fontsize=16)
 
 
-plot_metric(axes[0], "ws_psnr", "WS-PSNR (dB)", "bpp × WS-PSNR")
-plot_metric(axes[1], "ws_ssim", "WS-SSIM", "bpp × WS-SSIM")
+plot_metric(axes[0], "ws_psnr", "WS-PSNR (dB)", "")
+plot_metric(axes[1], "ws_ssim", "WS-SSIM", "")
 
 plt.tight_layout()
 
-plt.savefig("rd_curves_ws_semOri.png", dpi=300, bbox_inches="tight")
-plt.savefig("rd_curves_ws_semOri.pdf", bbox_inches="tight")
+plt.savefig("rd_curves_ws_final.png", dpi=300, bbox_inches="tight")
+plt.savefig("rd_curves_ws_final.pdf", bbox_inches="tight")
 
 plt.close()
